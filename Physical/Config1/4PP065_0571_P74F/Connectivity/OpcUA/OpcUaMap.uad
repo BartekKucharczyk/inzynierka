@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="3">
+  <DefaultView>
+    <Module>
+      <GlobalVariables Name="Global PV">
+        <Variable Name="Nowa_zmienna" Enable="True" />
+        <Variable Name="Zm_wyj" Enable="True">
+          <Variable Name="Zmienna1" Enable="True" />
+          <Variable Name="Zmienna2" Enable="True" />
+        </Variable>
+      </GlobalVariables>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

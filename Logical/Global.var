@@ -1,0 +1,4 @@
+VAR
+	Nowa_zmienna : USINT;
+	Zm_wyj : Data_OPC_struct;
+END_VAR

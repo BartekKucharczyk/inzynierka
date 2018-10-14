@@ -1,0 +1,9 @@
+<BuildOptions>
+  <BuildOption>
+    <SourceFile Value="C:/projects/Inzynierka_Kucharczyk_2018/Physical/Config1/4PP065_0571_P74F/Cpu.sw" />
+    <Query Value="/ns:SwConfiguration/ns:TaskClass/*$$Name,Source" />
+    <Xml>
+      <Task Name="Program" Source="Source.Code.Program.prg" />
+    </Xml>
+  </BuildOption>
+</BuildOptions>

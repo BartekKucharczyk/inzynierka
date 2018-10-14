@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toc Version="2" MinorVersion="0">
+	<Application>
+		<Class Name="AddonsData">
+			<Folder Name="OPCUA" ProjectDependent="1" IgnoreDifference="0" IsGroup="1">
+				<Folder Name="NodeSet" ProjectDependent="1" IgnoreDifference="0">
+					<Folder Name="Vendor" ProjectDependent="1" IgnoreDifference="0">
+						<File Name="plc.aprol.uanodeset" HashValue="45C262C5FB0AC7AF91C4E0AF79544FE7" ProjectDependent="1" IgnoreDifference="0" />
+						<File Name="plc.br.pv.uanodeset" HashValue="DDAEDF25B973C16F115C7AD5DB276C13" ProjectDependent="1" IgnoreDifference="0" />
+						<File Name="plc.plcopen.pv.uanodeset" HashValue="F7992BEE72225A497855C573933B07A8" ProjectDependent="1" IgnoreDifference="0" />
+						<File Name="plc.uanodeset" HashValue="0BCCB98A68083B5C99D3E1006F6E6389" ProjectDependent="1" IgnoreDifference="0" />
+					</Folder>
+				</Folder>
+			</Folder>
+		</Class>
+		<Class Name="Os">
+			<File Name="BRLcReg.dll" HashValue="5CE306FC22306CD6BCD7E40C2D6CC31F" ProjectDependent="1" IgnoreDifference="0" />
+			<Folder Name="Brm" ProjectDependent="1" IgnoreDifference="0">
+				<File Name="@cfAR000.br" HashValue="4B942ACD39E18D205AB83DBB501D52B7" ProjectDependent="1" IgnoreDifference="0" />
+				<File Name="@sbAR000.br" HashValue="AA4BF7D1D236CDE82EAE8FF2F1FA6E6A" ProjectDependent="1" IgnoreDifference="0" />
+			</Folder>
+			<File Name="InaFrms.dll" HashValue="BCBB8AB4B7168E2BB538CF86E5B742A3" ProjectDependent="1" IgnoreDifference="0" />
+			<Folder Name="System" ProjectDependent="1" IgnoreDifference="0">
+				<Folder Name="BASE" ProjectDependent="1" IgnoreDifference="0">
+					<Folder Name="COMPONENTS" ProjectDependent="1" IgnoreDifference="0">
+						<File Name="ArLcTextP.br" HashValue="99D06CA804FC1F2BF22B3DC37B896F23" ProjectDependent="1" IgnoreDifference="0" />
+						<File Name="unitsys.br" HashValue="89CA005A80005CAE78ACC113FBD49928" ProjectDependent="1" IgnoreDifference="0" />
+					</Folder>
+					<Folder Name="HWD" ProjectDependent="1" IgnoreDifference="0">
+						<File Name="AsHwdSimulation.xml.gz" HashValue="F0716C58B5B7E0AE53FF026C91A948B3" ProjectDependent="1" IgnoreDifference="0" />
+						<File Name="AsHwdhw_upl.xml.gz" HashValue="D9E8CF0207F671D1672BBFC18D43F705" ProjectDependent="1" IgnoreDifference="0" />
+					</Folder>
+				</Folder>
+				<Folder Name="SDM" ProjectDependent="1" IgnoreDifference="0">
+					<File Name="arsdm.tar.gz" HashValue="3160A9FE8441CA16FC847DDB704B25B3" ProjectDependent="1" IgnoreDifference="0" />
+				</Folder>
+				<Folder Name="TOC" ProjectDependent="1" IgnoreDifference="0">
+					<File Name="ftoc.xml" HashValue="F83AEC703141D083AB19580424BF781A" ProjectDependent="1" IgnoreDifference="0" />
+				</Folder>
+				<Folder Name="WEBSERV" ProjectDependent="1" IgnoreDifference="0">
+					<File Name="webserv.br" HashValue="22706D96EBA07AF42826F75EAD9FA250" ProjectDependent="1" IgnoreDifference="0" />
+				</Folder>
+			</Folder>
+			<File Name="arsimproxy.dll" HashValue="B6831EEF7E96FEBDBE334ED0A550E515" ProjectDependent="1" IgnoreDifference="0" />
+		</Class>
+		<Memory Name="SYSROM">
+			<Module Name="::$$sysconf" Type="129" Size="69736" Modified="2018-10-08 17:52:13" Version="4.34" ProjectDependent="1" Reboot="1" />
+			<Module Name="::TCData" Type="209" Size="3728920" Modified="2018-10-08 14:46:19" Version="1.00" ProjectDependent="1" />
+			<Module Name="::arconfig" Type="132" Size="1936" Modified="2018-10-08 15:29:56" Version="1.00" ProjectDependent="1" Reboot="1" />
+			<Module Name="::asfw" Type="67" Size="128" Modified="2018-10-08 14:45:47" Version="1.00" ProjectDependent="1" Reboot="1" />
+			<Module Name="::ashwd" Type="67" Size="1324" Modified="2018-10-08 14:45:47" Version="1.00" ProjectDependent="1" Reboot="1" />
+		</Memory>
+		<Memory Name="USERROM">
+			<Module Name="::AsIecCon" Type="18" Size="17500" Modified="2018-05-25 19:40:28" Version="4.34" ProjectDependent="1" />
+			<Module Name="::DataObj" Type="18" Size="20340" Modified="2018-05-25 19:57:56" Version="4.34" ProjectDependent="1" />
+			<Module Name="::FileIO" Type="18" Size="24664" Modified="2018-05-25 20:01:04" Version="4.34" ProjectDependent="1" />
+			<Module Name="::OpcUaMap" Type="134" Size="560" Modified="2018-10-08 17:38:31" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Program" Type="17" Size="1584" Modified="2018-10-08 14:45:53" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Role" Type="136" Size="760" Modified="2018-10-08 14:46:13" Version="1.00" ProjectDependent="1" />
+			<Module Name="::User" Type="136" Size="656" Modified="2018-10-08 14:46:13" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Visu" Type="18" Size="1344" Modified="2018-10-08 14:46:13" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Visu01" Type="18" Size="35864" Modified="2018-10-08 14:46:10" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Visu02" Type="18" Size="2524" Modified="2018-10-08 14:46:10" Version="1.00" ProjectDependent="1" />
+			<Module Name="::Visu03" Type="18" Size="2273248" Modified="2018-10-08 14:46:10" Version="1.00" ProjectDependent="1" />
+			<Module Name="::arial" Type="18" Size="1045436" Modified="2018-10-08 14:46:11" Version="1.00" ProjectDependent="1" />
+			<Module Name="::arialbd" Type="18" Size="989172" Modified="2018-10-08 14:46:11" Version="1.00" ProjectDependent="1" />
+			<Module Name="::ashwac" Type="136" Size="212" Modified="2018-10-08 14:45:50" Version="1.00" ProjectDependent="1" />
+			<Module Name="::astime" Type="18" Size="22824" Modified="2018-05-25 19:54:02" Version="4.34" ProjectDependent="1" />
+			<Module Name="::iomap" Type="50" Size="2668" Modified="2018-10-08 14:46:13" Version="1.00" ProjectDependent="1" />
+			<Module Name="::runtime" Type="18" Size="29404" Modified="2018-05-25 20:02:32" Version="4.34" ProjectDependent="1" />
+			<Module Name="::udbdef" Type="210" Size="70264" Modified="2014-04-10 10:00:00" Version="0.01" ProjectDependent="1" />
+			<Module Name="::vcalarm" Type="18" Size="97848" Modified="2018-05-15 23:51:35" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcbclass" Type="18" Size="181288" Modified="2018-05-15 23:54:39" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vccbtn" Type="18" Size="17016" Modified="2018-05-15 23:52:53" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vccovl" Type="18" Size="1888" Modified="2018-05-15 23:53:29" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcdsint" Type="18" Size="7264" Modified="2018-05-15 23:52:40" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcdsloc" Type="18" Size="37368" Modified="2018-05-15 23:52:44" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcfile" Type="18" Size="6544" Modified="2018-05-15 23:50:36" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcfntttf" Type="18" Size="276176" Modified="2018-05-15 23:55:48" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcgclass" Type="18" Size="245128" Modified="2018-05-15 23:55:22" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcmgr" Type="18" Size="42620" Modified="2018-05-15 23:55:28" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcnet" Type="18" Size="12068" Modified="2018-05-15 23:50:34" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcpdsw" Type="18" Size="2632" Modified="2018-05-15 23:51:11" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcpdvnc" Type="18" Size="75952" Modified="2018-05-15 23:51:04" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcpfar00" Type="18" Size="3128" Modified="2018-05-15 23:56:27" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcresman" Type="18" Size="1552504" Modified="2018-05-15 23:50:31" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcrt" Type="18" Size="75112" Modified="2018-05-15 23:54:53" Version="4.343" ProjectDependent="1" />
+			<Module Name="::vcshared" Type="18" Size="14744" Modified="2018-10-08 14:46:11" Version="1.00" ProjectDependent="1" />
+			<Module Name="::vctcal" Type="18" Size="5388" Modified="2018-05-15 23:53:16" Version="4.343" ProjectDependent="1" />
+		</Memory>
+	</Application>
+</Toc>
