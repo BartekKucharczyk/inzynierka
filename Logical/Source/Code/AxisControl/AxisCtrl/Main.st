@@ -6,7 +6,6 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	Input_commands;
 	
 	AxesControl;
 	

@@ -263,9 +263,10 @@
   <Symbol Name="\Projects\Visu\Localizer\POBJ" Index="1" Type="LOC" RefString="Source[local].Localizer[de]" />
   <Symbol Name="Source[local].BorderManager[default]" Index="1073741824" Type="MGR" RefString="Source[local].BorderManager[default]" />
   <Symbol Name="\Projects\Visu\Forms\POBJ" Index="0" Type="PAGE" RefString="Source[local].Page[Init_Page]" />
-  <Symbol Name="Source[local].KeySource[VNCServer]" Index="1073741824" Type="KS" RefString="Source[local].KeySource[VNCServer]" />
-  <Symbol Name="Source[local].Driver[DisplaySW]" Index="1073741824" Type="DRV" RefString="Source[local].Driver[DisplaySW]" />
-  <Symbol Name="Source[local].KS[default]" Index="1073741825" Type="KS" RefString="Source[local].KS[default]" />
+  <Symbol Name="Source[local].Driver[DriverPanelKeysIPC0]" Index="1073741824" Type="DRV" RefString="Source[local].Driver[DriverPanelKeysIPC0]" />
+  <Symbol Name="Source[local].Driver[DisplayCx300]" Index="1073741825" Type="DRV" RefString="Source[local].Driver[DisplayCx300]" />
+  <Symbol Name="Source[local].Driver[EloTouch]" Index="1073741826" Type="DRV" RefString="Source[local].Driver[EloTouch]" />
+  <Symbol Name="Source[local].KS[default]" Index="1073741824" Type="KS" RefString="Source[local].KS[default]" />
   <Symbol Name="Source[local].KSTable[4PP065.0571-P74F]" Index="1073741824" Type="KSTable" RefString="Source[local].KSTable[4PP065.0571-P74F]" />
   <Symbol Name="Source[local].Page[Init_Page].Layer[Default].Control[Button_1]" Index="1073741824" Type="CTRL" RefString="Source[local].Page[Init_Page].Layer[Default].Control[Button_1]" />
   <Symbol Name="Source[local].VirtualKey[%embVirtualKey_1]" Index="1073741824" Type="VKEY" RefString="Source[local].VirtualKey[%embVirtualKey_1]" />

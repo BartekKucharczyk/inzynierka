@@ -7,10 +7,27 @@
     </Connector>
     <Parameter ID="ConfigurationID" Value="Inzynierka_Kucharczyk_2018_Config1" />
     <Parameter ID="SimulationInaPort" Value="5900" />
+    <Parameter ID="TimerDeviceType" Value="EPLX2X" />
+    <Parameter ID="TimerDevice" Value="4PP065_0571_P74F.IF4" />
+    <Parameter ID="TaskClassIdleTime" Value="2000" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUa_Security_AdminRole" Value="Everyone" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
     <Parameter ID="VcObjectName" Value="Visu" />
     <Parameter ID="KeyMappingFile" Value="VC\4PP065_0571_P74F.dis" />
+  </Module>
+  <Module Name="8AC114.60-2" Type="8AC114.60-2" Version="1.0.0.8">
+    <Connection Connector="SS" TargetModule="8V1010.00-2" TargetConnector="SS1" />
+    <Connection Connector="PLK1" TargetModule="4PP065_0571_P74F" TargetConnector="IF4">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.1" />
+    </Connection>
+  </Module>
+  <Module Name="8AC120.60-1" Type="8AC120.60-1" Version="1.0.0.2">
+    <Connection Connector="SS" TargetModule="8V1010.00-2" TargetConnector="SS2" />
+  </Module>
+  <Module Name="8V1010.00-2" Type="8V1010.00-2" Version="1.0.0.2">
+    <Parameter ID="PoweredBy" Value="DC" />
+    <Parameter ID="BothEndSwitchesAreNormallyOpen_r1" Value="on" />
+    <Parameter ID="QuickStopIsNormallyOpen_r1" Value="on" />
   </Module>
 </Hardware>

@@ -68,6 +68,31 @@
     <Property Name="Platform" Value="Platform.x86.Generic" />
   </Module>
   <Module>
+    <Property Name="Name" Value="vcpk.br" />
+    <Property Name="Version" Value="Core" />
+    <Property Name="Platform" Value="Platform.x86.Generic" />
+  </Module>
+  <Module>
+    <Property Name="Name" Value="vcpdpp30.br" />
+    <Property Name="Version" Value="Core" />
+    <Property Name="Platform" Value="Platform.x86.Generic" />
+  </Module>
+  <Module>
+    <Property Name="Name" Value="vcptelo.br" />
+    <Property Name="Version" Value="Core" />
+    <Property Name="Platform" Value="Platform.x86.Generic" />
+  </Module>
+  <Module>
+    <Property Name="Name" Value="vcpfmtcx.br" />
+    <Property Name="Version" Value="Core" />
+    <Property Name="Platform" Value="Platform.x86.Generic" />
+  </Module>
+  <Module>
+    <Property Name="Name" Value="vcpfpp30.br" />
+    <Property Name="Version" Value="Core" />
+    <Property Name="Platform" Value="Platform.x86.Generic" />
+  </Module>
+  <Module>
     <Property Name="Name" Value="vcalarm.br" />
     <Property Name="Version" Value="Core" />
     <Property Name="Platform" Value="Platform.x86.Generic" />

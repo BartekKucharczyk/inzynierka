@@ -8,6 +8,11 @@
     <Task Name="AxisCtrl" Source="Source.Code.AxisControl.AxisCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Program" Source="Source.Code.Package1.Program.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
+  <NcDataObjects>
+    <NcDataObject Name="acp10etxen" Source="acp10etxen.dob" Memory="UserROM" Language="Ett" />
+    <NcDataObject Name="gAxis01a" Source="gAxis01obj.gAxis01a.dob" Memory="UserROM" Language="Apt" />
+    <NcDataObject Name="gAxis01i" Source="gAxis01obj.gAxis01i.dob" Memory="UserROM" Language="Ax" />
+  </NcDataObjects>
   <VcDataObjects>
     <VcDataObject Name="Visu" Source="Source.Visu.Visu.dob" Memory="UserROM" Language="Vc" WarningLevel="2" Compress="false" />
   </VcDataObjects>

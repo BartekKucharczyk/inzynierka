@@ -23,5 +23,10 @@
       <Parameter ID="cam_dat_dl_parallel" Value="No" />
       <Parameter ID="tc_cam_dl_parallel" Value="Task class for NC Manager task" />
     </Group>
+    <Group ID="plk_if[0]">
+      <Parameter ID="if_name" Value="IF4" />
+      <Parameter ID="tc_CycDat_PLCopen" Value="Task class for NC Manager task" />
+      <Parameter ID="mc_broadcast_extdat" Value="No" />
+    </Group>
   </Group>
 </NcConfiguration>

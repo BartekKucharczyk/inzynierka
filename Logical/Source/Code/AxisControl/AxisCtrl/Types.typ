@@ -107,7 +107,7 @@ TYPE
 		AxisStateMachine : AxisCtrlEnum;
 	END_STRUCT;
 	AxisCtrlOutStatesType : 	STRUCT 
-		SingleAxis : USINT;
+		SingleAxis : AxisCtrlOutStatesSingType;
 		AllAxis : AxisCtrlOutStatesAllType;
 	END_STRUCT;
 END_TYPE
@@ -116,6 +116,21 @@ END_TYPE
 
 TYPE
 	AxisCtrlOutStatesAllType : 	STRUCT 
+		InPosition : BOOL;
+		InVelocity : BOOL;
+		UpdateDone : BOOL;
+		Active : BOOL;
+		Error : BOOL;
+		Stopped : BOOL;
+		MoveActive : BOOL;
+		IsHomed : BOOL;
+		PowerOn : BOOL;
+	END_STRUCT;
+	AxisCtrlOutStatesSingType : 	STRUCT 
+		Axis_0 : AxisCtrlOutStatesSingAxType;
+		Axis_1 : AxisCtrlOutStatesSingAxType;
+	END_STRUCT;
+	AxisCtrlOutStatesSingAxType : 	STRUCT 
 		InPosition : BOOL;
 		InVelocity : BOOL;
 		StatusID : DINT;
@@ -141,6 +156,7 @@ TYPE
 		);
 	AxisCtrlEnum : 
 		(
+		WAIT_FOR_CMD,
 		JOG,
 		MOVE_ADDITIVE,
 		MOVE_VELOCITY,
@@ -148,9 +164,9 @@ TYPE
 		STOP_OFF,
 		STOP_ON,
 		HOME,
-		WAIT_FOR_CMD,
 		POWER_OFF,
 		POWER_ON,
-		WAIT_FOR_ACTIVE
+		WAIT_FOR_ACTIVE,
+		ERROR_RESET
 		);
 END_TYPE

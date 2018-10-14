@@ -10,16 +10,30 @@
   <TaskClass
     Name="Cyclic#4">
     <Task
+      Name="AxisCtrl"
+      Disable="false"
+      Source="Source.Code.AxisControl.AxisCtrl"
+      Language="IEC">
+      <InternalFile
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\AxisCtrl\Main.st.var" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Types.typ" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Variables.var" />
+      <InternalFile
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\AxisCtrl\Actions.var" />
+    </Task>
+    <Task
       Name="Program"
       Disable="false"
-      Source="Source.Code.Program"
+      Source="Source.Code.Package1.Program"
       Language="IEC">
       <InternalFile
         Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\Program\Main.st.var" />
       <File
-        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Program\Types.typ" />
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package1\Program\Types.typ" />
       <File
-        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Program\Variables.var" />
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package1\Program\Variables.var" />
     </Task>
   </TaskClass>
   <TaskClass

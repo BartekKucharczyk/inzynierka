@@ -1,0 +1,6 @@
+$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Variables.var
+$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Types.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpBase/MpBase.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxisError.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.fun

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BR.AS.HardwareTopology Version="0.0.0.1">
+  <Modules>
+    <Module Name="4PP065_0571_P74F" Type="4PP065.0571-P74F" X="100" Y="100" />
+    <Module Name="8V1010.00-2" Type="8V1010.00-2" X="255.099991" Y="259.5" />
+    <Module Name="8AC120.60-1" Type="8AC120.60-1" X="269.099976" Y="375" />
+    <Module Name="8AC114.60-2" Type="8AC114.60-2" X="257.9" Y="375" />
+  </Modules>
+  <Links>
+    <Link From="4PP065_0571_P74F" To="8AC114.60-2" FromPort="IF4" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="153.049988" Y="205.5" />
+      <Point X="153.049988" Y="205.5" />
+      <Point X="153.049988" Y="210.5" />
+      <Point X="153.049988" Y="402.8" />
+      <Point X="255" Y="402.8" />
+      <Point X="264" Y="402.8" />
+      <Point X="264" Y="402.8" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

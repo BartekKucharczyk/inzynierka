@@ -13,6 +13,11 @@
   <File Name="vcmgr.br" />
   <File Name="vcpdvnc.br" />
   <File Name="vcpfar00.br" />
+  <File Name="vcpk.br" />
+  <File Name="vcpdpp30.br" />
+  <File Name="vcptelo.br" />
+  <File Name="vcpfmtcx.br" />
+  <File Name="vcpfpp30.br" />
   <File Name="vcalarm.br" />
   <File Name="vcdsint.br" />
   <File Name="vcdsloc.br" />

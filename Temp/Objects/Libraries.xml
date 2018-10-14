@@ -2,6 +2,24 @@
 <?AutomationStudio Version="4.3.7.46 SP"?>
 <LibraryInfos>
   <Library
+    Name="Acp10_MC"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="3.18.2" />
+  <Library
+    Name="Acp10man"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="3.18.2" />
+  <Library
+    Name="Acp10par"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="3.18.2" />
+  <Library
     Name="AsIecCon"
     IsDeployed="false"
     IsStatic="false"
@@ -14,6 +32,36 @@
     UseAsStatic="false"
     Version="" />
   <Library
+    Name="brsystem"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="" />
+  <Library
+    Name="MpAxis"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="1.62.1" />
+  <Library
+    Name="MpBase"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="5.00.0" />
+  <Library
+    Name="MpCom"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="1.62.1" />
+  <Library
+    Name="NcGlobal"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="3.18.2" />
+  <Library
     Name="operator"
     IsDeployed="false"
     IsStatic="false"
@@ -21,7 +69,13 @@
     Version="" />
   <Library
     Name="runtime"
-    IsDeployed="false"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="" />
+  <Library
+    Name="sys_lib"
+    IsDeployed="true"
     IsStatic="false"
     UseAsStatic="false"
     Version="" />
