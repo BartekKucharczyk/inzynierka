@@ -20,6 +20,12 @@
     UseAsStatic="false"
     Version="3.18.2" />
   <Library
+    Name="Acp10sim"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="3.18.2" />
+  <Library
     Name="AsIecCon"
     IsDeployed="false"
     IsStatic="false"

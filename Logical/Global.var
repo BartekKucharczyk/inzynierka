@@ -1,4 +1,3 @@
 VAR
-	Zm_wyj : Data_OPC_struct;
 	gAxis01 : ACP10AXIS_typ;
 END_VAR

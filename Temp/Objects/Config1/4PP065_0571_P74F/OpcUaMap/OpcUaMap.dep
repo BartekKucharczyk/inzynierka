@@ -1,2 +1,7 @@
-$(AS_PROJECT_PATH)/Logical/Global.var
-$(AS_PROJECT_PATH)/Logical/Global.typ
+$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Variables.var
+$(AS_PROJECT_PATH)/Physical/Config1/4PP065_0571_P74F/Cpu.sw
+$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Types.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/MpBase/MpBase.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.typ
+$(AS_PROJECT_PATH)/Physical/Config1/4PP065_0571_P74F/AccessAndSecurity/UserRoleSystem/Role.role

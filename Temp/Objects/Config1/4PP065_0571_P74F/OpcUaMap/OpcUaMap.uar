@@ -4,7 +4,7 @@
     <Uri>http://br-automation.com/OpcUa/PLC/PV/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://br-automation.com/OpcUa/PLC/PV/" Version="1.00" PublicationDate="2018-10-08T15:38:31Z" />
+    <Model ModelUri="http://br-automation.com/OpcUa/PLC/PV/" Version="1.00" PublicationDate="2018-10-15T17:04:59Z" />
   </Models>
   <Extensions>
     <Extension>
@@ -13,13 +13,580 @@
   </Extensions>
   <DefaultView>
     <Module>
-      <GlobalVariables Name="Global PV">
-        <Variable Name="Nowa_zmienna" DataType="i=3" />
-        <Variable Name="Zm_wyj" DataType="i=22">
-          <Variable Name="Zmienna1" DataType="i=3" />
-          <Variable Name="Zmienna2" DataType="i=1" />
+      <ACL>
+        <ACE Role="1" Allow="0x017F" />
+        <ACE Role="2" Allow="0x017F" />
+        <ACE Role="3" Allow="0x017F" />
+      </ACL>
+      <Task Name="AxisCtrl">
+        <Variable Name="_AxisCtrl" DataType="i=22">
+          <Variable Name="Input" DataType="i=22">
+            <Variable Name="Commands" DataType="i=22">
+              <Variable Name="SingleAxis" DataType="i=22">
+                <Variable Name="A1" DataType="i=22">
+                  <Variable Name="PowerOn" DataType="i=1" />
+                  <Variable Name="PowerOff" DataType="i=1" />
+                  <Variable Name="Home" DataType="i=1" />
+                  <Variable Name="MoveVelocity" DataType="i=1" />
+                  <Variable Name="MoveAdditive" DataType="i=1" />
+                  <Variable Name="MoveAbsolute" DataType="i=1" />
+                  <Variable Name="StopOn" DataType="i=1" />
+                  <Variable Name="StopOff" DataType="i=1" />
+                  <Variable Name="JogPositive" DataType="i=1" />
+                  <Variable Name="JogNegative" DataType="i=1" />
+                  <Variable Name="ErrorReset" DataType="i=1" />
+                  <Variable Name="Update" DataType="i=1" />
+                </Variable>
+                <Variable Name="A2" DataType="i=22">
+                  <Variable Name="PowerOn" DataType="i=1" />
+                  <Variable Name="PowerOff" DataType="i=1" />
+                  <Variable Name="Home" DataType="i=1" />
+                  <Variable Name="MoveVelocity" DataType="i=1" />
+                  <Variable Name="MoveAdditive" DataType="i=1" />
+                  <Variable Name="MoveAbsolute" DataType="i=1" />
+                  <Variable Name="StopOn" DataType="i=1" />
+                  <Variable Name="StopOff" DataType="i=1" />
+                  <Variable Name="JogPositive" DataType="i=1" />
+                  <Variable Name="JogNegative" DataType="i=1" />
+                  <Variable Name="ErrorReset" DataType="i=1" />
+                  <Variable Name="Update" DataType="i=1" />
+                </Variable>
+              </Variable>
+              <Variable Name="AllAxis" DataType="i=22">
+                <Variable Name="PowerOn" DataType="i=1" />
+                <Variable Name="PowerOff" DataType="i=1" />
+                <Variable Name="Home" DataType="i=1" />
+                <Variable Name="MoveVelocity" DataType="i=1" />
+                <Variable Name="MoveAdditive" DataType="i=1" />
+                <Variable Name="MoveAbsolute" DataType="i=1" />
+                <Variable Name="StopOn" DataType="i=1" />
+                <Variable Name="StopOff" DataType="i=1" />
+                <Variable Name="Jog" DataType="i=1" />
+                <Variable Name="ErrorReset" DataType="i=1" />
+              </Variable>
+            </Variable>
+            <Variable Name="Parameters" DataType="i=22">
+              <Variable Name="Acceleration" DataType="i=10" />
+              <Variable Name="Deceleration" DataType="i=10" />
+              <Variable Name="Distance" DataType="i=10" />
+              <Variable Name="Velocity" DataType="i=10" />
+              <Variable Name="Position" DataType="i=10" />
+              <Variable Name="JogParams" DataType="i=22">
+                <Variable Name="JogVelocity" DataType="i=10" />
+                <Variable Name="Acceleration" DataType="i=10" />
+                <Variable Name="Deceleration" DataType="i=10" />
+                <Variable Name="UpperLimit" DataType="i=11" />
+                <Variable Name="LowerLimit" DataType="i=11" />
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="Internal" DataType="i=22">
+            <Variable Name="FunctionsBlock" DataType="i=22">
+              <Variable Name="MpAxisBasic_0" DataType="i=22">
+                <Variable Name="MpLink" DataType="i=22">
+                  <Variable Name="Internal" DataType="i=7" ValueRank="1" ArrayDimensions="2" />
+                </Variable>
+                <Variable Name="Enable" DataType="i=1" />
+                <Variable Name="ErrorReset" DataType="i=1" />
+                <Variable Name="Parameters" DataType="i=22">
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="Velocity" DataType="i=10" />
+                  <Variable Name="Position" DataType="i=11" />
+                  <Variable Name="Distance" DataType="i=11" />
+                  <Variable Name="Direction" DataType="i=6" />
+                  <Variable Name="Home" DataType="i=22">
+                    <Variable Name="Mode" DataType="i=6" />
+                    <Variable Name="Position" DataType="i=11" />
+                    <Variable Name="StartVelocity" DataType="i=10" />
+                    <Variable Name="HomingVelocity" DataType="i=10" />
+                    <Variable Name="SensorOffset" DataType="i=11" />
+                    <Variable Name="Acceleration" DataType="i=10" />
+                    <Variable Name="StartDirection" DataType="i=6" />
+                    <Variable Name="HomingDirection" DataType="i=6" />
+                    <Variable Name="NoDirectionChange" DataType="i=6" />
+                    <Variable Name="SwitchEdge" DataType="i=6" />
+                    <Variable Name="ReferencePulse" DataType="i=6" />
+                    <Variable Name="ReferencePulseBlockingDistance" DataType="i=11" />
+                    <Variable Name="TorqueLimit" DataType="i=10" />
+                    <Variable Name="BlockDetectionPositionError" DataType="i=11" />
+                    <Variable Name="PositionErrorStopLimit" DataType="i=11" />
+                    <Variable Name="EndlessPositionDataRef" DataType="i=7" />
+                  </Variable>
+                  <Variable Name="Jog" DataType="i=22">
+                    <Variable Name="Acceleration" DataType="i=10" />
+                    <Variable Name="Deceleration" DataType="i=10" />
+                    <Variable Name="Velocity" DataType="i=10" />
+                    <Variable Name="LowerLimit" DataType="i=11" />
+                    <Variable Name="UpperLimit" DataType="i=11" />
+                  </Variable>
+                  <Variable Name="Stop" DataType="i=22">
+                    <Variable Name="Deceleration" DataType="i=10" />
+                    <Variable Name="StopInPhase" DataType="i=1" />
+                    <Variable Name="Phase" DataType="i=11" />
+                  </Variable>
+                  <Variable Name="StopAfterTrigger" DataType="i=22">
+                    <Variable Name="Enable" DataType="i=1" />
+                    <Variable Name="TriggerDistance" DataType="i=11" />
+                    <Variable Name="ForceTriggerDistance" DataType="i=1" />
+                    <Variable Name="Source" DataType="i=6" />
+                    <Variable Name="Edge" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Torque" DataType="i=22">
+                    <Variable Name="Limit" DataType="i=10" />
+                    <Variable Name="Window" DataType="i=10" />
+                  </Variable>
+                  <Variable Name="CyclicRead" DataType="i=22">
+                    <Variable Name="TorqueMode" DataType="i=6" />
+                    <Variable Name="LagErrorMode" DataType="i=6" />
+                    <Variable Name="MotorTempMode" DataType="i=6" />
+                    <Variable Name="UserChannelMode" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Autotune" DataType="i=22">
+                    <Variable Name="Mode" DataType="i=6" />
+                    <Variable Name="FeedForward" DataType="i=6" />
+                    <Variable Name="Vertical" DataType="i=1" />
+                    <Variable Name="MaxCurrentPercent" DataType="i=10" />
+                    <Variable Name="MaxSpeedPercent" DataType="i=10" />
+                    <Variable Name="MaxDistance" DataType="i=11" />
+                    <Variable Name="ProportionalAmplification" DataType="i=10" />
+                  </Variable>
+                </Variable>
+                <Variable Name="Update" DataType="i=1" />
+                <Variable Name="Axis" DataType="i=7" />
+                <Variable Name="Power" DataType="i=1" />
+                <Variable Name="Home" DataType="i=1" />
+                <Variable Name="MoveVelocity" DataType="i=1" />
+                <Variable Name="MoveAbsolute" DataType="i=1" />
+                <Variable Name="MoveAdditive" DataType="i=1" />
+                <Variable Name="Stop" DataType="i=1" />
+                <Variable Name="JogPositive" DataType="i=1" />
+                <Variable Name="JogNegative" DataType="i=1" />
+                <Variable Name="Autotune" DataType="i=1" />
+                <Variable Name="Simulate" DataType="i=1" />
+                <Variable Name="TorqueLimit" DataType="i=1" />
+                <Variable Name="ReleaseBrake" DataType="i=1" />
+                <Variable Name="Active" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="UpdateDone" DataType="i=1" />
+                <Variable Name="Position" DataType="i=11" />
+                <Variable Name="Velocity" DataType="i=10" />
+                <Variable Name="CommandBusy" DataType="i=1" />
+                <Variable Name="CommandAborted" DataType="i=1" />
+                <Variable Name="PowerOn" DataType="i=1" />
+                <Variable Name="IsHomed" DataType="i=1" />
+                <Variable Name="InVelocity" DataType="i=1" />
+                <Variable Name="InPosition" DataType="i=1" />
+                <Variable Name="MoveActive" DataType="i=1" />
+                <Variable Name="Stopped" DataType="i=1" />
+                <Variable Name="TuningDone" DataType="i=1" />
+                <Variable Name="Simulation" DataType="i=1" />
+                <Variable Name="TorqueLimited" DataType="i=1" />
+                <Variable Name="BrakeReleased" DataType="i=1" />
+                <Variable Name="Info" DataType="i=22">
+                  <Variable Name="AxisInitialized" DataType="i=1" />
+                  <Variable Name="ReadyToPowerOn" DataType="i=1" />
+                  <Variable Name="JogLimited" DataType="i=1" />
+                  <Variable Name="TorqueLimitActive" DataType="i=1" />
+                  <Variable Name="DriveRestarted" DataType="i=1" />
+                  <Variable Name="CyclicRead" DataType="i=22">
+                    <Variable Name="Torque" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="LagError" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="MotorTemperature" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="UserChannelParameterID" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                  </Variable>
+                  <Variable Name="BootState" DataType="i=6" />
+                  <Variable Name="PLCopenState" DataType="i=6" />
+                  <Variable Name="DigitalInputsStatus" DataType="i=22">
+                    <Variable Name="DriveEnable" DataType="i=1" />
+                    <Variable Name="HomeSwitch" DataType="i=1" />
+                    <Variable Name="PositiveLimitSwitch" DataType="i=1" />
+                    <Variable Name="NegativeLimitSwitch" DataType="i=1" />
+                    <Variable Name="Trigger1" DataType="i=1" />
+                    <Variable Name="Trigger2" DataType="i=1" />
+                  </Variable>
+                  <Variable Name="HardwareInfo" DataType="i=22">
+                    <Variable Name="NodeID" DataType="i=5" />
+                    <Variable Name="Channel" DataType="i=3" />
+                    <Variable Name="NetworkType" DataType="i=6" />
+                    <Variable Name="DeviceType" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Diag" DataType="i=22">
+                    <Variable Name="StatusID" DataType="i=22">
+                      <Variable Name="ID" DataType="i=6" />
+                      <Variable Name="Severity" DataType="i=6" />
+                      <Variable Name="Code" DataType="i=5" />
+                    </Variable>
+                    <Variable Name="Internal" DataType="i=22">
+                      <Variable Name="ID" DataType="i=6" />
+                      <Variable Name="Severity" DataType="i=6" />
+                      <Variable Name="Facility" DataType="i=6" />
+                      <Variable Name="Code" DataType="i=5" />
+                    </Variable>
+                    <Variable Name="ExecutingCommand" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="MoveDone" DataType="i=1" />
+                </Variable>
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="pObject" DataType="i=7" />
+                  <Variable Name="State" DataType="i=7" />
+                </Variable>
+              </Variable>
+              <Variable Name="MpAxisBasic_1" DataType="i=22">
+                <Variable Name="MpLink" DataType="i=22">
+                  <Variable Name="Internal" DataType="i=7" ValueRank="1" ArrayDimensions="2" />
+                </Variable>
+                <Variable Name="Enable" DataType="i=1" />
+                <Variable Name="ErrorReset" DataType="i=1" />
+                <Variable Name="Parameters" DataType="i=22">
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="Velocity" DataType="i=10" />
+                  <Variable Name="Position" DataType="i=11" />
+                  <Variable Name="Distance" DataType="i=11" />
+                  <Variable Name="Direction" DataType="i=6" />
+                  <Variable Name="Home" DataType="i=22">
+                    <Variable Name="Mode" DataType="i=6" />
+                    <Variable Name="Position" DataType="i=11" />
+                    <Variable Name="StartVelocity" DataType="i=10" />
+                    <Variable Name="HomingVelocity" DataType="i=10" />
+                    <Variable Name="SensorOffset" DataType="i=11" />
+                    <Variable Name="Acceleration" DataType="i=10" />
+                    <Variable Name="StartDirection" DataType="i=6" />
+                    <Variable Name="HomingDirection" DataType="i=6" />
+                    <Variable Name="NoDirectionChange" DataType="i=6" />
+                    <Variable Name="SwitchEdge" DataType="i=6" />
+                    <Variable Name="ReferencePulse" DataType="i=6" />
+                    <Variable Name="ReferencePulseBlockingDistance" DataType="i=11" />
+                    <Variable Name="TorqueLimit" DataType="i=10" />
+                    <Variable Name="BlockDetectionPositionError" DataType="i=11" />
+                    <Variable Name="PositionErrorStopLimit" DataType="i=11" />
+                    <Variable Name="EndlessPositionDataRef" DataType="i=7" />
+                  </Variable>
+                  <Variable Name="Jog" DataType="i=22">
+                    <Variable Name="Acceleration" DataType="i=10" />
+                    <Variable Name="Deceleration" DataType="i=10" />
+                    <Variable Name="Velocity" DataType="i=10" />
+                    <Variable Name="LowerLimit" DataType="i=11" />
+                    <Variable Name="UpperLimit" DataType="i=11" />
+                  </Variable>
+                  <Variable Name="Stop" DataType="i=22">
+                    <Variable Name="Deceleration" DataType="i=10" />
+                    <Variable Name="StopInPhase" DataType="i=1" />
+                    <Variable Name="Phase" DataType="i=11" />
+                  </Variable>
+                  <Variable Name="StopAfterTrigger" DataType="i=22">
+                    <Variable Name="Enable" DataType="i=1" />
+                    <Variable Name="TriggerDistance" DataType="i=11" />
+                    <Variable Name="ForceTriggerDistance" DataType="i=1" />
+                    <Variable Name="Source" DataType="i=6" />
+                    <Variable Name="Edge" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Torque" DataType="i=22">
+                    <Variable Name="Limit" DataType="i=10" />
+                    <Variable Name="Window" DataType="i=10" />
+                  </Variable>
+                  <Variable Name="CyclicRead" DataType="i=22">
+                    <Variable Name="TorqueMode" DataType="i=6" />
+                    <Variable Name="LagErrorMode" DataType="i=6" />
+                    <Variable Name="MotorTempMode" DataType="i=6" />
+                    <Variable Name="UserChannelMode" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Autotune" DataType="i=22">
+                    <Variable Name="Mode" DataType="i=6" />
+                    <Variable Name="FeedForward" DataType="i=6" />
+                    <Variable Name="Vertical" DataType="i=1" />
+                    <Variable Name="MaxCurrentPercent" DataType="i=10" />
+                    <Variable Name="MaxSpeedPercent" DataType="i=10" />
+                    <Variable Name="MaxDistance" DataType="i=11" />
+                    <Variable Name="ProportionalAmplification" DataType="i=10" />
+                  </Variable>
+                </Variable>
+                <Variable Name="Update" DataType="i=1" />
+                <Variable Name="Axis" DataType="i=7" />
+                <Variable Name="Power" DataType="i=1" />
+                <Variable Name="Home" DataType="i=1" />
+                <Variable Name="MoveVelocity" DataType="i=1" />
+                <Variable Name="MoveAbsolute" DataType="i=1" />
+                <Variable Name="MoveAdditive" DataType="i=1" />
+                <Variable Name="Stop" DataType="i=1" />
+                <Variable Name="JogPositive" DataType="i=1" />
+                <Variable Name="JogNegative" DataType="i=1" />
+                <Variable Name="Autotune" DataType="i=1" />
+                <Variable Name="Simulate" DataType="i=1" />
+                <Variable Name="TorqueLimit" DataType="i=1" />
+                <Variable Name="ReleaseBrake" DataType="i=1" />
+                <Variable Name="Active" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="UpdateDone" DataType="i=1" />
+                <Variable Name="Position" DataType="i=11" />
+                <Variable Name="Velocity" DataType="i=10" />
+                <Variable Name="CommandBusy" DataType="i=1" />
+                <Variable Name="CommandAborted" DataType="i=1" />
+                <Variable Name="PowerOn" DataType="i=1" />
+                <Variable Name="IsHomed" DataType="i=1" />
+                <Variable Name="InVelocity" DataType="i=1" />
+                <Variable Name="InPosition" DataType="i=1" />
+                <Variable Name="MoveActive" DataType="i=1" />
+                <Variable Name="Stopped" DataType="i=1" />
+                <Variable Name="TuningDone" DataType="i=1" />
+                <Variable Name="Simulation" DataType="i=1" />
+                <Variable Name="TorqueLimited" DataType="i=1" />
+                <Variable Name="BrakeReleased" DataType="i=1" />
+                <Variable Name="Info" DataType="i=22">
+                  <Variable Name="AxisInitialized" DataType="i=1" />
+                  <Variable Name="ReadyToPowerOn" DataType="i=1" />
+                  <Variable Name="JogLimited" DataType="i=1" />
+                  <Variable Name="TorqueLimitActive" DataType="i=1" />
+                  <Variable Name="DriveRestarted" DataType="i=1" />
+                  <Variable Name="CyclicRead" DataType="i=22">
+                    <Variable Name="Torque" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="LagError" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="MotorTemperature" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="UserChannelParameterID" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                  </Variable>
+                  <Variable Name="BootState" DataType="i=6" />
+                  <Variable Name="PLCopenState" DataType="i=6" />
+                  <Variable Name="DigitalInputsStatus" DataType="i=22">
+                    <Variable Name="DriveEnable" DataType="i=1" />
+                    <Variable Name="HomeSwitch" DataType="i=1" />
+                    <Variable Name="PositiveLimitSwitch" DataType="i=1" />
+                    <Variable Name="NegativeLimitSwitch" DataType="i=1" />
+                    <Variable Name="Trigger1" DataType="i=1" />
+                    <Variable Name="Trigger2" DataType="i=1" />
+                  </Variable>
+                  <Variable Name="HardwareInfo" DataType="i=22">
+                    <Variable Name="NodeID" DataType="i=5" />
+                    <Variable Name="Channel" DataType="i=3" />
+                    <Variable Name="NetworkType" DataType="i=6" />
+                    <Variable Name="DeviceType" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Diag" DataType="i=22">
+                    <Variable Name="StatusID" DataType="i=22">
+                      <Variable Name="ID" DataType="i=6" />
+                      <Variable Name="Severity" DataType="i=6" />
+                      <Variable Name="Code" DataType="i=5" />
+                    </Variable>
+                    <Variable Name="Internal" DataType="i=22">
+                      <Variable Name="ID" DataType="i=6" />
+                      <Variable Name="Severity" DataType="i=6" />
+                      <Variable Name="Facility" DataType="i=6" />
+                      <Variable Name="Code" DataType="i=5" />
+                    </Variable>
+                    <Variable Name="ExecutingCommand" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="MoveDone" DataType="i=1" />
+                </Variable>
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="pObject" DataType="i=7" />
+                  <Variable Name="State" DataType="i=7" />
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="Functions" DataType="i=22">
+              <Variable Name="MpAxisBasicParType_0" DataType="i=22">
+                <Variable Name="Acceleration" DataType="i=10" />
+                <Variable Name="Deceleration" DataType="i=10" />
+                <Variable Name="Velocity" DataType="i=10" />
+                <Variable Name="Position" DataType="i=11" />
+                <Variable Name="Distance" DataType="i=11" />
+                <Variable Name="Direction" DataType="i=6" />
+                <Variable Name="Home" DataType="i=22">
+                  <Variable Name="Mode" DataType="i=6" />
+                  <Variable Name="Position" DataType="i=11" />
+                  <Variable Name="StartVelocity" DataType="i=10" />
+                  <Variable Name="HomingVelocity" DataType="i=10" />
+                  <Variable Name="SensorOffset" DataType="i=11" />
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="StartDirection" DataType="i=6" />
+                  <Variable Name="HomingDirection" DataType="i=6" />
+                  <Variable Name="NoDirectionChange" DataType="i=6" />
+                  <Variable Name="SwitchEdge" DataType="i=6" />
+                  <Variable Name="ReferencePulse" DataType="i=6" />
+                  <Variable Name="ReferencePulseBlockingDistance" DataType="i=11" />
+                  <Variable Name="TorqueLimit" DataType="i=10" />
+                  <Variable Name="BlockDetectionPositionError" DataType="i=11" />
+                  <Variable Name="PositionErrorStopLimit" DataType="i=11" />
+                  <Variable Name="EndlessPositionDataRef" DataType="i=7" />
+                </Variable>
+                <Variable Name="Jog" DataType="i=22">
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="Velocity" DataType="i=10" />
+                  <Variable Name="LowerLimit" DataType="i=11" />
+                  <Variable Name="UpperLimit" DataType="i=11" />
+                </Variable>
+                <Variable Name="Stop" DataType="i=22">
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="StopInPhase" DataType="i=1" />
+                  <Variable Name="Phase" DataType="i=11" />
+                </Variable>
+                <Variable Name="StopAfterTrigger" DataType="i=22">
+                  <Variable Name="Enable" DataType="i=1" />
+                  <Variable Name="TriggerDistance" DataType="i=11" />
+                  <Variable Name="ForceTriggerDistance" DataType="i=1" />
+                  <Variable Name="Source" DataType="i=6" />
+                  <Variable Name="Edge" DataType="i=6" />
+                </Variable>
+                <Variable Name="Torque" DataType="i=22">
+                  <Variable Name="Limit" DataType="i=10" />
+                  <Variable Name="Window" DataType="i=10" />
+                </Variable>
+                <Variable Name="CyclicRead" DataType="i=22">
+                  <Variable Name="TorqueMode" DataType="i=6" />
+                  <Variable Name="LagErrorMode" DataType="i=6" />
+                  <Variable Name="MotorTempMode" DataType="i=6" />
+                  <Variable Name="UserChannelMode" DataType="i=6" />
+                </Variable>
+                <Variable Name="Autotune" DataType="i=22">
+                  <Variable Name="Mode" DataType="i=6" />
+                  <Variable Name="FeedForward" DataType="i=6" />
+                  <Variable Name="Vertical" DataType="i=1" />
+                  <Variable Name="MaxCurrentPercent" DataType="i=10" />
+                  <Variable Name="MaxSpeedPercent" DataType="i=10" />
+                  <Variable Name="MaxDistance" DataType="i=11" />
+                  <Variable Name="ProportionalAmplification" DataType="i=10" />
+                </Variable>
+              </Variable>
+              <Variable Name="MpAxisBasicParType_1" DataType="i=22">
+                <Variable Name="Acceleration" DataType="i=10" />
+                <Variable Name="Deceleration" DataType="i=10" />
+                <Variable Name="Velocity" DataType="i=10" />
+                <Variable Name="Position" DataType="i=11" />
+                <Variable Name="Distance" DataType="i=11" />
+                <Variable Name="Direction" DataType="i=6" />
+                <Variable Name="Home" DataType="i=22">
+                  <Variable Name="Mode" DataType="i=6" />
+                  <Variable Name="Position" DataType="i=11" />
+                  <Variable Name="StartVelocity" DataType="i=10" />
+                  <Variable Name="HomingVelocity" DataType="i=10" />
+                  <Variable Name="SensorOffset" DataType="i=11" />
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="StartDirection" DataType="i=6" />
+                  <Variable Name="HomingDirection" DataType="i=6" />
+                  <Variable Name="NoDirectionChange" DataType="i=6" />
+                  <Variable Name="SwitchEdge" DataType="i=6" />
+                  <Variable Name="ReferencePulse" DataType="i=6" />
+                  <Variable Name="ReferencePulseBlockingDistance" DataType="i=11" />
+                  <Variable Name="TorqueLimit" DataType="i=10" />
+                  <Variable Name="BlockDetectionPositionError" DataType="i=11" />
+                  <Variable Name="PositionErrorStopLimit" DataType="i=11" />
+                  <Variable Name="EndlessPositionDataRef" DataType="i=7" />
+                </Variable>
+                <Variable Name="Jog" DataType="i=22">
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="Velocity" DataType="i=10" />
+                  <Variable Name="LowerLimit" DataType="i=11" />
+                  <Variable Name="UpperLimit" DataType="i=11" />
+                </Variable>
+                <Variable Name="Stop" DataType="i=22">
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="StopInPhase" DataType="i=1" />
+                  <Variable Name="Phase" DataType="i=11" />
+                </Variable>
+                <Variable Name="StopAfterTrigger" DataType="i=22">
+                  <Variable Name="Enable" DataType="i=1" />
+                  <Variable Name="TriggerDistance" DataType="i=11" />
+                  <Variable Name="ForceTriggerDistance" DataType="i=1" />
+                  <Variable Name="Source" DataType="i=6" />
+                  <Variable Name="Edge" DataType="i=6" />
+                </Variable>
+                <Variable Name="Torque" DataType="i=22">
+                  <Variable Name="Limit" DataType="i=10" />
+                  <Variable Name="Window" DataType="i=10" />
+                </Variable>
+                <Variable Name="CyclicRead" DataType="i=22">
+                  <Variable Name="TorqueMode" DataType="i=6" />
+                  <Variable Name="LagErrorMode" DataType="i=6" />
+                  <Variable Name="MotorTempMode" DataType="i=6" />
+                  <Variable Name="UserChannelMode" DataType="i=6" />
+                </Variable>
+                <Variable Name="Autotune" DataType="i=22">
+                  <Variable Name="Mode" DataType="i=6" />
+                  <Variable Name="FeedForward" DataType="i=6" />
+                  <Variable Name="Vertical" DataType="i=1" />
+                  <Variable Name="MaxCurrentPercent" DataType="i=10" />
+                  <Variable Name="MaxSpeedPercent" DataType="i=10" />
+                  <Variable Name="MaxDistance" DataType="i=11" />
+                  <Variable Name="ProportionalAmplification" DataType="i=10" />
+                </Variable>
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="Output" DataType="i=22">
+            <Variable Name="Status" DataType="i=22">
+              <Variable Name="HomingStateMachine" DataType="i=6" />
+              <Variable Name="AxisStateMachine" DataType="i=6" />
+            </Variable>
+            <Variable Name="States" DataType="i=22">
+              <Variable Name="SingleAxis" DataType="i=22">
+                <Variable Name="Axis_0" DataType="i=22">
+                  <Variable Name="InPosition" DataType="i=1" />
+                  <Variable Name="InVelocity" DataType="i=1" />
+                  <Variable Name="StatusID" DataType="i=6" />
+                  <Variable Name="UpdateDone" DataType="i=1" />
+                  <Variable Name="Active" DataType="i=1" />
+                  <Variable Name="Error" DataType="i=1" />
+                  <Variable Name="Stopped" DataType="i=1" />
+                  <Variable Name="MoveActive" DataType="i=1" />
+                  <Variable Name="IsHomed" DataType="i=1" />
+                  <Variable Name="PowerOn" DataType="i=1" />
+                </Variable>
+                <Variable Name="Axis_1" DataType="i=22">
+                  <Variable Name="InPosition" DataType="i=1" />
+                  <Variable Name="InVelocity" DataType="i=1" />
+                  <Variable Name="StatusID" DataType="i=6" />
+                  <Variable Name="UpdateDone" DataType="i=1" />
+                  <Variable Name="Active" DataType="i=1" />
+                  <Variable Name="Error" DataType="i=1" />
+                  <Variable Name="Stopped" DataType="i=1" />
+                  <Variable Name="MoveActive" DataType="i=1" />
+                  <Variable Name="IsHomed" DataType="i=1" />
+                  <Variable Name="PowerOn" DataType="i=1" />
+                </Variable>
+              </Variable>
+              <Variable Name="AllAxis" DataType="i=22">
+                <Variable Name="InPosition" DataType="i=1" />
+                <Variable Name="InVelocity" DataType="i=1" />
+                <Variable Name="UpdateDone" DataType="i=1" />
+                <Variable Name="Active" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="Stopped" DataType="i=1" />
+                <Variable Name="MoveActive" DataType="i=1" />
+                <Variable Name="IsHomed" DataType="i=1" />
+                <Variable Name="PowerOn" DataType="i=1" />
+              </Variable>
+            </Variable>
+          </Variable>
         </Variable>
-      </GlobalVariables>
+      </Task>
     </Module>
   </DefaultView>
 </UANodeSet>

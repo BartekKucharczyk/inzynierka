@@ -2,13 +2,7 @@
 <?AutomationStudio Version="4.3.7.46 SP"?>
 <ConfigInfo xmlns="http://br-automation.co.at/AS/BuildInfo">
   <TaskClass
-    Name="Cyclic#1" />
-  <TaskClass
-    Name="Cyclic#2" />
-  <TaskClass
-    Name="Cyclic#3" />
-  <TaskClass
-    Name="Cyclic#4">
+    Name="Cyclic#1">
     <Task
       Name="AxisCtrl"
       Disable="false"
@@ -23,9 +17,16 @@
       <InternalFile
         Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\AxisCtrl\Actions.var" />
     </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#2" />
+  <TaskClass
+    Name="Cyclic#3" />
+  <TaskClass
+    Name="Cyclic#4">
     <Task
       Name="Program"
-      Disable="false"
+      Disable="true"
       Source="Source.Code.Package1.Program"
       Language="IEC">
       <InternalFile

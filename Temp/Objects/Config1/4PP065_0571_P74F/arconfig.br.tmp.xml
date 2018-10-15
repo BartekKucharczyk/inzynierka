@@ -31,6 +31,20 @@
     <Parameter ID="BusCycleTrigger" Value="auto" />
     <Parameter ID="OutputCycleTrigger" Value="auto" />
   </Module>
+  <Module ID="IF4.ST1" Hardware="8AC114.60-2">
+    <Parameter ID="Mode" Value="CN" />
+    <Parameter ID="ResponseTimeout" Value="25" Type="UDINT" />
+    <Parameter ID="MuxNetworkSlot" Value="0" Type="UDINT" />
+    <Parameter ID="MinimalInputLatency" Value="off" />
+    <Parameter ID="EPL_Chained" Value="off" />
+    <Parameter ID="FunctionModel" Value="SingleAxis" />
+    <Parameter ID="HardwareModuleName" Value="8V1010.00-2" />
+    <Parameter ID="OrderNumber" Value="8V1010.00-2" />
+  </Module>
+  <Module ID="IF4.ST1.SS1" Hardware="8AC114.60-2c" />
+  <Module ID="IF4.ST1.SS2" Hardware="8AC120.60-1">
+    <Parameter ID="HardwareModuleName" Value="8AC120.60-1" />
+  </Module>
   <Module ID="IF5.SITEMAN" Hardware="SITEMAN">
     <Parameter ID="ActivateSiteMan" Value="1" Type="INT" />
   </Module>

@@ -39,6 +39,10 @@ END_TYPE
 
 TYPE
 	AxisCtrlInpCmdSigAxType : 	STRUCT 
+		A1 : AxisCtrlInpCmdSingAxAType;
+		A2 : AxisCtrlInpCmdSingAxAType;
+	END_STRUCT;
+	AxisCtrlInpCmdSingAxAType : 	STRUCT 
 		PowerOn : BOOL;
 		PowerOff : BOOL;
 		Home : BOOL;
@@ -47,9 +51,10 @@ TYPE
 		MoveAbsolute : BOOL;
 		StopOn : BOOL;
 		StopOff : BOOL;
-		JogNegative : BOOL;
 		JogPositive : BOOL;
+		JogNegative : BOOL;
 		ErrorReset : BOOL;
+		Update : BOOL;
 	END_STRUCT;
 	AxisCtrlInpCmdAllAxType : 	STRUCT 
 		PowerOn : BOOL;
@@ -60,8 +65,7 @@ TYPE
 		MoveAbsolute : BOOL;
 		StopOn : BOOL;
 		StopOff : BOOL;
-		JogNegative : BOOL;
-		JogPositive : BOOL;
+		Jog : BOOL;
 		ErrorReset : BOOL;
 	END_STRUCT;
 	AxisCtrlInpParmsJogPType : 	STRUCT 
@@ -88,9 +92,11 @@ END_TYPE
 TYPE
 	AxisCtrlInternalFubsType : 	STRUCT 
 		MpAxisBasic_0 : MpAxisBasic;
+		MpAxisBasic_1 : MpAxisBasic;
 	END_STRUCT;
 	AxisCtrlInternalFunsType : 	STRUCT 
 		MpAxisBasicParType_0 : MpAxisBasicParType;
+		MpAxisBasicParType_1 : MpAxisBasicParType;
 	END_STRUCT;
 END_TYPE
 
@@ -148,16 +154,11 @@ END_TYPE
 (*Enumerators*)
 
 TYPE
-	HomingEnum : 
-		(
-		PREPARE_HOME,
-		HOMING,
-		EXIT_HOME
-		);
 	AxisCtrlEnum : 
 		(
 		WAIT_FOR_CMD,
-		JOG,
+		JOG_NEGATIVE,
+		JOG_POSITIVE,
 		MOVE_ADDITIVE,
 		MOVE_VELOCITY,
 		MOVE_ABSOLUTE,
@@ -167,6 +168,14 @@ TYPE
 		POWER_OFF,
 		POWER_ON,
 		WAIT_FOR_ACTIVE,
-		ERROR_RESET
+		ERROR,
+		ERROR_RESET,
+		UPDATE
+		);
+	HomingEnum : 
+		(
+		PREPARE_HOME,
+		HOMING,
+		EXIT_HOME
 		);
 END_TYPE
