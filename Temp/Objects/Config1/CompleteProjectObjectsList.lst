@@ -10,7 +10,7 @@
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Includes\AS_TempDecl\Config1\GlobalComponents\MpComponents.var"
     LogicalPath="MpComponents.var"
     Type="File"
-    LastWriteTime="131839002171939842"
+    LastWriteTime="131858212430147584"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Global.typ"
@@ -22,13 +22,13 @@
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Global.var"
     LogicalPath="Global.var"
     Type="File"
-    LastWriteTime="131840901293190797"
+    LastWriteTime="131854841112256285"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Libraries\Package.pkg"
     LogicalPath="Libraries"
     Type="Package"
-    LastWriteTime="131840956156576490" />
+    LastWriteTime="131860042639614383" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Libraries\operator\Binary.lby"
     LogicalPath="Libraries.operator"
@@ -340,59 +340,70 @@
     LastWriteTime="131840956155966021"
     Private="false" />
   <Object
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Libraries\ArEventLog\Binary.lby"
+    LogicalPath="Libraries.ArEventLog"
+    Type="Library"
+    LastWriteTime="131860042639001114" />
+  <Object
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Libraries\ArEventLog\ArEventLog.fun"
+    LogicalPath="Libraries.ArEventLog.ArEventLog.fun"
+    Type="File"
+    LastWriteTime="131860042638711287"
+    Private="false" />
+  <Object
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Libraries\ArEventLog\ArEventLog.typ"
+    LogicalPath="Libraries.ArEventLog.ArEventLog.typ"
+    Type="File"
+    LastWriteTime="131860042638771063"
+    Private="false" />
+  <Object
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Libraries\ArEventLog\ArEventLog.var"
+    LogicalPath="Libraries.ArEventLog.ArEventLog.var"
+    Type="File"
+    LastWriteTime="131860042638851029"
+    Private="false" />
+  <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Package.pkg"
     LogicalPath="Source"
     Type="Package"
-    LastWriteTime="131834737256003339" />
+    LastWriteTime="131843336003854675" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package.pkg"
     LogicalPath="Source.Code"
     Type="Package"
-    LastWriteTime="131838982370604072" />
+    LastWriteTime="131843335880648888" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\Package.pkg"
     LogicalPath="Source.Code.AxisControl"
     Type="Package"
-    LastWriteTime="131838982423187040" />
+    LastWriteTime="131848850894786104" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\IEC.prg"
     LogicalPath="Source.Code.AxisControl.AxisCtrl"
     Type="Program"
-    LastWriteTime="131838986689900646" />
+    LastWriteTime="131848850717282626" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Main.st"
     LogicalPath="Source.Code.AxisControl.AxisCtrl.Main.st"
     Type="File"
-    LastWriteTime="131840877516370227"
+    LastWriteTime="131858209163486208"
     Private="false" />
-  <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Types.typ"
-    LogicalPath="Source.Code.AxisControl.AxisCtrl.Types.typ"
-    Type="File"
-    LastWriteTime="131840937680125270"
-    Private="true" />
-  <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Variables.var"
-    LogicalPath="Source.Code.AxisControl.AxisCtrl.Variables.var"
-    Type="File"
-    LastWriteTime="131839004561617097"
-    Private="true" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Package.pkg"
     LogicalPath="Source.Code.AxisControl.AxisCtrl.Actions"
     Type="Package"
-    LastWriteTime="131840873496305890" />
+    LastWriteTime="131843334066011198" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Initalization.st"
     LogicalPath="Source.Code.AxisControl.AxisCtrl.Actions.Initalization.st"
     Type="File"
-    LastWriteTime="131840954682173621"
+    LastWriteTime="131843352684269613"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\InputCmds.st"
     LogicalPath="Source.Code.AxisControl.AxisCtrl.Actions.InputCmds.st"
     Type="File"
-    LastWriteTime="131840948673993814"
+    LastWriteTime="131843346409453403"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Axis1.st"
@@ -401,16 +412,10 @@
     LastWriteTime="131840949171289886"
     Private="false" />
   <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Axis2.st"
-    LogicalPath="Source.Code.AxisControl.AxisCtrl.Actions.Axis2.st"
-    Type="File"
-    LastWriteTime="131840873963874217"
-    Private="false" />
-  <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\OutputCmds.st"
     LogicalPath="Source.Code.AxisControl.AxisCtrl.Actions.OutputCmds.st"
     Type="File"
-    LastWriteTime="131840884225703586"
+    LastWriteTime="131858211704230364"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Exit.st"
@@ -419,36 +424,48 @@
     LastWriteTime="131838986161056078"
     Private="false" />
   <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package1\Package.pkg"
-    LogicalPath="Source.Code.Package1"
-    Type="Package"
-    LastWriteTime="131838983108724624" />
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\Types.typ"
+    LogicalPath="Source.Code.AxisControl.Types.typ"
+    Type="File"
+    LastWriteTime="131858213080746849"
+    Private="false" />
   <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package1\Program\IEC.prg"
-    LogicalPath="Source.Code.Package1.Program"
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\Variables.var"
+    LogicalPath="Source.Code.AxisControl.Variables.var"
+    Type="File"
+    LastWriteTime="131848850717902288"
+    Private="false" />
+  <Object
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Logger\Package.pkg"
+    LogicalPath="Source.Code.Logger"
+    Type="Package"
+    LastWriteTime="131843347405594413" />
+  <Object
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Logger\LoggerTask\IEC.prg"
+    LogicalPath="Source.Code.Logger.LoggerTask"
     Type="Program"
     LastWriteTime="131838983108604576" />
   <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package1\Program\Main.st"
-    LogicalPath="Source.Code.Package1.Program.Main.st"
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Logger\LoggerTask\Main.st"
+    LogicalPath="Source.Code.Logger.LoggerTask.Main.st"
     Type="File"
-    LastWriteTime="131838983108554608"
+    LastWriteTime="131861692909851121"
     Private="false" />
   <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package1\Program\Types.typ"
-    LogicalPath="Source.Code.Package1.Program.Types.typ"
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Logger\LoggerTask\Types.typ"
+    LogicalPath="Source.Code.Logger.LoggerTask.Types.typ"
     Type="File"
-    LastWriteTime="131838983108574598"
+    LastWriteTime="131861687009667003"
     Private="true" />
   <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package1\Program\Variables.var"
-    LogicalPath="Source.Code.Package1.Program.Variables.var"
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Logger\LoggerTask\Variables.var"
+    LogicalPath="Source.Code.Logger.LoggerTask.Variables.var"
     Type="File"
-    LastWriteTime="131838983108584594"
+    LastWriteTime="131860094283531761"
     Private="true" />
   <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Package2\Package.pkg"
-    LogicalPath="Source.Code.Package2"
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Memory\Package.pkg"
+    LogicalPath="Source.Code.Memory"
     Type="Package"
     LastWriteTime="131838976894096409" />
   <Object
@@ -461,22 +478,6 @@
     LogicalPath="Source.Code.Package4"
     Type="Package"
     LastWriteTime="131838976904967253" />
-  <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Visu\Package.pkg"
-    LogicalPath="Source.Visu"
-    Type="Package"
-    LastWriteTime="131834737469758247" />
-  <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Visu\Visu\Vc.dob"
-    LogicalPath="Source.Visu.Visu"
-    Type="DataObject"
-    LastWriteTime="131834737469448432" />
-  <Object
-    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Visu\Visu\VCObject.vc"
-    LogicalPath="Source.Visu.Visu.VCObject.vc"
-    Type="File"
-    LastWriteTime="131834737468788807"
-    Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\acp10etxen\Ett.dob"
     LogicalPath="acp10etxen"
@@ -524,7 +525,7 @@
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Physical\Config1\Hardware.hw"
     LogicalPath="Config1.Hardware.hw"
     Type="File"
-    LastWriteTime="131840962893765381"
+    LastWriteTime="131861699315906270"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Physical\Config1\Hardware.hwl"
@@ -541,7 +542,7 @@
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Physical\Config1\4PP065_0571_P74F\Cpu.sw"
     LogicalPath="Config1.4PP065_0571_P74F.Cpu.sw"
     Type="File"
-    LastWriteTime="131840961136379263"
+    LastWriteTime="131860096331744765"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Physical\Config1\4PP065_0571_P74F\Cpu.per"
@@ -575,7 +576,7 @@
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Physical\Config1\4PP065_0571_P74F\Connectivity\OpcUA\OpcUaMap.uad"
     LogicalPath="Config1.4PP065_0571_P74F.Connectivity.OpcUA.OpcUaMap.uad"
     Type="File"
-    LastWriteTime="131840966814613776"
+    LastWriteTime="131856384826659770"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Physical\Config1\4PP065_0571_P74F\TextSystem\Package.pkg"
@@ -728,6 +729,12 @@
     LogicalPath="Acp10sim.h"
     Type="File"
     LastWriteTime="131459723500000000"
+    Private="false" />
+  <Object
+    Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Libraries\ArEventLog\SG4\ArEventLog.h"
+    LogicalPath="ArEventLog.h"
+    Type="File"
+    LastWriteTime="131717458960000000"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Libraries\AsIecCon\SG4\AsIecCon.h"

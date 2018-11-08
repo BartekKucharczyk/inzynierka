@@ -7,9 +7,14 @@
       <ACE Role="Zarzad" Write="True" />
     </ACL>
     <Module>
-      <Task Name="AxisCtrl" Enable="True">
-        <Variable Name="_AxisCtrl" Enable="True" AutomaticEnable="True" />
-      </Task>
+      <GlobalVariables Name="Global PV">
+        <Variable Name="_AxisCtrl" Enable="True">
+          <Variable Name="Input" Enable="True" AutomaticEnable="True" />
+          <Variable Name="Internal" Enable="True" AutomaticEnable="True" />
+          <Variable Name="Output" Enable="True" AutomaticEnable="True" />
+        </Variable>
+      </GlobalVariables>
+      <Task Name="AxisCtrl" Enable="True" />
     </Module>
   </DefaultView>
 </OpcUaSource>

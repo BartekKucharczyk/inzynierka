@@ -1,0 +1,3 @@
+VAR
+	_LoggerHandling : LoggerHandlingType;
+END_VAR

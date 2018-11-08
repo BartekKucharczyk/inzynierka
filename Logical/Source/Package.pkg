@@ -3,6 +3,5 @@
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Package">Code</Object>
-    <Object Type="Package">Visu</Object>
   </Objects>
 </Package>

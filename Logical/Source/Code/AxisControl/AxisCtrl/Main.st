@@ -13,9 +13,6 @@ PROGRAM _CYCLIC
 	(* Commands for first axis 		*)
 	Axis1;
 	
-	(* Commands for second axis 	*)
-	Axis2;
-	
 	(* Status and states all axes 	*)
 	Output_commands; 	
 END_PROGRAM

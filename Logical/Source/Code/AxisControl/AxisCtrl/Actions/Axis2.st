@@ -1,4 +1,0 @@
-
-ACTION Axis2: 
-
-END_ACTION

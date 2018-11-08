@@ -26,6 +26,12 @@
     UseAsStatic="false"
     Version="3.18.2" />
   <Library
+    Name="ArEventLog"
+    IsDeployed="true"
+    IsStatic="false"
+    UseAsStatic="false"
+    Version="" />
+  <Library
     Name="AsIecCon"
     IsDeployed="false"
     IsStatic="false"

@@ -4,7 +4,7 @@
     <Uri>http://br-automation.com/OpcUa/PLC/PV/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://br-automation.com/OpcUa/PLC/PV/" Version="1.00" PublicationDate="2018-10-15T17:04:59Z" />
+    <Model ModelUri="http://br-automation.com/OpcUa/PLC/PV/" Version="1.00" PublicationDate="2018-11-04T16:46:16Z" />
   </Models>
   <Extensions>
     <Extension>
@@ -18,7 +18,7 @@
         <ACE Role="2" Allow="0x017F" />
         <ACE Role="3" Allow="0x017F" />
       </ACL>
-      <Task Name="AxisCtrl">
+      <GlobalVariables Name="Global PV">
         <Variable Name="_AxisCtrl" DataType="i=22">
           <Variable Name="Input" DataType="i=22">
             <Variable Name="Commands" DataType="i=22">
@@ -30,6 +30,7 @@
                   <Variable Name="MoveVelocity" DataType="i=1" />
                   <Variable Name="MoveAdditive" DataType="i=1" />
                   <Variable Name="MoveAbsolute" DataType="i=1" />
+                  <Variable Name="MoveTorque" DataType="i=1" />
                   <Variable Name="StopOn" DataType="i=1" />
                   <Variable Name="StopOff" DataType="i=1" />
                   <Variable Name="JogPositive" DataType="i=1" />
@@ -44,6 +45,7 @@
                   <Variable Name="MoveVelocity" DataType="i=1" />
                   <Variable Name="MoveAdditive" DataType="i=1" />
                   <Variable Name="MoveAbsolute" DataType="i=1" />
+                  <Variable Name="MoveTorque" DataType="i=1" />
                   <Variable Name="StopOn" DataType="i=1" />
                   <Variable Name="StopOff" DataType="i=1" />
                   <Variable Name="JogPositive" DataType="i=1" />
@@ -59,6 +61,7 @@
                 <Variable Name="MoveVelocity" DataType="i=1" />
                 <Variable Name="MoveAdditive" DataType="i=1" />
                 <Variable Name="MoveAbsolute" DataType="i=1" />
+                <Variable Name="MoveTorque" DataType="i=1" />
                 <Variable Name="StopOn" DataType="i=1" />
                 <Variable Name="StopOff" DataType="i=1" />
                 <Variable Name="Jog" DataType="i=1" />
@@ -558,6 +561,16 @@
                   <Variable Name="MoveActive" DataType="i=1" />
                   <Variable Name="IsHomed" DataType="i=1" />
                   <Variable Name="PowerOn" DataType="i=1" />
+                  <Variable Name="Params" DataType="i=22">
+                    <Variable Name="PositionAct" DataType="i=11" />
+                    <Variable Name="Deceleration" DataType="i=11" />
+                    <Variable Name="Acceleration" DataType="i=11" />
+                    <Variable Name="Position" DataType="i=11" />
+                    <Variable Name="TorqueLimit" DataType="i=11" />
+                    <Variable Name="Distance" DataType="i=11" />
+                    <Variable Name="Velocity" DataType="i=11" />
+                    <Variable Name="VelocityAct" DataType="i=11" />
+                  </Variable>
                 </Variable>
                 <Variable Name="Axis_1" DataType="i=22">
                   <Variable Name="InPosition" DataType="i=1" />
@@ -570,6 +583,16 @@
                   <Variable Name="MoveActive" DataType="i=1" />
                   <Variable Name="IsHomed" DataType="i=1" />
                   <Variable Name="PowerOn" DataType="i=1" />
+                  <Variable Name="Params" DataType="i=22">
+                    <Variable Name="PositionAct" DataType="i=11" />
+                    <Variable Name="Deceleration" DataType="i=11" />
+                    <Variable Name="Acceleration" DataType="i=11" />
+                    <Variable Name="Position" DataType="i=11" />
+                    <Variable Name="TorqueLimit" DataType="i=11" />
+                    <Variable Name="Distance" DataType="i=11" />
+                    <Variable Name="Velocity" DataType="i=11" />
+                    <Variable Name="VelocityAct" DataType="i=11" />
+                  </Variable>
                 </Variable>
               </Variable>
               <Variable Name="AllAxis" DataType="i=22">
@@ -586,7 +609,8 @@
             </Variable>
           </Variable>
         </Variable>
-      </Task>
+      </GlobalVariables>
+      <Task Name="AxisCtrl" />
     </Module>
   </DefaultView>
 </UANodeSet>

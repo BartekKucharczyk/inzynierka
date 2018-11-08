@@ -3,7 +3,9 @@
 <Transfer xmlns="http://br-automation.co.at/AS/Transfer">
   <OperatingSystem Version="G4.34"/>
   <Hardware Target="SG4"/>
+  <Operation Delete="LoggerTask.br"/>
   <Operation Delete="AxisCtrl.br"/>
+  <Operation Delete="ArEventLog.br"/>
   <Operation Delete="MpAxis.br"/>
   <Operation Delete="asieccon.br"/>
   <Operation Delete="dataobj.br"/>
@@ -46,6 +48,7 @@
   <Operation Download="dataobj.br" Memory="UserROM"/>
   <Operation Download="asieccon.br" Memory="UserROM"/>
   <Operation Download="MpAxis.br" Memory="UserROM"/>
+  <Operation Download="ArEventLog.br" Memory="UserROM"/>
   <Operation Download="TCData.br" Memory="SystemROM"/>
   <Operation Download="udbdef.br" Memory="UserROM"/>
   <Operation Download="User.br" Memory="UserROM"/>
@@ -55,4 +58,5 @@
   <Operation Download="OpcUaMap.br" Memory="UserROM"/>
   <Operation Download="iomap.br" Memory="UserROM"/>
   <Operation Download="AxisCtrl.br" Memory="UserROM"/>
+  <Operation Download="LoggerTask.br" Memory="UserROM"/>
 </Transfer>

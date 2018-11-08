@@ -39,6 +39,16 @@ ACTION Output_commands:
 	
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.StatusID	 := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.StatusID;
 	
+	(* PARAMS *)
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.PositionAct := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.Position;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.VelocityAct := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.Velocity;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.Acceleration := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Acceleration;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.Deceleration := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Deceleration;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.Distance := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Distance;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.Position := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Position;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.TorqueLimit := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Torque.Limit;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.Velocity := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Velocity;
+//	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.
 	
 	(* SECOND AXIS *)
 	_AxisCtrl.Output.States.SingleAxis.Axis_1.Active     := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_1.Active;

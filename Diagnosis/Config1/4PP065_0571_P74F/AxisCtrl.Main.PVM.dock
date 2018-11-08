@@ -1,59 +1,98 @@
 WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=AxisCtrl 
-Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index=305 ASCIIString=0
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index=352 ASCIIString=0
                                     name                                     type force                                                            value level type len format place expand specs
-                               _AxisCtrl                             AxisCtrlType    0 "                                                               *"    0   24    1    0    1    1         
-                                   Input                          AxisCtrlInpType    0 "                                                               *"    1   24    1    0    0    1         
-                                Commands                       AxisCtrlInpCmdType    0 "                                                               *"    2   24    1    0    0    1         
-                              SingleAxis                  AxisCtrlInpCmdSigAxType    0 "                                                               *"    3   24    1    0    0    1         
-                                      A1                AxisCtrlInpCmdSingAxAType    0 "                                                               *"    4   24    1    0    0    1         
+                               _AxisCtrl                             AxisCtrlType    0 "                                                               *"    0   24    1    0    0    1         
+                                   Input                          AxisCtrlInpType    0 "                                                               *"    1   24    1    0    0    0         
+                                Commands                       AxisCtrlInpCmdType    0 "                                                               *"    2   24    1    0    0    0         
+                              SingleAxis                  AxisCtrlInpCmdSigAxType    0 "                                                               *"    3   24    1    0    0    0         
+                                      A1                AxisCtrlInpCmdSingAxAType    0 "                                                               *"    4   24    1    0    0    0         
                                  PowerOn                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                                 PowerOff                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                                     Home                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                             MoveVelocity                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                             MoveAdditive                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                             MoveAbsolute                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                              MoveTorque                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                                   StopOn                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                                  StopOff                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                              JogPositive                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                              JogNegative                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                               ErrorReset                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                                   Update                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                                      A2                AxisCtrlInpCmdSingAxAType    0 "                                                               *"    4   24    1    0    0    0         
+                                 PowerOn                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                                PowerOff                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                                    Home                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                            MoveVelocity                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                            MoveAdditive                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                            MoveAbsolute                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                              MoveTorque                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                                  StopOn                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                                 StopOff                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                             JogPositive                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                             JogNegative                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                              ErrorReset                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                                  Update                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                                 AllAxis                  AxisCtrlInpCmdAllAxType    0 "                                                               *"    3   24    1    0    0    0         
+                                 PowerOn                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                PowerOff                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                    Home                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                            MoveVelocity                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                            MoveAdditive                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                            MoveAbsolute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                              MoveTorque                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                  StopOn                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                 StopOff                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                     Jog                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                              ErrorReset                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                              Parameters                    AxisCtrlInpParamsType    0 "                                                               *"    2   24    1    0    0    0         
+                            Acceleration                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                            Deceleration                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                Distance                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                Velocity                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                Position                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                               JogParams                 AxisCtrlInpParmsJogPType    0 "                                                               *"    3   24    1    0    0    0         
+                             JogVelocity                                     REAL    0 "                                                               *"    4    8    1   10    0    0         
+                            Acceleration                                     REAL    0 "                                                               *"    4    8    1   10    0    0         
+                            Deceleration                                     REAL    0 "                                                               *"    4    8    1   10    0    0         
+                              UpperLimit                                    LREAL    0 "                                                               *"    4   14    1   10    0    0         
+                              LowerLimit                                    LREAL    0 "                                                               *"    4   14    1   10    0    0         
                                 Internal                     AxisCtrlInternalType    0 "                                                               *"    1   24    1    0    0    0         
                           FunctionsBlock                 AxisCtrlInternalFubsType    0 "                                                               *"    2   24    1    0    0    0         
                            MpAxisBasic_0                              MpAxisBasic    0 "                                                               *"    3   24    1    0    0    0         
-                                  MpLink                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
-                                  Enable                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                              ErrorReset                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                              Parameters                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
-                                  Update                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                    Axis                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
-                                   Power                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                    Home                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                            MoveVelocity                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                            MoveAbsolute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                            MoveAdditive                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                    Stop                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                             JogPositive                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                             JogNegative                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                Autotune                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                Simulate                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                             TorqueLimit                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                            ReleaseBrake                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                  Active                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
-                              UpdateDone                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                Position                                    LREAL    0 "                                                               *"    4   14    1   10    0    0         
-                                Velocity                                     REAL    0 "                                                               *"    4    8    1   10    0    0         
-                             CommandBusy                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                          CommandAborted                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                 PowerOn                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                 IsHomed                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                              InVelocity                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                              InPosition                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                              MoveActive                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                                 Stopped                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
-                              TuningDone                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                  MpLink                                    UDINT    0 "                                                        74231656"    4    7    1   10    0    0         
+                                  Enable                                     BOOL    0 "                                                            TRUE"    4    1    1    2    0    0         
+                              ErrorReset                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                              Parameters                                    UDINT    0 "                                                        74232128"    4    7    1   10    0    0         
+                                  Update                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                    Axis                                    UDINT    0 "                                                        74232788"    4    7    1   10    0    0         
+                                   Power                                     BOOL    0 "                                                            TRUE"    4    1    1    2    0    0         
+                                    Home                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                            MoveVelocity                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                            MoveAbsolute                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                            MoveAdditive                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                    Stop                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                             JogPositive                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                             JogNegative                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                Autotune                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                Simulate                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                             TorqueLimit                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                            ReleaseBrake                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                  Active                                     BOOL    0 "                                                            TRUE"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               0"    4    4    1   10    0    0         
+                              UpdateDone                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                Position                                    LREAL    0 "                                                             0.0"    4   14    1   10    0    0         
+                                Velocity                                     REAL    0 "                                                             0.0"    4    8    1   10    0    0         
+                             CommandBusy                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                          CommandAborted                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                 PowerOn                                     BOOL    0 "                                                            TRUE"    4    1    1    2    0    0         
+                                 IsHomed                                     BOOL    0 "                                                            TRUE"    4    1    1    2    0    0         
+                              InVelocity                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                              InPosition                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                              MoveActive                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                 Stopped                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                              TuningDone                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
                               Simulation                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
                            TorqueLimited                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
                            BrakeReleased                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
@@ -352,7 +391,7 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index
                              MaxDistance                                    LREAL    0 "                                                               *"    5   14    1   10    0    0         
                ProportionalAmplification                                     REAL    0 "                                                               *"    5    8    1   10    0    0         
                                   Output                          AxisCtrlOutType    0 "                                                               *"    1   24    1    0    0    1         
-                                  Status                    AxisCtrlOutStatusType    0 "                                                               *"    2   24    1    0    0    1         
+                                  Status                    AxisCtrlOutStatusType    0 "                                                               *"    2   24    1    0    0    0         
                       HomingStateMachine                                     DINT    0 "                                                               0"    3    4    1   10    0    0 e,0,PREP
 
                         AxisStateMachine                                     DINT    0 "                                                               0"    3    4    1   10    0    0 e,0,WAIT
@@ -368,5 +407,14 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index
                                    Error                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                                  Stopped                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
                               MoveActive                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
-                                 IsHomed                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
-                                 PowerOn                                     BOOL    0 "                                                           FALSE"    5    1    1    2    0    0         
+                                 IsHomed                                     BOOL    0 "                                                            TRUE"    5    1    1    2    0    0         
+                                 PowerOn                                     BOOL    0 "                                                            TRUE"    5    1    1    2    0    0         
+                                  Params           AxisCtrlOutStatesSingAxParType    0 "                                                               *"    5   24    1    0    0    1         
+                             PositionAct                                    LREAL    0 "                                                          4078.0"    6   14    1   10    0    0         
+                            Deceleration                                    LREAL    0 "                                                          1000.0"    6   14    1   10    0    0         
+                            Acceleration                                    LREAL    0 "                                                          1000.0"    6   14    1   10    0    0         
+                                Position                                    LREAL    0 "                                                             1.0"    6   14    1   10    0    0         
+                             TorqueLimit                                    LREAL    0 "                                                             0.0"    6   14    1   10    0    0         
+                                Distance                                    LREAL    0 "                                                             1.0"    6   14    1   10    0    0         
+                                Velocity                                    LREAL    0 "                                                           100.0"    6   14    1   10    0    0         
+                             VelocityAct                                    LREAL    0 "                                                             0.0"    6   14    1   10    0    0         

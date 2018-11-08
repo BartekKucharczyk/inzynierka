@@ -20,6 +20,7 @@ $(AS_CPU_PATH)/ashwac.br \
 $(AS_CPU_PATH)/acp10cfg.br \
 $(AS_CPU_PATH)/acp10map.br \
 $(AS_CPU_PATH)/AxisCtrl.br \
+$(AS_CPU_PATH)/LoggerTask.br \
 $(AS_CPU_PATH)/acp10etxen.br \
 $(AS_CPU_PATH)/gAxis01a.br \
 $(AS_CPU_PATH)/gAxis01i.br \
@@ -41,6 +42,7 @@ $(AS_BINARIES_PATH)/$(AS_CONFIGURATION)/$(AS_PLC)/Transfer.lst: \
 	$(AS_CPU_PATH)/acp10cfg.br \
 	$(AS_CPU_PATH)/acp10map.br \
 	$(AS_CPU_PATH)/AxisCtrl.br \
+	$(AS_CPU_PATH)/LoggerTask.br \
 	$(AS_CPU_PATH)/acp10etxen.br \
 	$(AS_CPU_PATH)/gAxis01a.br \
 	$(AS_CPU_PATH)/gAxis01i.br \
@@ -64,6 +66,7 @@ include $(AS_CPU_PATH)/iomap/iomap.mak
 include $(AS_CPU_PATH)/gAxis01i/gAxis01i.mak
 include $(AS_CPU_PATH)/gAxis01a/gAxis01a.mak
 include $(AS_CPU_PATH)/acp10etxen/acp10etxen.mak
+include $(AS_CPU_PATH)/LoggerTask/LoggerTask.mak
 include $(AS_CPU_PATH)/AxisCtrl/AxisCtrl.mak
 include $(AS_CPU_PATH)/acp10map/acp10map.mak
 include $(AS_CPU_PATH)/acp10cfg/acp10cfg.mak
