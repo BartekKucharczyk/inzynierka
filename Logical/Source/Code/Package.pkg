@@ -5,7 +5,5 @@
     <Object Type="Package">AxisControl</Object>
     <Object Type="Package">Logger</Object>
     <Object Type="Package">Memory</Object>
-    <Object Type="Package">Package3</Object>
-    <Object Type="Package">Package4</Object>
   </Objects>
 </Package>

@@ -12,12 +12,14 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+	(*********************  MAIN STEP LIST  *********************)
+	
 		CASE _LoggerHandling.Output.MainStep OF
 		WAIT_FOR_CMD_LH:
 			IF _LoggerHandling.Input.Commands.GET_ID THEN
 				_LoggerHandling.Input.Commands.GET_ID := FALSE;
 				_LoggerHandling.Output.MainStep := GET_ID_LH;
-				
+								
 			ELSIF _LoggerHandling.Input.Commands.CREATE THEN
 				_LoggerHandling.Input.Commands.CREATE := FALSE;
 				_LoggerHandling.Output.MainStep := CREATE_LOGBOOK_LH;
@@ -58,11 +60,16 @@ PROGRAM _CYCLIC
 				_LoggerHandling.Internal.Fubs._ArEventLogGetIdent();
 				_LoggerHandling.Output.States.EndStateCmd := 'CMD_OK: GET ID';
 				_LoggerHandling.Output.MainStep := WAIT_FOR_CMD_LH;
-			ELSIF _LoggerHandling.Internal.Fubs._ArEventLogGetIdent.Error THEN
+			ELSIF _LoggerHandling.Internal.Fubs._ArEventLogGetIdent.Error AND _LoggerHandling.Internal.Fubs._ArEventLogGetIdent.StatusID <> -1070586087 THEN
 				_LoggerHandling.Internal.Fubs._ArEventLogGetIdent.Execute := FALSE;
 				_LoggerHandling.Internal.Fubs._ArEventLogGetIdent();
-				_LoggerHandling.Output.States.EndStateCmd := 'CMD_EREOR: GET ID';
+				_LoggerHandling.Output.States.EndStateCmd := 'CMD_ERROR: GET ID';
 				_LoggerHandling.Output.MainStep := ERROR_LH;
+			ELSIF _LoggerHandling.Internal.Fubs._ArEventLogGetIdent.Error AND _LoggerHandling.Internal.Fubs._ArEventLogGetIdent.StatusID = -1070586087 THEN
+				_LoggerHandling.Internal.Fubs._ArEventLogGetIdent.Execute := FALSE;
+				_LoggerHandling.Internal.Fubs._ArEventLogGetIdent();
+				_LoggerHandling.Output.States.EndStateCmd := 'CMD_ERROR: Logbook entry doesnt exist';
+				_LoggerHandling.Output.MainStep := WAIT_FOR_CMD_LH;
 			END_IF
 			
 		CREATE_LOGBOOK_LH:
@@ -135,11 +142,18 @@ PROGRAM _CYCLIC
 				_LoggerHandling.Output.States.EndStateCmd := 'CMD_OK: GET PREVIOUS RECORD';
 				_LoggerHandling.Output.MainStep := WAIT_FOR_CMD_LH;
 				
-			ELSIF _LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID.Error THEN
+			ELSIF _LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID.Error AND _LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID.StatusID = -1070586096 THEN
+				_LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID.Execute := FALSE;
+				_LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID();
+				_LoggerHandling.Output.States.EndStateCmd := 'CMD_DONE_ALL: GET PREVIOUS RECORD';
+			
+				_LoggerHandling.Output.MainStep := WAIT_FOR_CMD_LH;
+				
+			ELSIF _LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID.Error AND _LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID.StatusID <> -1070586096 THEN
 				_LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID.Execute := FALSE;
 				_LoggerHandling.Internal.Fubs._ArEventLogGetPreviousRecordID();
 				_LoggerHandling.Output.States.EndStateCmd := 'CMD_ERROR: GET PREVIOUS RECORD';
-				_LoggerHandling.Output.MainStep := ERROR_LH;				
+				_LoggerHandling.Output.MainStep := ERROR_LH;	
 			END_IF
 			
 			
@@ -150,7 +164,7 @@ PROGRAM _CYCLIC
 			_LoggerHandling.Internal.Fubs._ArEventLogRead();
 			
 			IF _LoggerHandling.Internal.Fubs._ArEventLogRead.Done THEN
-				_LoggerHandling.Internal.FuncAndParams.EventID := _LoggerHandling.Internal.Fubs._ArEventLogRead.EventID;
+				_LoggerHandling.Internal.FuncAndParams.EventID :=DINT_TO_STRING(_LoggerHandling.Internal.Fubs._ArEventLogRead.EventID);
 				_LoggerHandling.Internal.FuncAndParams.TimeLog := _LoggerHandling.Internal.Fubs._ArEventLogRead.TimeStamp;
 				_LoggerHandling.Internal.Fubs._ArEventLogRead.Execute := FALSE;
 				_LoggerHandling.Internal.Fubs._ArEventLogRead();
@@ -168,13 +182,20 @@ PROGRAM _CYCLIC
 			_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.Execute := TRUE;
 			_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.Ident := _LoggerHandling.Internal.FuncAndParams._ArEventLogIdentType;
 			_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.RecordID := _LoggerHandling.Internal.FuncAndParams._ArEventLogRecordIDType;
-			_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.TextBuffer := ADR(_LoggerHandling.Output.States.LogDesc[_LoggerHandling.Internal.FuncAndParams.i]);
+			_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.LanguageCode := 'en';
+			_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.TextBuffer := ADR(_LoggerHandling.Internal.FuncAndParams.TextBuffor);	
+			_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.TextBufferSize := 1000;
+			_LoggerHandling.Internal.Fubs._ArEventLogReadDescription();
 			
 			IF _LoggerHandling.Internal.Fubs._ArEventLogReadDescription.Done THEN
+				strcat(ADR(_LoggerHandling.Output.States.LogDesc),ADR(_LoggerHandling.Internal.FuncAndParams.TextBuffor));
+				strcat(ADR(_LoggerHandling.Output.States.LogDesc),ADR(','));
+				
 				_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.Execute := FALSE;
 				_LoggerHandling.Internal.Fubs._ArEventLogReadDescription();
 				_LoggerHandling.Output.States.EndStateCmd := 'CMD_OK: READ DESC';
 				_LoggerHandling.Output.MainStep := WAIT_FOR_CMD_LH;
+				
 			ELSIF _LoggerHandling.Internal.Fubs._ArEventLogReadDescription.Error THEN
 				_LoggerHandling.Internal.Fubs._ArEventLogReadDescription.Execute := FALSE;
 				_LoggerHandling.Internal.Fubs._ArEventLogReadDescription();
@@ -189,7 +210,34 @@ PROGRAM _CYCLIC
 			_LoggerHandling.Internal.Fubs._ArEventLogReadErrorNumber();
 			
 			IF _LoggerHandling.Internal.Fubs._ArEventLogReadErrorNumber.Done THEN
-				_LoggerHandling.Output.States.LogList[_LoggerHandling.Internal.FuncAndParams.i] := UDINT_TO_STRING(_LoggerHandling.Internal.Fubs._ArEventLogReadErrorNumber.ErrorNumber);
+				_LoggerHandling.Internal.FuncAndParams.ErrorBuffor := UDINT_TO_STRING(_LoggerHandling.Internal.Fubs._ArEventLogReadErrorNumber.ErrorNumber);
+				strcat(ADR(_LoggerHandling.Output.States.LogList),ADR(_LoggerHandling.Internal.FuncAndParams.ErrorBuffor));
+				strcat(ADR(_LoggerHandling.Output.States.LogList),ADR(','));
+							
+				IF _LoggerHandling.Internal.FuncAndParams.i <> 0 THEN				
+					CASE _LoggerHandling.Internal.Fubs._ArEventLogReadErrorNumber.Severity OF
+					arEVENTLOG_SEVERITY_SUCCESS:
+						strcat(ADR(_LoggerHandling.Output.States.LogSeverity),ADR(',S'));
+					arEVENTLOG_SEVERITY_INFO:
+						strcat(ADR(_LoggerHandling.Output.States.LogSeverity),ADR(',I'));
+					arEVENTLOG_SEVERITY_WARNING:	
+						strcat(ADR(_LoggerHandling.Output.States.LogSeverity),ADR(',W'));
+					arEVENTLOG_SEVERITY_ERROR:
+						strcat(ADR(_LoggerHandling.Output.States.LogSeverity),ADR(',E'));
+					END_CASE;		
+				ELSE
+					CASE _LoggerHandling.Internal.Fubs._ArEventLogReadErrorNumber.Severity OF
+						arEVENTLOG_SEVERITY_SUCCESS:
+							strcat(ADR(_LoggerHandling.Output.States.LogSeverity),ADR('S'));
+						arEVENTLOG_SEVERITY_INFO:
+							strcat(ADR(_LoggerHandling.Output.States.LogSeverity),ADR('I'));
+						arEVENTLOG_SEVERITY_WARNING:	
+							strcat(ADR(_LoggerHandling.Output.States.LogSeverity),ADR('W'));
+						arEVENTLOG_SEVERITY_ERROR:
+							strcat(ADR(_LoggerHandling.Output.States.LogSeverity),ADR('E'));
+					END_CASE;
+				END_IF
+			
 				_LoggerHandling.Internal.Fubs._ArEventLogReadErrorNumber.Execute := FALSE;
 				_LoggerHandling.Internal.Fubs._ArEventLogReadErrorNumber();
 				_LoggerHandling.Output.States.EndStateCmd := 'CMD_OK: READ ERROR NUMBER';
@@ -202,7 +250,26 @@ PROGRAM _CYCLIC
 				_LoggerHandling.Output.MainStep := ERROR_LH;
 				
 			END_IF
+					
+		READ_OBJ_ID_LH:
+			_LoggerHandling.Internal.Fubs._ArEventLogReadObjectID.Execute := TRUE;
+			_LoggerHandling.Internal.Fubs._ArEventLogReadObjectID.Ident := _LoggerHandling.Internal.FuncAndParams._ArEventLogIdentType;
+			_LoggerHandling.Internal.Fubs._ArEventLogReadObjectID.RecordID := _LoggerHandling.Internal.FuncAndParams._ArEventLogRecordIDType;
+			_LoggerHandling.Internal.Fubs._ArEventLogReadObjectID();
 			
+			IF _LoggerHandling.Internal.Fubs._ArEventLogReadObjectID.Done THEN
+				_LoggerHandling.Internal.FuncAndParams.ObjectID := _LoggerHandling.Internal.Fubs._ArEventLogReadObjectID.ObjectID;
+				_LoggerHandling.Internal.Fubs._ArEventLogReadObjectID.Execute := FALSE;
+				_LoggerHandling.Internal.Fubs._ArEventLogReadObjectID();
+				_LoggerHandling.Output.States.EndStateCmd := 'CMD_OK: READ OBJ ID';
+				_LoggerHandling.Output.MainStep := WAIT_FOR_CMD_LH;
+			ELSIF _LoggerHandling.Internal.Fubs._ArEventLogReadObjectID.Error THEN
+				_LoggerHandling.Internal.Fubs._ArEventLogReadObjectID.Execute := FALSE;
+				_LoggerHandling.Internal.Fubs._ArEventLogReadObjectID();
+				_LoggerHandling.Output.States.EndStateCmd := 'CMD_ERROR: READ OBJ ID';
+				_LoggerHandling.Output.MainStep := ERROR_LH;
+			END_IF
+				
 		ADD_TO_INTERNAL_LH:	
 			_LoggerHandling.Internal.FuncAndParams._ArEventLogRecordIDType := _LoggerHandling.Input.Parameters.RecordID;
 			_LoggerHandling.Output.MainStep := WAIT_FOR_CMD_LH;
@@ -218,12 +285,20 @@ PROGRAM _CYCLIC
 			_LoggerHandling.Output.MainStep := WAIT_FOR_CMD_LH;
 		END_CASE;
 	 
+	
+	(*********************  READ LIST CASE  *********************)
+	
 		CASE _LoggerHandling.Output.ReadList OF
 		
 		START_REL:
+			_LoggerHandling.Output.States.EndStateCmd := 'NOT READ';
 			IF _LoggerHandling.Input.Commands.REL_START THEN
 				_LoggerHandling.Input.Commands.REL_START := FALSE;
 				_LoggerHandling.Internal.FuncAndParams.i := 0;
+				_LoggerHandling.Output.States.LogDesc := '';
+				_LoggerHandling.Output.States.LogList := '';
+				_LoggerHandling.Output.States.LogSeverity := '';
+				_LoggerHandling.Output.States.LogTime := '';
 				_LoggerHandling.Output.ReadList := INIT_REL;
 			END_IF
 		INIT_REL:
@@ -233,7 +308,9 @@ PROGRAM _CYCLIC
 		GET_LATEST_REL:
 			IF _LoggerHandling.Output.MainStep = ERROR_LH THEN
 				_LoggerHandling.Output.ReadList := START_REL;
-				
+			
+			ELSIF _LoggerHandling.Output.States.EndStateCmd = 'CMD_ERROR: Logbook entry doesnt exist' THEN
+				_LoggerHandling.Output.ReadList := END_REL;
 			ELSIF _LoggerHandling.Output.States.EndStateCmd = 'CMD_OK: GET ID' THEN
 				_LoggerHandling.Input.Commands.GET_LATEST_RECORD := TRUE;
 				_LoggerHandling.Output.ReadList := READ_REL;
@@ -245,6 +322,9 @@ PROGRAM _CYCLIC
 			ELSIF _LoggerHandling.Output.States.EndStateCmd = 'CMD_OK: GET LATEST RECORD ID' OR _LoggerHandling.Output.States.EndStateCmd = 'CMD_OK: GET PREVIOUS RECORD'  THEN
 				_LoggerHandling.Input.Commands.READ := TRUE;
 				_LoggerHandling.Output.ReadList := WAIT_FOR_EXE_REL;
+				
+			ELSIF _LoggerHandling.Output.States.EndStateCmd = 'CMD_DONE_ALL: GET PREVIOUS RECORD' THEN
+				_LoggerHandling.Output.ReadList := END_REL;
 			END_IF			
 			
 		WAIT_FOR_EXE_REL:
@@ -253,8 +333,10 @@ PROGRAM _CYCLIC
 				
 			ELSIF _LoggerHandling.Output.States.EndStateCmd = 'CMD_OK: READ' THEN
 				
-				IF _LoggerHandling.Internal.FuncAndParams.EventID <> 0 THEN
-					_LoggerHandling.Output.States.LogList[_LoggerHandling.Internal.FuncAndParams.i] := DINT_TO_STRING(_LoggerHandling.Internal.FuncAndParams.EventID);
+				IF _LoggerHandling.Internal.FuncAndParams.EventID <> '0' THEN
+					
+					strcat(ADR(_LoggerHandling.Output.States.LogList),ADR(_LoggerHandling.Internal.FuncAndParams.EventID));
+					strcat(ADR(_LoggerHandling.Output.States.LogList),ADR(','));
 					_LoggerHandling.Input.Commands.READ_DESC := TRUE;
 					_LoggerHandling.Output.ReadList := WAIT_FOR_DESC_REL;
 				ELSE
@@ -281,13 +363,19 @@ PROGRAM _CYCLIC
 			END_IF
 		
 		CONVERSION_REL:
-			_LoggerHandling.Output.States.LogTime[0] := 
-			(* Do roku 1970 dodaæ sekundy i nanosekundy - powinno wyjœæ to samo co w loggerze w kolumnie time. *)
+			_LoggerHandling.Internal.FuncAndParams.ConvTime := DT_TO_STRING(DATE_TO_DT(UDINT_TO_DATE(_LoggerHandling.Internal.FuncAndParams.TimeLog.sec + 3600 +(_LoggerHandling.Internal.FuncAndParams.TimeLog.nsec/1000000000))));
+		
+			strcat(ADR(_LoggerHandling.Output.States.LogTime),ADR(_LoggerHandling.Internal.FuncAndParams.ConvTime));
+			strcat(ADR(_LoggerHandling.Output.States.LogTime),ADR(','));
+			
+			_LoggerHandling.Output.ReadList := NEXT_REL;
+			
 		NEXT_REL:
 			
 			_LoggerHandling.Internal.FuncAndParams.i := _LoggerHandling.Internal.FuncAndParams.i + 1;
 			
 			IF _LoggerHandling.Internal.FuncAndParams.i >= 50 THEN
+				_LoggerHandling.Output.States.EndStateCmd := 'CMD_OK: READING_ALL_LOG_DONE';
 				_LoggerHandling.Output.ReadList := END_REL;
 			ELSE 
 				_LoggerHandling.Input.Commands.GET_PREVIOUS := TRUE;
@@ -295,8 +383,10 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		END_REL:
-	
-		
+			IF _LoggerHandling.Input.Commands.ACK THEN
+				_LoggerHandling.Input.Commands.ACK := FALSE;
+				_LoggerHandling.Output.ReadList := START_REL;
+			END_IF
 		END_CASE;
 		
 	

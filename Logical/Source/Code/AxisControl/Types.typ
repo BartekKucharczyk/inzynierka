@@ -30,7 +30,9 @@ TYPE
 		Deceleration : REAL;
 		Distance : REAL;
 		Velocity : REAL;
+		TorqueLimit : REAL;
 		Position : REAL;
+		TorqueWindow : REAL;
 		JogParams : AxisCtrlInpParmsJogPType;
 	END_STRUCT;
 END_TYPE
@@ -40,7 +42,6 @@ END_TYPE
 TYPE
 	AxisCtrlInpCmdSigAxType : 	STRUCT 
 		A1 : AxisCtrlInpCmdSingAxAType;
-		A2 : AxisCtrlInpCmdSingAxAType;
 	END_STRUCT;
 	AxisCtrlInpCmdSingAxAType : 	STRUCT 
 		PowerOn : BOOL;
@@ -48,6 +49,7 @@ TYPE
 		Home : BOOL;
 		MoveVelocity : BOOL;
 		MoveAdditive : BOOL;
+		MoveOff : BOOL;
 		MoveAbsolute : BOOL;
 		MoveTorque : BOOL;
 		StopOn : BOOL;
@@ -93,12 +95,12 @@ END_TYPE
 
 TYPE
 	AxisCtrlInternalFubsType : 	STRUCT 
+		TorqueControl : MpAxisCyclicSet;
 		MpAxisBasic_0 : MpAxisBasic;
-		MpAxisBasic_1 : MpAxisBasic;
 	END_STRUCT;
 	AxisCtrlInternalFunsType : 	STRUCT 
+		MpTorqueParams : MpAxisCyclicSetParType;
 		MpAxisBasicParType_0 : MpAxisBasicParType;
-		MpAxisBasicParType_1 : MpAxisBasicParType;
 	END_STRUCT;
 END_TYPE
 
@@ -117,6 +119,7 @@ TYPE
 	AxisCtrlOutStatesType : 	STRUCT 
 		SingleAxis : AxisCtrlOutStatesSingType;
 		AllAxis : AxisCtrlOutStatesAllType;
+		Diagnosis : AxisCtrlOutStatesDiagType;
 	END_STRUCT;
 END_TYPE
 
@@ -161,6 +164,17 @@ TYPE
 		Velocity : LREAL;
 		VelocityAct : LREAL;
 	END_STRUCT;
+	AxisCtrlOutStatesDiagType : 	STRUCT 
+		A0 : AxisCtrlOutStatesDiagAxType;
+	END_STRUCT;
+	AxisCtrlOutStatesDiagAxType : 	STRUCT 
+		DriveRestarted : BOOL;
+		TorqueLimitActive : BOOL;
+		JogLimited : BOOL;
+		AxisInitialized : BOOL;
+		ReadyToOPowerOn : BOOL;
+		PLCopenStateAx0 : STRING[80];
+	END_STRUCT;
 END_TYPE
 
 (**)
@@ -184,7 +198,8 @@ TYPE
 		WAIT_FOR_ACTIVE,
 		ERROR,
 		ERROR_RESET,
-		UPDATE
+		UPDATE,
+		MOVE_OFF
 		);
 	HomingEnum : 
 		(

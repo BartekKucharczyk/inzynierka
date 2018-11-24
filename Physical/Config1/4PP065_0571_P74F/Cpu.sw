@@ -4,14 +4,16 @@
   <TaskClass Name="Cyclic#1">
     <Task Name="AxisCtrl" Source="Source.Code.AxisControl.AxisCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
-  <TaskClass Name="Cyclic#2" />
-  <TaskClass Name="Cyclic#3" />
-  <TaskClass Name="Cyclic#4" />
-  <TaskClass Name="Cyclic#5">
+  <TaskClass Name="Cyclic#2">
     <Task Name="LoggerTask" Source="Source.Code.Logger.LoggerTask.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
+  <TaskClass Name="Cyclic#3" />
+  <TaskClass Name="Cyclic#4" />
+  <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
-  <TaskClass Name="Cyclic#7" />
+  <TaskClass Name="Cyclic#7">
+    <Task Name="MemTask" Source="Source.Code.Memory.MemTask.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#8" />
   <DataObjects>
     <DataObject Name="Acp10sys" Source="" Memory="UserROM" Language="Binary" />
@@ -85,5 +87,6 @@
     <LibraryObject Name="astime" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="vcresman" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="asstring" Source="Libraries.asstring.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

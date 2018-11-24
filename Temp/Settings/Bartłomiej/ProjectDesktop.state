@@ -1,3 +1,0 @@
-<?xml version="1.0"?>
-<?AutomationStudio Version=3.0?>
-<Project xmlns="http://br-automation.co.at/AS/Project"><Active ID="0"/><Configuration Name="Config1"/><ConfigurationFiles xmlns="" ConfigurationName="Config1"><ConfigurationFile Placement="\Logical\Source\Code\Logger\LoggerTask\Types.typ,Source.Code.Logger.LoggerTask,1,44,0,1,-1,-1,-1,-1,996,24,1552,506"/><ConfigurationFile Placement="\Diagnosis\Config1\4PP065_0571_P74F\$CPU.arl,,0,44,0,1,-1,-1,-1,-1,996,24,1552,506"/><ConfigurationFile Placement="\Diagnosis\Config1\4PP065_0571_P74F\LoggerTask.pvm,,4,44,0,1,-1,-1,-1,-1,2,24,989,506"/><ConfigurationFile Placement="\Logical\Source\Code\Logger\LoggerTask\Main.st,Source.Code.Logger.LoggerTask,2,44,0,1,-1,-1,-1,-1,2,24,989,506"/></ConfigurationFiles></Project>

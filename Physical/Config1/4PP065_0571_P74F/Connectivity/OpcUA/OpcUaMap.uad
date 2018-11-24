@@ -15,6 +15,18 @@
         </Variable>
       </GlobalVariables>
       <Task Name="AxisCtrl" Enable="True" />
+      <Task Name="LoggerTask" Enable="True">
+        <Variable Name="_LoggerHandling" Enable="True" AutomaticEnable="True" />
+      </Task>
+      <Task Name="MemTask" Enable="True">
+        <Variable Name="_MemTask" Enable="True" AutomaticEnable="True">
+          <Variable Name="Input">
+            <Variable Name="Cmd">
+              <Variable Name="Start" MinimumSamplingInterval="Timer1" Historizing="True" HistoryBufferSize="500" HistorySamplingInterval="Timer2" />
+            </Variable>
+          </Variable>
+        </Variable>
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

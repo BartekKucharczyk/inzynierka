@@ -1,0 +1,3 @@
+VAR
+	_MemTask : MemTaskType;
+END_VAR

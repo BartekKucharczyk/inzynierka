@@ -8,7 +8,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	(* Common commands for all axes *)
-	Input_commands;
+//	Input_commands;
 	
 	(* Commands for first axis 		*)
 	Axis1;

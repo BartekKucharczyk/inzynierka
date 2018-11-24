@@ -24,6 +24,7 @@ TYPE
 		READ : BOOL;
 		GET_LATEST_RECORD : BOOL;
 		GET_PREVIOUS : BOOL;
+		ACK : BOOL;
 		REL_START : BOOL;
 	END_STRUCT;
 	LoggerHandlingInpParsType : 	STRUCT 
@@ -52,12 +53,17 @@ TYPE
 		_ArEventLogGetPreviousRecordID : ArEventLogGetPreviousRecordID;
 		_ArEventLogGetLatestRecordID : ArEventLogGetLatestRecordID;
 		_ArEventLogRead : ArEventLogRead;
+		_ArEventLogReadObjectID : ArEventLogReadObjectID;
 	END_STRUCT;
 	LoggerHandlingInterFuncAParsType : 	STRUCT 
 		_ArEventLogIdentType : ArEventLogIdentType;
 		_ArEventLogRecordIDType : ArEventLogRecordIDType;
-		EventID : DINT;
+		EventID : STRING[20];
+		ConvTime : STRING[30];
 		TimeLog : ArEventLogTimeStampType;
+		TextBuffor : STRING[80];
+		ErrorBuffor : STRING[30];
+		ObjectID : STRING[36];
 		i : UINT;
 	END_STRUCT;
 END_TYPE
@@ -71,9 +77,10 @@ TYPE
 		States : LoggerHandlingOutStatesType;
 	END_STRUCT;
 	LoggerHandlingOutStatesType : 	STRUCT 
-		LogList : ARRAY[0..49]OF STRING[200];
-		LogDesc : ARRAY[0..49]OF STRING[200];
-		LogTime : ARRAY[0..49]OF STRING[80];
+		LogList : STRING[450];
+		LogDesc : STRING[1500];
+		LogTime : STRING[1150];
+		LogSeverity : STRING[150];
 		EndStateCmd : STRING[80];
 	END_STRUCT;
 END_TYPE
@@ -107,6 +114,7 @@ TYPE
 		ERROR_RESET_LH,
 		GET_LATEST_RECORD_ID_LH,
 		GET_PREVIOUS_RECORD_LH,
-		ADD_TO_INTERNAL_LH
+		ADD_TO_INTERNAL_LH,
+		READ_OBJ_ID_LH
 		);
 END_TYPE
