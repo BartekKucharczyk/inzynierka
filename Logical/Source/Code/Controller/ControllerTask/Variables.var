@@ -1,0 +1,3 @@
+VAR
+	_Controller : ControllerType;
+END_VAR

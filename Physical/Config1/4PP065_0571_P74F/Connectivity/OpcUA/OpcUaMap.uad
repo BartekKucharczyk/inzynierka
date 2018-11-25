@@ -15,8 +15,8 @@
         </Variable>
       </GlobalVariables>
       <Task Name="AxisCtrl" Enable="True" />
-      <Task Name="LoggerTask" Enable="True">
-        <Variable Name="_LoggerHandling" Enable="True" AutomaticEnable="True" />
+      <Task Name="Controller" Enable="True">
+        <Variable Name="_Controller" Enable="True" AutomaticEnable="True" />
       </Task>
       <Task Name="MemTask" Enable="True">
         <Variable Name="_MemTask" Enable="True" AutomaticEnable="True">
@@ -26,6 +26,9 @@
             </Variable>
           </Variable>
         </Variable>
+      </Task>
+      <Task Name="LoggerTask" Enable="True">
+        <Variable Name="_LoggerHandling" Enable="True" AutomaticEnable="True" />
       </Task>
     </Module>
   </DefaultView>

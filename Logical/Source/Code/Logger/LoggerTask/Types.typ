@@ -29,7 +29,7 @@ TYPE
 	END_STRUCT;
 	LoggerHandlingInpParsType : 	STRUCT 
 		NumberOfLogbook : USINT;
-		NumberOfLog : USINT;
+		NumberOfLog : INT;
 		IDentLogToDelete : ArEventLogIdentType;
 		NameOfNewLogbook : STRING[80];
 		RecordID : UDINT;
@@ -78,10 +78,12 @@ TYPE
 	END_STRUCT;
 	LoggerHandlingOutStatesType : 	STRUCT 
 		LogList : STRING[450];
-		LogDesc : STRING[1500];
+		LogDesc : STRING[1800];
 		LogTime : STRING[1150];
 		LogSeverity : STRING[150];
 		EndStateCmd : STRING[80];
+		FaultNumber : DINT;
+		NumberOfFault : USINT;
 	END_STRUCT;
 END_TYPE
 
@@ -99,6 +101,7 @@ TYPE
 		WAIT_FOR_ERROR_NUMBER_REL,
 		CONVERSION_REL,
 		NEXT_REL,
+		ERROR_REL,
 		END_REL
 		);
 	MainStepEnum : 
