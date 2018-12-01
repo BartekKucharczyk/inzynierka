@@ -11,12 +11,25 @@
         <Variable Name="_AxisCtrl" Enable="True">
           <Variable Name="Input" Enable="True" AutomaticEnable="True" />
           <Variable Name="Internal" Enable="True" AutomaticEnable="True" />
-          <Variable Name="Output" Enable="True" AutomaticEnable="True" />
+          <Variable Name="Output" Enable="True" AutomaticEnable="True">
+            <Variable Name="States">
+              <Variable Name="SingleAxis">
+                <Variable Name="Axis_0">
+                  <Variable Name="Params">
+                    <Variable Name="PositionAct" HistoryBufferSize="1000" HistorySamplingInterval="Timer6" />
+                  </Variable>
+                </Variable>
+              </Variable>
+            </Variable>
+          </Variable>
         </Variable>
       </GlobalVariables>
       <Task Name="AxisCtrl" Enable="True" />
       <Task Name="Controller" Enable="True">
         <Variable Name="_Controller" Enable="True" AutomaticEnable="True" />
+      </Task>
+      <Task Name="ChartTask" Enable="True">
+        <Variable Name="_Trace" Enable="True" AutomaticEnable="True" />
       </Task>
       <Task Name="MemTask" Enable="True">
         <Variable Name="_MemTask" Enable="True" AutomaticEnable="True">

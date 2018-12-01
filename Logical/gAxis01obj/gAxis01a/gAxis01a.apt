@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=?>
+<?AutomationStudio Version=4.3.7.46 SP?>
 <AcoposParameterTable>
-  <Root Name="Parameters" />
+  <Root Name="Parameters">
+    <Parameter Name="PCTRL_V_ACT" ID="92" Value="0" Unit="Units/s" Description="CTRL Position controller: Actual speed" />
+    <Parameter Name="SCTRL_SPEED_ACT" ID="251" Value="0" Unit="1/s" Description="CTRL Speed controller: Actual speed" />
+    <Parameter Name="ENCOD_POS_ACT" ID="245" Value="5" Unit="Incr" Description="Encoder1: Actual position per revolution" />
+  </Root>
 </AcoposParameterTable>

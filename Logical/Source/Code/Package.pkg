@@ -6,5 +6,6 @@
     <Object Type="Package">Logger</Object>
     <Object Type="Package">Memory</Object>
     <Object Type="Package">Controller</Object>
+    <Object Type="Package">Chart</Object>
   </Objects>
 </Package>
