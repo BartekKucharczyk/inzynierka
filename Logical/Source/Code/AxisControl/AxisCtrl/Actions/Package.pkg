@@ -7,5 +7,6 @@
     <Object Type="File">Axis1.st</Object>
     <Object Type="File">OutputCmds.st</Object>
     <Object Type="File">Exit.st</Object>
+    <Object Type="File">ErrorHandling.st</Object>
   </Objects>
 </Package>

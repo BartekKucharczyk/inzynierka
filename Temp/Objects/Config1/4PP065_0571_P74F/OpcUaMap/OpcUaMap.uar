@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:ua="http://br-automation.com/OpcUa/configuration/NodeSet.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
+  <NamespaceUris>
+    <Uri>http://br-automation.com/OpcUa/PLC/PV/</Uri>
+  </NamespaceUris>
+  <Models>
+    <Model ModelUri="http://br-automation.com/OpcUa/PLC/PV/" Version="1.00" PublicationDate="2018-12-04T18:37:44Z" />
+  </Models>
+  <Extensions>
+    <Extension>
+      <ua:ModelInfo Tool="AutomationStudio" Version="4.3.7.46 SP" />
+    </Extension>
+  </Extensions>
+  <DefaultView>
+    <Module>
+      <ACL>
+        <ACE Role="1" Allow="0x017F" />
+        <ACE Role="2" Allow="0x017F" />
+        <ACE Role="3" Allow="0x017F" />
+      </ACL>
+      <Task Name="AxisCtrl">
+        <Variable Name="_AxisCtrl" DataType="i=22">
+          <Variable Name="Input" DataType="i=22">
+            <Variable Name="Commands" DataType="i=22">
+              <Variable Name="SingleAxis" DataType="i=22">
+                <Variable Name="A1" DataType="i=22">
+                  <Variable Name="PowerOn" DataType="i=1" />
+                  <Variable Name="PowerOff" DataType="i=1" />
+                  <Variable Name="Home" DataType="i=1" />
+                  <Variable Name="MoveVelocity" DataType="i=1" />
+                  <Variable Name="MoveAdditive" DataType="i=1" />
+                  <Variable Name="MoveOff" DataType="i=1" />
+                  <Variable Name="MoveAbsolute" DataType="i=1" />
+                  <Variable Name="MoveTorque" DataType="i=1" />
+                  <Variable Name="StopOn" DataType="i=1" />
+                  <Variable Name="StopOff" DataType="i=1" />
+                  <Variable Name="JogPositive" DataType="i=1" />
+                  <Variable Name="JogNegative" DataType="i=1" />
+                  <Variable Name="ErrorReset" DataType="i=1" />
+                  <Variable Name="Autotune" DataType="i=1" />
+                  <Variable Name="ReleaseBreak" DataType="i=1" />
+                  <Variable Name="TorqControl" DataType="i=22">
+                    <Variable Name="ErrorReset" DataType="i=1" />
+                    <Variable Name="CyclicTorqueOff" DataType="i=1" />
+                    <Variable Name="CyclicTorqueOn" DataType="i=1" />
+                    <Variable Name="CyclicVelocityOn" DataType="i=1" />
+                    <Variable Name="CyclicVelocityOff" DataType="i=1" />
+                    <Variable Name="CyclicPositionOff" DataType="i=1" />
+                    <Variable Name="CyclicPositionOn" DataType="i=1" />
+                    <Variable Name="Update" DataType="i=1" />
+                  </Variable>
+                  <Variable Name="Update" DataType="i=1" />
+                </Variable>
+              </Variable>
+              <Variable Name="AllAxis" DataType="i=22">
+                <Variable Name="PowerOn" DataType="i=1" />
+                <Variable Name="PowerOff" DataType="i=1" />
+                <Variable Name="Home" DataType="i=1" />
+                <Variable Name="MoveVelocity" DataType="i=1" />
+                <Variable Name="MoveAdditive" DataType="i=1" />
+                <Variable Name="MoveAbsolute" DataType="i=1" />
+                <Variable Name="MoveTorque" DataType="i=1" />
+                <Variable Name="StopOn" DataType="i=1" />
+                <Variable Name="StopOff" DataType="i=1" />
+                <Variable Name="Jog" DataType="i=1" />
+                <Variable Name="ErrorReset" DataType="i=1" />
+              </Variable>
+            </Variable>
+            <Variable Name="Parameters" DataType="i=22">
+              <Variable Name="Acceleration" DataType="i=10" />
+              <Variable Name="Deceleration" DataType="i=10" />
+              <Variable Name="Distance" DataType="i=10" />
+              <Variable Name="Velocity" DataType="i=10" />
+              <Variable Name="TorqueLimit" DataType="i=10" />
+              <Variable Name="Position" DataType="i=10" />
+              <Variable Name="TorqueWindow" DataType="i=10" />
+              <Variable Name="JogParams" DataType="i=22">
+                <Variable Name="JogVelocity" DataType="i=10" />
+                <Variable Name="Acceleration" DataType="i=10" />
+                <Variable Name="Deceleration" DataType="i=10" />
+                <Variable Name="UpperLimit" DataType="i=11" />
+                <Variable Name="LowerLimit" DataType="i=11" />
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="Internal" DataType="i=22">
+            <Variable Name="FunctionsBlock" DataType="i=22">
+              <Variable Name="TorqueControl" DataType="i=22">
+                <Variable Name="MpLink" DataType="i=22">
+                  <Variable Name="Internal" DataType="i=7" ValueRank="1" ArrayDimensions="2" />
+                </Variable>
+                <Variable Name="Enable" DataType="i=1" />
+                <Variable Name="ErrorReset" DataType="i=1" />
+                <Variable Name="Parameters" DataType="i=22">
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="PositionModeMaxVelocity" DataType="i=10" />
+                  <Variable Name="VelocityModeDirection" DataType="i=6" />
+                  <Variable Name="PositionParID" DataType="i=5" />
+                  <Variable Name="VelocityParID" DataType="i=5" />
+                  <Variable Name="TorqueSetup" DataType="i=22">
+                    <Variable Name="Mode" DataType="i=6" />
+                    <Variable Name="SctrlKv" DataType="i=10" />
+                    <Variable Name="SctrlTn" DataType="i=10" />
+                    <Variable Name="RampedControl" DataType="i=22">
+                      <Variable Name="TorqueRamp" DataType="i=10" />
+                      <Variable Name="PositiveMaxVelocity" DataType="i=10" />
+                      <Variable Name="NegativeMaxVelocity" DataType="i=10" />
+                      <Variable Name="DisableVelocityLimits" DataType="i=1" />
+                      <Variable Name="CompensateVelocityLimits" DataType="i=1" />
+                      <Variable Name="EnableTimeLimit" DataType="i=1" />
+                      <Variable Name="TimeLimit" DataType="i=10" />
+                      <Variable Name="StartParID" DataType="i=5" />
+                      <Variable Name="TorqueParID" DataType="i=5" />
+                    </Variable>
+                  </Variable>
+                </Variable>
+                <Variable Name="Update" DataType="i=1" />
+                <Variable Name="Position" DataType="i=11" />
+                <Variable Name="Velocity" DataType="i=11" />
+                <Variable Name="Torque" DataType="i=11" />
+                <Variable Name="CyclicPosition" DataType="i=1" />
+                <Variable Name="CyclicVelocity" DataType="i=1" />
+                <Variable Name="CyclicTorque" DataType="i=1" />
+                <Variable Name="Active" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="UpdateDone" DataType="i=1" />
+                <Variable Name="CommandBusy" DataType="i=1" />
+                <Variable Name="CommandAborted" DataType="i=1" />
+                <Variable Name="CyclicSetActive" DataType="i=1" />
+                <Variable Name="Info" DataType="i=22">
+                  <Variable Name="AxisReady" DataType="i=1" />
+                  <Variable Name="PositionReceivedParID" DataType="i=5" />
+                  <Variable Name="VelocityReceivedParID" DataType="i=5" />
+                  <Variable Name="SlavePosition" DataType="i=11" />
+                  <Variable Name="SlaveVelocity" DataType="i=10" />
+                  <Variable Name="Diag" DataType="i=22">
+                    <Variable Name="StatusID" DataType="i=22">
+                      <Variable Name="ID" DataType="i=6" />
+                      <Variable Name="Severity" DataType="i=6" />
+                      <Variable Name="Code" DataType="i=5" />
+                    </Variable>
+                    <Variable Name="Internal" DataType="i=22">
+                      <Variable Name="ID" DataType="i=6" />
+                      <Variable Name="Severity" DataType="i=6" />
+                      <Variable Name="Facility" DataType="i=6" />
+                      <Variable Name="Code" DataType="i=5" />
+                    </Variable>
+                    <Variable Name="ExecutingCommand" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="TorqueControl" DataType="i=22">
+                    <Variable Name="InTorque" DataType="i=1" />
+                    <Variable Name="WaitingForStart" DataType="i=1" />
+                    <Variable Name="VelocityLimitActive" DataType="i=1" />
+                  </Variable>
+                </Variable>
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="pObject" DataType="i=7" />
+                  <Variable Name="State" DataType="i=7" />
+                </Variable>
+              </Variable>
+              <Variable Name="MpAxisBasic_0" DataType="i=22">
+                <Variable Name="MpLink" DataType="i=22">
+                  <Variable Name="Internal" DataType="i=7" ValueRank="1" ArrayDimensions="2" />
+                </Variable>
+                <Variable Name="Enable" DataType="i=1" />
+                <Variable Name="ErrorReset" DataType="i=1" />
+                <Variable Name="Parameters" DataType="i=22">
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="Velocity" DataType="i=10" />
+                  <Variable Name="Position" DataType="i=11" />
+                  <Variable Name="Distance" DataType="i=11" />
+                  <Variable Name="Direction" DataType="i=6" />
+                  <Variable Name="Home" DataType="i=22">
+                    <Variable Name="Mode" DataType="i=6" />
+                    <Variable Name="Position" DataType="i=11" />
+                    <Variable Name="StartVelocity" DataType="i=10" />
+                    <Variable Name="HomingVelocity" DataType="i=10" />
+                    <Variable Name="SensorOffset" DataType="i=11" />
+                    <Variable Name="Acceleration" DataType="i=10" />
+                    <Variable Name="StartDirection" DataType="i=6" />
+                    <Variable Name="HomingDirection" DataType="i=6" />
+                    <Variable Name="NoDirectionChange" DataType="i=6" />
+                    <Variable Name="SwitchEdge" DataType="i=6" />
+                    <Variable Name="ReferencePulse" DataType="i=6" />
+                    <Variable Name="ReferencePulseBlockingDistance" DataType="i=11" />
+                    <Variable Name="TorqueLimit" DataType="i=10" />
+                    <Variable Name="BlockDetectionPositionError" DataType="i=11" />
+                    <Variable Name="PositionErrorStopLimit" DataType="i=11" />
+                    <Variable Name="EndlessPositionDataRef" DataType="i=7" />
+                  </Variable>
+                  <Variable Name="Jog" DataType="i=22">
+                    <Variable Name="Acceleration" DataType="i=10" />
+                    <Variable Name="Deceleration" DataType="i=10" />
+                    <Variable Name="Velocity" DataType="i=10" />
+                    <Variable Name="LowerLimit" DataType="i=11" />
+                    <Variable Name="UpperLimit" DataType="i=11" />
+                  </Variable>
+                  <Variable Name="Stop" DataType="i=22">
+                    <Variable Name="Deceleration" DataType="i=10" />
+                    <Variable Name="StopInPhase" DataType="i=1" />
+                    <Variable Name="Phase" DataType="i=11" />
+                  </Variable>
+                  <Variable Name="StopAfterTrigger" DataType="i=22">
+                    <Variable Name="Enable" DataType="i=1" />
+                    <Variable Name="TriggerDistance" DataType="i=11" />
+                    <Variable Name="ForceTriggerDistance" DataType="i=1" />
+                    <Variable Name="Source" DataType="i=6" />
+                    <Variable Name="Edge" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Torque" DataType="i=22">
+                    <Variable Name="Limit" DataType="i=10" />
+                    <Variable Name="Window" DataType="i=10" />
+                  </Variable>
+                  <Variable Name="CyclicRead" DataType="i=22">
+                    <Variable Name="TorqueMode" DataType="i=6" />
+                    <Variable Name="LagErrorMode" DataType="i=6" />
+                    <Variable Name="MotorTempMode" DataType="i=6" />
+                    <Variable Name="UserChannelMode" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Autotune" DataType="i=22">
+                    <Variable Name="Mode" DataType="i=6" />
+                    <Variable Name="FeedForward" DataType="i=6" />
+                    <Variable Name="Vertical" DataType="i=1" />
+                    <Variable Name="MaxCurrentPercent" DataType="i=10" />
+                    <Variable Name="MaxSpeedPercent" DataType="i=10" />
+                    <Variable Name="MaxDistance" DataType="i=11" />
+                    <Variable Name="ProportionalAmplification" DataType="i=10" />
+                  </Variable>
+                </Variable>
+                <Variable Name="Update" DataType="i=1" />
+                <Variable Name="Axis" DataType="i=7" />
+                <Variable Name="Power" DataType="i=1" />
+                <Variable Name="Home" DataType="i=1" />
+                <Variable Name="MoveVelocity" DataType="i=1" />
+                <Variable Name="MoveAbsolute" DataType="i=1" />
+                <Variable Name="MoveAdditive" DataType="i=1" />
+                <Variable Name="Stop" DataType="i=1" />
+                <Variable Name="JogPositive" DataType="i=1" />
+                <Variable Name="JogNegative" DataType="i=1" />
+                <Variable Name="Autotune" DataType="i=1" />
+                <Variable Name="Simulate" DataType="i=1" />
+                <Variable Name="TorqueLimit" DataType="i=1" />
+                <Variable Name="ReleaseBrake" DataType="i=1" />
+                <Variable Name="Active" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="UpdateDone" DataType="i=1" />
+                <Variable Name="Position" DataType="i=11" />
+                <Variable Name="Velocity" DataType="i=10" />
+                <Variable Name="CommandBusy" DataType="i=1" />
+                <Variable Name="CommandAborted" DataType="i=1" />
+                <Variable Name="PowerOn" DataType="i=1" />
+                <Variable Name="IsHomed" DataType="i=1" />
+                <Variable Name="InVelocity" DataType="i=1" />
+                <Variable Name="InPosition" DataType="i=1" />
+                <Variable Name="MoveActive" DataType="i=1" />
+                <Variable Name="Stopped" DataType="i=1" />
+                <Variable Name="TuningDone" DataType="i=1" />
+                <Variable Name="Simulation" DataType="i=1" />
+                <Variable Name="TorqueLimited" DataType="i=1" />
+                <Variable Name="BrakeReleased" DataType="i=1" />
+                <Variable Name="Info" DataType="i=22">
+                  <Variable Name="AxisInitialized" DataType="i=1" />
+                  <Variable Name="ReadyToPowerOn" DataType="i=1" />
+                  <Variable Name="JogLimited" DataType="i=1" />
+                  <Variable Name="TorqueLimitActive" DataType="i=1" />
+                  <Variable Name="DriveRestarted" DataType="i=1" />
+                  <Variable Name="CyclicRead" DataType="i=22">
+                    <Variable Name="Torque" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="LagError" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="MotorTemperature" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="UserChannelParameterID" DataType="i=22">
+                      <Variable Name="Valid" DataType="i=1" />
+                      <Variable Name="Value" DataType="i=11" />
+                    </Variable>
+                  </Variable>
+                  <Variable Name="BootState" DataType="i=6" />
+                  <Variable Name="PLCopenState" DataType="i=6" />
+                  <Variable Name="DigitalInputsStatus" DataType="i=22">
+                    <Variable Name="DriveEnable" DataType="i=1" />
+                    <Variable Name="HomeSwitch" DataType="i=1" />
+                    <Variable Name="PositiveLimitSwitch" DataType="i=1" />
+                    <Variable Name="NegativeLimitSwitch" DataType="i=1" />
+                    <Variable Name="Trigger1" DataType="i=1" />
+                    <Variable Name="Trigger2" DataType="i=1" />
+                  </Variable>
+                  <Variable Name="HardwareInfo" DataType="i=22">
+                    <Variable Name="NodeID" DataType="i=5" />
+                    <Variable Name="Channel" DataType="i=3" />
+                    <Variable Name="NetworkType" DataType="i=6" />
+                    <Variable Name="DeviceType" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="Diag" DataType="i=22">
+                    <Variable Name="StatusID" DataType="i=22">
+                      <Variable Name="ID" DataType="i=6" />
+                      <Variable Name="Severity" DataType="i=6" />
+                      <Variable Name="Code" DataType="i=5" />
+                    </Variable>
+                    <Variable Name="Internal" DataType="i=22">
+                      <Variable Name="ID" DataType="i=6" />
+                      <Variable Name="Severity" DataType="i=6" />
+                      <Variable Name="Facility" DataType="i=6" />
+                      <Variable Name="Code" DataType="i=5" />
+                    </Variable>
+                    <Variable Name="ExecutingCommand" DataType="i=6" />
+                  </Variable>
+                  <Variable Name="MoveDone" DataType="i=1" />
+                </Variable>
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="pObject" DataType="i=7" />
+                  <Variable Name="State" DataType="i=7" />
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="Functions" DataType="i=22">
+              <Variable Name="MpTorqueParams" DataType="i=22">
+                <Variable Name="Acceleration" DataType="i=10" />
+                <Variable Name="Deceleration" DataType="i=10" />
+                <Variable Name="PositionModeMaxVelocity" DataType="i=10" />
+                <Variable Name="VelocityModeDirection" DataType="i=6" />
+                <Variable Name="PositionParID" DataType="i=5" />
+                <Variable Name="VelocityParID" DataType="i=5" />
+                <Variable Name="TorqueSetup" DataType="i=22">
+                  <Variable Name="Mode" DataType="i=6" />
+                  <Variable Name="SctrlKv" DataType="i=10" />
+                  <Variable Name="SctrlTn" DataType="i=10" />
+                  <Variable Name="RampedControl" DataType="i=22">
+                    <Variable Name="TorqueRamp" DataType="i=10" />
+                    <Variable Name="PositiveMaxVelocity" DataType="i=10" />
+                    <Variable Name="NegativeMaxVelocity" DataType="i=10" />
+                    <Variable Name="DisableVelocityLimits" DataType="i=1" />
+                    <Variable Name="CompensateVelocityLimits" DataType="i=1" />
+                    <Variable Name="EnableTimeLimit" DataType="i=1" />
+                    <Variable Name="TimeLimit" DataType="i=10" />
+                    <Variable Name="StartParID" DataType="i=5" />
+                    <Variable Name="TorqueParID" DataType="i=5" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="MpAxisBasicParType_0" DataType="i=22">
+                <Variable Name="Acceleration" DataType="i=10" />
+                <Variable Name="Deceleration" DataType="i=10" />
+                <Variable Name="Velocity" DataType="i=10" />
+                <Variable Name="Position" DataType="i=11" />
+                <Variable Name="Distance" DataType="i=11" />
+                <Variable Name="Direction" DataType="i=6" />
+                <Variable Name="Home" DataType="i=22">
+                  <Variable Name="Mode" DataType="i=6" />
+                  <Variable Name="Position" DataType="i=11" />
+                  <Variable Name="StartVelocity" DataType="i=10" />
+                  <Variable Name="HomingVelocity" DataType="i=10" />
+                  <Variable Name="SensorOffset" DataType="i=11" />
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="StartDirection" DataType="i=6" />
+                  <Variable Name="HomingDirection" DataType="i=6" />
+                  <Variable Name="NoDirectionChange" DataType="i=6" />
+                  <Variable Name="SwitchEdge" DataType="i=6" />
+                  <Variable Name="ReferencePulse" DataType="i=6" />
+                  <Variable Name="ReferencePulseBlockingDistance" DataType="i=11" />
+                  <Variable Name="TorqueLimit" DataType="i=10" />
+                  <Variable Name="BlockDetectionPositionError" DataType="i=11" />
+                  <Variable Name="PositionErrorStopLimit" DataType="i=11" />
+                  <Variable Name="EndlessPositionDataRef" DataType="i=7" />
+                </Variable>
+                <Variable Name="Jog" DataType="i=22">
+                  <Variable Name="Acceleration" DataType="i=10" />
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="Velocity" DataType="i=10" />
+                  <Variable Name="LowerLimit" DataType="i=11" />
+                  <Variable Name="UpperLimit" DataType="i=11" />
+                </Variable>
+                <Variable Name="Stop" DataType="i=22">
+                  <Variable Name="Deceleration" DataType="i=10" />
+                  <Variable Name="StopInPhase" DataType="i=1" />
+                  <Variable Name="Phase" DataType="i=11" />
+                </Variable>
+                <Variable Name="StopAfterTrigger" DataType="i=22">
+                  <Variable Name="Enable" DataType="i=1" />
+                  <Variable Name="TriggerDistance" DataType="i=11" />
+                  <Variable Name="ForceTriggerDistance" DataType="i=1" />
+                  <Variable Name="Source" DataType="i=6" />
+                  <Variable Name="Edge" DataType="i=6" />
+                </Variable>
+                <Variable Name="Torque" DataType="i=22">
+                  <Variable Name="Limit" DataType="i=10" />
+                  <Variable Name="Window" DataType="i=10" />
+                </Variable>
+                <Variable Name="CyclicRead" DataType="i=22">
+                  <Variable Name="TorqueMode" DataType="i=6" />
+                  <Variable Name="LagErrorMode" DataType="i=6" />
+                  <Variable Name="MotorTempMode" DataType="i=6" />
+                  <Variable Name="UserChannelMode" DataType="i=6" />
+                </Variable>
+                <Variable Name="Autotune" DataType="i=22">
+                  <Variable Name="Mode" DataType="i=6" />
+                  <Variable Name="FeedForward" DataType="i=6" />
+                  <Variable Name="Vertical" DataType="i=1" />
+                  <Variable Name="MaxCurrentPercent" DataType="i=10" />
+                  <Variable Name="MaxSpeedPercent" DataType="i=10" />
+                  <Variable Name="MaxDistance" DataType="i=11" />
+                  <Variable Name="ProportionalAmplification" DataType="i=10" />
+                </Variable>
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="Output" DataType="i=22">
+            <Variable Name="Status" DataType="i=22">
+              <Variable Name="HomingStateMachine" DataType="i=6" />
+              <Variable Name="AxisStateMachine" DataType="i=6" />
+            </Variable>
+            <Variable Name="States" DataType="i=22">
+              <Variable Name="SingleAxis" DataType="i=22">
+                <Variable Name="Axis_0" DataType="i=22">
+                  <Variable Name="InPosition" DataType="i=1" />
+                  <Variable Name="InVelocity" DataType="i=1" />
+                  <Variable Name="StatusID" DataType="i=6" />
+                  <Variable Name="UpdateDone" DataType="i=1" />
+                  <Variable Name="Active" DataType="i=1" />
+                  <Variable Name="Error" DataType="i=1" />
+                  <Variable Name="Stopped" DataType="i=1" />
+                  <Variable Name="MoveActive" DataType="i=1" />
+                  <Variable Name="IsHomed" DataType="i=1" />
+                  <Variable Name="PowerOn" DataType="i=1" />
+                  <Variable Name="CyclicSet" DataType="i=22">
+                    <Variable Name="Error" DataType="i=1" />
+                    <Variable Name="Active" DataType="i=1" />
+                    <Variable Name="CyclicSetActive" DataType="i=1" />
+                    <Variable Name="CommandAborted" DataType="i=1" />
+                    <Variable Name="CommandBusy" DataType="i=1" />
+                    <Variable Name="UpdateDone" DataType="i=1" />
+                    <Variable Name="StatusID" DataType="i=7" />
+                  </Variable>
+                  <Variable Name="Params" DataType="i=22">
+                    <Variable Name="PositionAct" DataType="i=11" Historizing="True" HistoryBufferSize="150" HistorySamplingInterval="500" AccessLevel="0x07" />
+                    <Variable Name="Deceleration" DataType="i=11" />
+                    <Variable Name="Acceleration" DataType="i=11" />
+                    <Variable Name="Position" DataType="i=11" />
+                    <Variable Name="TorqueLimit" DataType="i=11" />
+                    <Variable Name="Distance" DataType="i=11" />
+                    <Variable Name="Velocity" DataType="i=11" />
+                    <Variable Name="VelocityAct" DataType="i=11" Historizing="True" HistoryBufferSize="150" HistorySamplingInterval="500" AccessLevel="0x07" />
+                  </Variable>
+                </Variable>
+                <Variable Name="Axis_1" DataType="i=22">
+                  <Variable Name="InPosition" DataType="i=1" />
+                  <Variable Name="InVelocity" DataType="i=1" />
+                  <Variable Name="StatusID" DataType="i=6" />
+                  <Variable Name="UpdateDone" DataType="i=1" />
+                  <Variable Name="Active" DataType="i=1" />
+                  <Variable Name="Error" DataType="i=1" />
+                  <Variable Name="Stopped" DataType="i=1" />
+                  <Variable Name="MoveActive" DataType="i=1" />
+                  <Variable Name="IsHomed" DataType="i=1" />
+                  <Variable Name="PowerOn" DataType="i=1" />
+                  <Variable Name="CyclicSet" DataType="i=22">
+                    <Variable Name="Error" DataType="i=1" />
+                    <Variable Name="Active" DataType="i=1" />
+                    <Variable Name="CyclicSetActive" DataType="i=1" />
+                    <Variable Name="CommandAborted" DataType="i=1" />
+                    <Variable Name="CommandBusy" DataType="i=1" />
+                    <Variable Name="UpdateDone" DataType="i=1" />
+                    <Variable Name="StatusID" DataType="i=7" />
+                  </Variable>
+                  <Variable Name="Params" DataType="i=22">
+                    <Variable Name="PositionAct" DataType="i=11" />
+                    <Variable Name="Deceleration" DataType="i=11" />
+                    <Variable Name="Acceleration" DataType="i=11" />
+                    <Variable Name="Position" DataType="i=11" />
+                    <Variable Name="TorqueLimit" DataType="i=11" />
+                    <Variable Name="Distance" DataType="i=11" />
+                    <Variable Name="Velocity" DataType="i=11" />
+                    <Variable Name="VelocityAct" DataType="i=11" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="AllAxis" DataType="i=22">
+                <Variable Name="InPosition" DataType="i=1" />
+                <Variable Name="InVelocity" DataType="i=1" />
+                <Variable Name="UpdateDone" DataType="i=1" />
+                <Variable Name="Active" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="Stopped" DataType="i=1" />
+                <Variable Name="MoveActive" DataType="i=1" />
+                <Variable Name="IsHomed" DataType="i=1" />
+                <Variable Name="PowerOn" DataType="i=1" />
+              </Variable>
+              <Variable Name="Diagnosis" DataType="i=22">
+                <Variable Name="A0" DataType="i=22">
+                  <Variable Name="DriveRestarted" DataType="i=1" />
+                  <Variable Name="TorqueLimitActive" DataType="i=1" />
+                  <Variable Name="JogLimited" DataType="i=1" />
+                  <Variable Name="AxisInitialized" DataType="i=1" />
+                  <Variable Name="ReadyToOPowerOn" DataType="i=1" />
+                  <Variable Name="PLCopenStateAx0" DataType="i=12" />
+                </Variable>
+              </Variable>
+            </Variable>
+          </Variable>
+        </Variable>
+      </Task>
+      <Task Name="Controller">
+        <Variable Name="_Controller" DataType="i=22">
+          <Variable Name="Input" DataType="i=22">
+            <Variable Name="Cmd" DataType="i=22">
+              <Variable Name="DoReset" DataType="i=1" />
+              <Variable Name="GetInfoAboutProject" DataType="i=1" />
+              <Variable Name="GetTime" DataType="i=1" />
+            </Variable>
+            <Variable Name="Params" DataType="i=22">
+              <Variable Name="ResetType" DataType="i=3" />
+            </Variable>
+          </Variable>
+          <Variable Name="Internal" DataType="i=22">
+            <Variable Name="Fubs" DataType="i=22">
+              <Variable Name="ProjectGetInfo" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Busy" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="ConfigurationID" DataType="i=12" />
+                <Variable Name="ConfigurationVersion" DataType="i=12" />
+                <Variable Name="Internal" DataType="i=7" ValueRank="1" ArrayDimensions="32" />
+              </Variable>
+              <Variable Name="GetTime" DataType="i=22">
+                <Variable Name="enable" DataType="i=1" />
+                <Variable Name="status" DataType="i=5" />
+                <Variable Name="DT1" DataType="i=13" />
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="Output" DataType="i=22">
+            <Variable Name="Time" DataType="i=13" />
+            <Variable Name="ProjectInfo" DataType="i=22">
+              <Variable Name="ConfigurationVersion" DataType="i=12" />
+              <Variable Name="ConfigurationID" DataType="i=12" />
+              <Variable Name="Done" DataType="i=1" />
+              <Variable Name="ErrorID" DataType="i=6" />
+            </Variable>
+          </Variable>
+        </Variable>
+      </Task>
+      <Task Name="ChartTask">
+        <Variable Name="_Trace" DataType="i=22">
+          <Variable Name="Input" DataType="i=22">
+            <Variable Name="Cmd" DataType="i=22">
+              <Variable Name="Start" DataType="i=1" />
+              <Variable Name="ResetError" DataType="i=1" />
+            </Variable>
+            <Variable Name="Params" DataType="i=22">
+              <Variable Name="NumberOfParams" DataType="i=1" />
+              <Variable Name="NameOfParams" DataType="i=12" />
+            </Variable>
+          </Variable>
+          <Variable Name="Internal" DataType="i=22">
+            <Variable Name="Fubs" DataType="i=22">
+              <Variable Name="Fileread" DataType="i=22">
+                <Variable Name="enable" DataType="i=1" />
+                <Variable Name="ident" DataType="i=7" />
+                <Variable Name="offset" DataType="i=7" />
+                <Variable Name="pDest" DataType="i=7" />
+                <Variable Name="len" DataType="i=7" />
+                <Variable Name="status" DataType="i=5" />
+                <Variable Name="i_state" DataType="i=5" />
+                <Variable Name="i_result" DataType="i=5" />
+                <Variable Name="i_tmp" DataType="i=7" />
+              </Variable>
+              <Variable Name="Fileopen" DataType="i=22">
+                <Variable Name="enable" DataType="i=1" />
+                <Variable Name="pDevice" DataType="i=7" />
+                <Variable Name="pFile" DataType="i=7" />
+                <Variable Name="mode" DataType="i=3" />
+                <Variable Name="status" DataType="i=5" />
+                <Variable Name="ident" DataType="i=7" />
+                <Variable Name="filelen" DataType="i=7" />
+                <Variable Name="i_state" DataType="i=5" />
+                <Variable Name="i_result" DataType="i=5" />
+                <Variable Name="i_tmp" DataType="i=7" />
+              </Variable>
+              <Variable Name="ParTrace" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Command" DataType="i=5" />
+                <Variable Name="Configuration" DataType="i=22">
+                  <Variable Name="DatObj" DataType="i=22">
+                    <Variable Name="Name" DataType="i=12" />
+                    <Variable Name="Type" DataType="i=5" />
+                    <Variable Name="Format" DataType="i=5" />
+                    <Variable Name="Device" DataType="i=12" />
+                  </Variable>
+                  <Variable Name="ParTrace" DataType="i=22">
+                    <Variable Name="Type" DataType="i=7" />
+                    <Variable Name="Reserve" DataType="i=7" />
+                    <Variable Name="TracingTime" DataType="i=10" />
+                    <Variable Name="SamplingTime" DataType="i=10" />
+                    <Variable Name="Delay" DataType="i=10" />
+                    <Variable Name="NetTriggerDelay" DataType="i=10" />
+                    <Variable Name="Trigger" DataType="i=22">
+                      <Variable Name="Axis" DataType="i=7" />
+                      <Variable Name="ParID" DataType="i=5" />
+                      <Variable Name="Event" DataType="i=3" />
+                      <Variable Name="Reserve" DataType="i=3" />
+                      <Variable Name="Threshold" DataType="i=10" />
+                      <Variable Name="Window" DataType="i=10" />
+                    </Variable>
+                    <Variable Name="Parameter" DataType="i=22" ValueRank="1" ArrayDimensions="100" />
+                  </Variable>
+                </Variable>
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Busy" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="ErrorID" DataType="i=5" />
+                <Variable Name="ErrorRecord" DataType="i=22">
+                  <Variable Name="ParID" DataType="i=5" />
+                  <Variable Name="Number" DataType="i=5" />
+                  <Variable Name="Info" DataType="i=7" />
+                  <Variable Name="Type" DataType="i=3" />
+                </Variable>
+                <Variable Name="IS" DataType="i=22">
+                  <Variable Name="C_Execute" DataType="i=1" />
+                  <Variable Name="C_Command" DataType="i=5" />
+                  <Variable Name="C_Configuration" DataType="i=22">
+                    <Variable Name="DatObj" DataType="i=22">
+                      <Variable Name="Name" DataType="i=12" />
+                      <Variable Name="Type" DataType="i=5" />
+                      <Variable Name="Format" DataType="i=5" />
+                      <Variable Name="Device" DataType="i=12" />
+                    </Variable>
+                    <Variable Name="ParTrace" DataType="i=22">
+                      <Variable Name="Type" DataType="i=7" />
+                      <Variable Name="Reserve" DataType="i=7" />
+                      <Variable Name="TracingTime" DataType="i=10" />
+                      <Variable Name="SamplingTime" DataType="i=10" />
+                      <Variable Name="Delay" DataType="i=10" />
+                      <Variable Name="NetTriggerDelay" DataType="i=10" />
+                      <Variable Name="Trigger" DataType="i=22">
+                        <Variable Name="Axis" DataType="i=7" />
+                        <Variable Name="ParID" DataType="i=5" />
+                        <Variable Name="Event" DataType="i=3" />
+                        <Variable Name="Reserve" DataType="i=3" />
+                        <Variable Name="Threshold" DataType="i=10" />
+                        <Variable Name="Window" DataType="i=10" />
+                      </Variable>
+                      <Variable Name="Parameter" DataType="i=22" ValueRank="1" ArrayDimensions="100" />
+                    </Variable>
+                  </Variable>
+                  <Variable Name="C_Done" DataType="i=1" />
+                  <Variable Name="C_Busy" DataType="i=1" />
+                  <Variable Name="C_Error" DataType="i=1" />
+                  <Variable Name="C_ErrorID" DataType="i=5" />
+                  <Variable Name="C_ErrorRecord" DataType="i=22">
+                    <Variable Name="ParID" DataType="i=5" />
+                    <Variable Name="Number" DataType="i=5" />
+                    <Variable Name="Info" DataType="i=7" />
+                    <Variable Name="Type" DataType="i=3" />
+                  </Variable>
+                  <Variable Name="StartSaveStarted" DataType="i=1" />
+                  <Variable Name="state" DataType="i=3" />
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="Func" DataType="i=22">
+              <Variable Name="PARTRACECONFIG" DataType="i=22">
+                <Variable Name="DatObj" DataType="i=22">
+                  <Variable Name="Name" DataType="i=12" />
+                  <Variable Name="Type" DataType="i=5" />
+                  <Variable Name="Format" DataType="i=5" />
+                  <Variable Name="Device" DataType="i=12" />
+                </Variable>
+                <Variable Name="ParTrace" DataType="i=22">
+                  <Variable Name="Type" DataType="i=7" />
+                  <Variable Name="Reserve" DataType="i=7" />
+                  <Variable Name="TracingTime" DataType="i=10" />
+                  <Variable Name="SamplingTime" DataType="i=10" />
+                  <Variable Name="Delay" DataType="i=10" />
+                  <Variable Name="NetTriggerDelay" DataType="i=10" />
+                  <Variable Name="Trigger" DataType="i=22">
+                    <Variable Name="Axis" DataType="i=7" />
+                    <Variable Name="ParID" DataType="i=5" />
+                    <Variable Name="Event" DataType="i=3" />
+                    <Variable Name="Reserve" DataType="i=3" />
+                    <Variable Name="Threshold" DataType="i=10" />
+                    <Variable Name="Window" DataType="i=10" />
+                  </Variable>
+                  <Variable Name="Parameter" DataType="i=22" ValueRank="1" ArrayDimensions="100" />
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="Params" DataType="i=22">
+              <Variable Name="FileLenght" DataType="i=10" />
+              <Variable Name="Offset" DataType="i=7" />
+              <Variable Name="VlvTrans" DataType="i=12" />
+              <Variable Name="Iteration" DataType="i=4" />
+              <Variable Name="ParamsIn" DataType="i=12" />
+            </Variable>
+          </Variable>
+          <Variable Name="Output" DataType="i=22">
+            <Variable Name="StateMachine" DataType="i=6" />
+            <Variable Name="Status" DataType="i=22">
+              <Variable Name="ParamsOut" DataType="i=12" />
+              <Variable Name="ErrorStatus" DataType="i=3" />
+            </Variable>
+          </Variable>
+        </Variable>
+      </Task>
+      <Task Name="LoggerTask">
+        <Variable Name="_LoggerHandling" DataType="i=22">
+          <Variable Name="Input" DataType="i=22">
+            <Variable Name="Commands" DataType="i=22">
+              <Variable Name="GET_ID" DataType="i=1" />
+              <Variable Name="ERROR_RESET" DataType="i=1" />
+              <Variable Name="DELETE" DataType="i=1" />
+              <Variable Name="CREATE" DataType="i=1" />
+              <Variable Name="READ_DESC" DataType="i=1" />
+              <Variable Name="READ_ERROR_NUMBER" DataType="i=1" />
+              <Variable Name="READ" DataType="i=1" />
+              <Variable Name="GET_LATEST_RECORD" DataType="i=1" />
+              <Variable Name="GET_PREVIOUS" DataType="i=1" />
+              <Variable Name="ACK" DataType="i=1" />
+              <Variable Name="REL_START" DataType="i=1" />
+            </Variable>
+            <Variable Name="Parameters" DataType="i=22">
+              <Variable Name="NumberOfLogbook" DataType="i=3" />
+              <Variable Name="NumberOfLog" DataType="i=4" />
+              <Variable Name="IDentLogToDelete" DataType="i=7" />
+              <Variable Name="NameOfNewLogbook" DataType="i=12" />
+              <Variable Name="RecordID" DataType="i=7" />
+              <Variable Name="NameOfLogbook" DataType="i=12" />
+            </Variable>
+          </Variable>
+          <Variable Name="Internal" DataType="i=22">
+            <Variable Name="Fubs" DataType="i=22">
+              <Variable Name="_ArEventLogCreate" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Name" DataType="i=12" />
+                <Variable Name="Size" DataType="i=7" />
+                <Variable Name="Persistence" DataType="i=3" />
+                <Variable Name="Info" DataType="i=7" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Busy" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                  <Variable Name="AsyFuMaCtx" DataType="i=22">
+                    <Variable Name="State" DataType="i=5" />
+                    <Variable Name="Result" DataType="i=6" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="_ArEventLogDelete" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Busy" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                  <Variable Name="AsyFuMaCtx" DataType="i=22">
+                    <Variable Name="State" DataType="i=5" />
+                    <Variable Name="Result" DataType="i=6" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="_ArEventLogGetIdent" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Name" DataType="i=12" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="_ArEventLogReadErrorNumber" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="RecordID" DataType="i=7" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="ErrorNumber" DataType="i=7" />
+                <Variable Name="Severity" DataType="i=3" />
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="_ArEventLogReadDescription" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="RecordID" DataType="i=7" />
+                <Variable Name="LanguageCode" DataType="i=12" />
+                <Variable Name="Qualifier" DataType="i=12" />
+                <Variable Name="TextBuffer" DataType="i=7" />
+                <Variable Name="TextBufferSize" DataType="i=7" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Busy" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="TextSize" DataType="i=7" />
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                  <Variable Name="AsyFuMaCtx" DataType="i=22">
+                    <Variable Name="State" DataType="i=5" />
+                    <Variable Name="Result" DataType="i=6" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="_ArEventLogGetPreviousRecordID" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="RecordID" DataType="i=7" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="PrevRecordID" DataType="i=7" />
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="_ArEventLogGetLatestRecordID" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="RecordID" DataType="i=7" />
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="_ArEventLogRead" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="RecordID" DataType="i=7" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="EventID" DataType="i=6" />
+                <Variable Name="OriginRecordID" DataType="i=7" />
+                <Variable Name="AddDataFormat" DataType="i=3" />
+                <Variable Name="AddDataSize" DataType="i=7" />
+                <Variable Name="TimeStamp" DataType="i=22">
+                  <Variable Name="sec" DataType="i=7" />
+                  <Variable Name="nsec" DataType="i=7" />
+                </Variable>
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                </Variable>
+              </Variable>
+              <Variable Name="_ArEventLogReadObjectID" DataType="i=22">
+                <Variable Name="Execute" DataType="i=1" />
+                <Variable Name="Ident" DataType="i=7" />
+                <Variable Name="RecordID" DataType="i=7" />
+                <Variable Name="Done" DataType="i=1" />
+                <Variable Name="Error" DataType="i=1" />
+                <Variable Name="StatusID" DataType="i=6" />
+                <Variable Name="ObjectID" DataType="i=12" />
+                <Variable Name="Internal" DataType="i=22">
+                  <Variable Name="FBStateCtx" DataType="i=22">
+                    <Variable Name="ExecuteRef" DataType="i=7" />
+                    <Variable Name="BusyRef" DataType="i=7" />
+                    <Variable Name="DoneRef" DataType="i=7" />
+                    <Variable Name="ErrorRef" DataType="i=7" />
+                    <Variable Name="ActiveRef" DataType="i=7" />
+                    <Variable Name="StatusRef" DataType="i=7" />
+                    <Variable Name="FBCyclic" DataType="i=7" />
+                    <Variable Name="AsyfumaState" DataType="i=7" />
+                    <Variable Name="FBResetOut" DataType="i=7" />
+                    <Variable Name="Argument" DataType="i=7" />
+                    <Variable Name="State" DataType="i=7" />
+                    <Variable Name="ExecutePrev" DataType="i=1" />
+                  </Variable>
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="FuncAndParams" DataType="i=22">
+              <Variable Name="_ArEventLogIdentType" DataType="i=7" />
+              <Variable Name="_ArEventLogRecordIDType" DataType="i=7" />
+              <Variable Name="EventID" DataType="i=12" />
+              <Variable Name="ConvTime" DataType="i=12" />
+              <Variable Name="TimeLog" DataType="i=22">
+                <Variable Name="sec" DataType="i=7" />
+                <Variable Name="nsec" DataType="i=7" />
+              </Variable>
+              <Variable Name="TextBuffor" DataType="i=12" />
+              <Variable Name="ErrorBuffor" DataType="i=12" />
+              <Variable Name="ObjectID" DataType="i=12" />
+              <Variable Name="i" DataType="i=5" />
+            </Variable>
+          </Variable>
+          <Variable Name="Output" DataType="i=22">
+            <Variable Name="MainStep" DataType="i=6" />
+            <Variable Name="ReadList" DataType="i=6" />
+            <Variable Name="States" DataType="i=22">
+              <Variable Name="LogList" DataType="i=12" />
+              <Variable Name="LogDesc" DataType="i=12" />
+              <Variable Name="LogTime" DataType="i=12" />
+              <Variable Name="LogSeverity" DataType="i=12" />
+              <Variable Name="EndStateCmd" DataType="i=12" />
+              <Variable Name="FaultNumber" DataType="i=6" />
+              <Variable Name="NumberOfFault" DataType="i=3" />
+            </Variable>
+          </Variable>
+        </Variable>
+      </Task>
+      <Task Name="MemTask">
+        <Variable Name="_MemTask" DataType="i=22">
+          <Variable Name="Input" DataType="i=22">
+            <Variable Name="Cmd" DataType="i=22">
+              <Variable Name="Start" DataType="i=1" MinimumSamplingInterval="10" Historizing="True" HistoryBufferSize="500" HistorySamplingInterval="20" AccessLevel="0x07" />
+              <Variable Name="RepeatAll" DataType="i=1" />
+              <Variable Name="ReapetOnce" DataType="i=1" />
+              <Variable Name="Ack" DataType="i=1" />
+            </Variable>
+            <Variable Name="Params" DataType="i=22">
+              <Variable Name="MemType" DataType="i=3" />
+            </Variable>
+          </Variable>
+          <Variable Name="Internal" DataType="i=22">
+            <Variable Name="memXInfo" DataType="i=22">
+              <Variable Name="enable" DataType="i=1" />
+              <Variable Name="mem_typ" DataType="i=7" />
+              <Variable Name="status" DataType="i=5" />
+              <Variable Name="MemSize" DataType="i=7" />
+              <Variable Name="FreeMemSize" DataType="i=7" />
+              <Variable Name="BiggestFreeBlockSize" DataType="i=7" />
+              <Variable Name="i_state" DataType="i=5" />
+              <Variable Name="i_result" DataType="i=5" />
+              <Variable Name="i_tmp" DataType="i=7" />
+            </Variable>
+            <Variable Name="memBuffor" DataType="i=12" />
+            <Variable Name="iter" DataType="i=3" />
+          </Variable>
+          <Variable Name="Output" DataType="i=22">
+            <Variable Name="States" DataType="i=22">
+              <Variable Name="Status" DataType="i=12" />
+              <Variable Name="brUSRROM" DataType="i=12" />
+              <Variable Name="brUSRRAM" DataType="i=12" />
+              <Variable Name="brSYSROM" DataType="i=12" />
+              <Variable Name="brDRAM" DataType="i=12" />
+            </Variable>
+            <Variable Name="MemStateMachine" DataType="i=6" />
+          </Variable>
+        </Variable>
+      </Task>
+    </Module>
+  </DefaultView>
+</UANodeSet>

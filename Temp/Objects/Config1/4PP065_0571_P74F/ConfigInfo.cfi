@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.3.7.46 SP"?>
+<ConfigInfo xmlns="http://br-automation.co.at/AS/BuildInfo">
+  <TaskClass
+    Name="Cyclic#1">
+    <Task
+      Name="AxisCtrl"
+      Disable="false"
+      Source="Source.Code.AxisControl.AxisCtrl"
+      Language="IEC">
+      <InternalFile
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\AxisCtrl\Main.st.var" />
+      <InternalFile
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\AxisCtrl\Actions.var" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Types.typ" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Variables.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#2">
+    <Task
+      Name="Controller"
+      Disable="false"
+      Source="Source.Code.Controller.ControllerTask"
+      Language="IEC">
+      <InternalFile
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\Controller\Main.st.var" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Controller\ControllerTask\Types.typ" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Controller\ControllerTask\Variables.var" />
+    </Task>
+    <Task
+      Name="ChartTask"
+      Disable="false"
+      Source="Source.Code.Chart.ChartTask"
+      Language="IEC">
+      <InternalFile
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\ChartTask\Main.st.var" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Chart\ChartTask\Types.typ" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Chart\ChartTask\Variables.var" />
+    </Task>
+    <Task
+      Name="LoggerTask"
+      Disable="false"
+      Source="Source.Code.Logger.LoggerTask"
+      Language="IEC">
+      <InternalFile
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\LoggerTask\Main.st.var" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Logger\LoggerTask\Types.typ" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Logger\LoggerTask\Variables.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#3" />
+  <TaskClass
+    Name="Cyclic#4" />
+  <TaskClass
+    Name="Cyclic#5" />
+  <TaskClass
+    Name="Cyclic#6" />
+  <TaskClass
+    Name="Cyclic#7">
+    <Task
+      Name="MemTask"
+      Disable="false"
+      Source="Source.Code.Memory.MemTask"
+      Language="IEC">
+      <InternalFile
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Temp\Objects\Config1\4PP065_0571_P74F\MemTask\Main.st.var" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Memory\MemTask\Types.typ" />
+      <File
+        Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Memory\MemTask\Variables.var" />
+    </Task>
+  </TaskClass>
+  <TaskClass
+    Name="Cyclic#8" />
+</ConfigInfo>

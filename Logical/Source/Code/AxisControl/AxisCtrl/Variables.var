@@ -1,0 +1,3 @@
+VAR
+	_AxisCtrl : AxisCtrlType;
+END_VAR

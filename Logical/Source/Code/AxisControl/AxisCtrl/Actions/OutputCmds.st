@@ -20,6 +20,8 @@ ACTION Output_commands:
 	
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.StatusID	 := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.StatusID;
 	
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.UpdateDone := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.UpdateDone;
+	
 	(* PARAMS *)
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.PositionAct  := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.Position;
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.VelocityAct  := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.Velocity;
@@ -29,7 +31,8 @@ ACTION Output_commands:
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.Position	  := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Position;
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.TorqueLimit  := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Torque.Limit;
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.Velocity	  := _AxisCtrl.Internal.Functions.MpAxisBasicParType_0.Velocity;
-	
+
+
 	(* DIAG *)
 	_AxisCtrl.Output.States.Diagnosis.A0.AxisInitialized := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.Info.AxisInitialized;
 	_AxisCtrl.Output.States.Diagnosis.A0.DriveRestarted  := _AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.Info.DriveRestarted;
@@ -56,6 +59,17 @@ ACTION Output_commands:
 			_AxisCtrl.Output.States.Diagnosis.A0.PLCopenStateAx0 := 'Axis errorstop';		
 	END_CASE
 	
+	(* MpAxisCyclicSet *)
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.Active		    := _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Active;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.CommandAborted  := _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CommandAborted;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.CommandBusy     := _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CommandBusy;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.CyclicSetActive := _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicSetActive;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.Error			:= _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Error;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.StatusID		:= _AxisCtrl.Internal.FunctionsBlock.TorqueControl.StatusID;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.UpdateDone 		:= _AxisCtrl.Internal.FunctionsBlock.TorqueControl.UpdateDone;
+
+		
+
 	
 	(* CALL FUBS *)
 	_AxisCtrl.Internal.FunctionsBlock.TorqueControl();

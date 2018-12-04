@@ -70,7 +70,33 @@ ACTION Axis1:
 			
 			ELSIF _AxisCtrl.Input.Commands.SingleAxis.A1.MoveOff THEN
 				_AxisCtrl.Input.Commands.SingleAxis.A1.MoveOff := FALSE;
-				_AxisCtrl.Output.Status.AxisStateMachine := MOVE_OFF;				
+				_AxisCtrl.Output.Status.AxisStateMachine := MOVE_OFF;
+			
+				(* CYCLIC SET FUBS *)
+			ELSIF _AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicPositionOn THEN
+				_AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicPositionOn := FALSE;
+				_AxisCtrl.Output.Status.AxisStateMachine := CYCLIC_POSITION_ON;
+				
+			ELSIF _AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicTorqueOn THEN
+				_AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicTorqueOff := FALSE;
+				_AxisCtrl.Output.Status.AxisStateMachine := CYCLIC_TORQUE_ON;
+				
+			ELSIF _AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicVelocityOn THEN
+				_AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicVelocityOff := FALSE;
+				_AxisCtrl.Output.Status.AxisStateMachine := CYCLIC_VELOCITY_ON;
+		 
+			ELSIF _AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicPositionOff THEN
+				_AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicPositionOff := FALSE;
+				_AxisCtrl.Output.Status.AxisStateMachine := CYCLIC_POSITION_OFF;
+				
+			ELSIF _AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicTorqueOff THEN
+				_AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicTorqueOff := FALSE;
+				_AxisCtrl.Output.Status.AxisStateMachine := CYCLIC_TORQUE_OFF;
+				
+			ELSIF _AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicVelocityOff THEN
+				_AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.CyclicVelocityOff := FALSE;
+				_AxisCtrl.Output.Status.AxisStateMachine := CYCLIC_VELOCITY_OFF;
+							
 			END_IF
 			
 		
@@ -204,16 +230,74 @@ ACTION Axis1:
 			_AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicPosition := FALSE;
 			_AxisCtrl.Output.Status.AxisStateMachine := WAIT_FOR_CMD;
 		ERROR:	
-			IF _AxisCtrl.Input.Commands.SingleAxis.A1.ErrorReset THEN
+			IF _AxisCtrl.Input.Commands.SingleAxis.A1.ErrorReset OR _AxisCtrl.Input.Commands.SingleAxis.A1.TorqControl.ErrorReset THEN
 				_AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.ErrorReset := TRUE;
+				_AxisCtrl.Internal.FunctionsBlock.TorqueControl.ErrorReset := TRUE;
 				_AxisCtrl.Output.Status.AxisStateMachine := ERROR_RESET;
 			END_IF
 	
 		ERROR_RESET:
-			IF NOT _AxisCtrl.Output.States.SingleAxis.Axis_0.Error THEN
+			IF NOT _AxisCtrl.Output.States.SingleAxis.Axis_0.Error AND NOT _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Error THEN
 				_AxisCtrl.Internal.FunctionsBlock.MpAxisBasic_0.ErrorReset := FALSE;
+				_AxisCtrl.Internal.FunctionsBlock.TorqueControl.ErrorReset := FALSE;
 				_AxisCtrl.Output.Status.AxisStateMachine := WAIT_FOR_CMD;
 				
+			END_IF
+		
+		CYCLIC_POSITION_ON:
+			_AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicPosition := TRUE;
+			
+			IF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicSetActive THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := WAIT_FOR_CMD;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Error THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := ERROR;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CommandBusy THEN
+				
+			END_IF		
+		CYCLIC_POSITION_OFF:
+			_AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicPosition := FALSE;
+			
+			IF NOT _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicSetActive THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := WAIT_FOR_CMD;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Error THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := ERROR;
+			END_IF
+		CYCLIC_TORQUE_ON:
+			_AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicTorque := TRUE;
+			
+			IF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicSetActive THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := WAIT_FOR_CMD;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Error THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := ERROR;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CommandBusy THEN
+				
+			END_IF		
+		CYCLIC_TORQUE_OFF:
+			_AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicTorque := FALSE;
+			
+			IF NOT _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicSetActive THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := WAIT_FOR_CMD;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Error THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := ERROR;
+			END_IF
+		CYCLIC_VELOCITY_ON:
+			_AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicVelocity := TRUE;
+			
+			IF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicSetActive THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := WAIT_FOR_CMD;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Error THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := ERROR;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CommandBusy THEN
+				
+			END_IF	
+		
+		CYCLIC_VELOCITY_OFF:
+			_AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicVelocity := FALSE;
+			
+			IF NOT _AxisCtrl.Internal.FunctionsBlock.TorqueControl.CyclicSetActive THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := WAIT_FOR_CMD;
+			ELSIF _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Error THEN
+				_AxisCtrl.Output.Status.AxisStateMachine := ERROR;
 			END_IF
 		
 	END_CASE;

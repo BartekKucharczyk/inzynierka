@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="File" Description="Init, cyclic, exit code">Main.st</Object>
     <Object Type="Package">Actions</Object>
+    <Object Type="File" Description="Local data types" Private="true">Types.typ</Object>
+    <Object Type="File" Description="Local variables" Private="true">Variables.var</Object>
   </Objects>
 </Program>

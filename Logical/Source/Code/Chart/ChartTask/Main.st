@@ -98,7 +98,7 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		CONNECT_TXT_T:
-			FOR _Trace.Internal.Params.Iteration = 0
+		//	FOR _Trace.Internal.Params.Iteration = 0
 			
 			
 			

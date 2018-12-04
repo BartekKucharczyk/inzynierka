@@ -1,0 +1,270 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=LoggerTask 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 Index=264 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                         _LoggerHandling                       LoggerHandlingType    0 "                                                               *"    0   24    1    0    1    1         
+                                   Input                    LoggerHandlingInpType    0 "                                                               *"    1   24    1    0    0    0         
+                                Commands                 LoggerHandlingInpCmdType    0 "                                                               *"    2   24    1    0    0    0         
+                                  GET_ID                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                             ERROR_RESET                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                                  DELETE                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                                  CREATE                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                               READ_DESC                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                       READ_ERROR_NUMBER                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                                    READ                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                       GET_LATEST_RECORD                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                            GET_PREVIOUS                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                                     ACK                                     BOOL    0 "                                                            TRUE"    3    1    1    2    0    0         
+                               REL_START                                     BOOL    0 "                                                           FALSE"    3    1    1    2    0    0         
+                              Parameters                LoggerHandlingInpParsType    0 "                                                               *"    2   24    1    0    0    0         
+                         NumberOfLogbook                                    USINT    0 "                                                               1"    3    5    1   10    0    0         
+                             NumberOfLog                                      INT    0 "                                                              20"    3    3    1   10    0    0         
+                        IDentLogToDelete                                    UDINT    0 "                                                               0"    3    7    1   10    0    0        v
+                        NameOfNewLogbook                               STRING[80]    0 "                                                   'UserLogbook'"    3    9   81    1    0    0         
+                                RecordID                                    UDINT    0 "                                                              10"    3    7    1   10    0    0         
+                           NameOfLogbook                               STRING[80]    0 "                                                    '$$arlogsys'"    3    9   81    1    0    0         
+                                Internal                  LoggerHandlingInterType    0 "                                                               *"    1   24    1    0    0    0         
+                                    Fubs              LoggerHandlingInterFubsType    0 "                                                               *"    2   24    1    0    0    0         
+                       _ArEventLogCreate                         ArEventLogCreate    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                    Name                              STRING[256]    0 "                                                              ''"    4    9  257    1    0    0         
+                                    Size                                    UDINT    0 "                                                               0"    4    7    1   10    0    0         
+                             Persistence                                    USINT    0 "                                                               0"    4    5    1   10    0    0         
+                                    Info                                    UDINT    0 "                                                               0"    4    7    1   10    0    0         
+                                    Done                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                    Busy                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                Internal              ArEventLogAsyncInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+                              AsyFuMaCtx                  ArFBAsyFuMaInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                                   State                                     UINT    0 "                                                               *"    6    6    1   10    0    0         
+                                  Result                                     DINT    0 "                                                               *"    6    4    1   10    0    0         
+                       _ArEventLogDelete                         ArEventLogDelete    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                    Done                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                    Busy                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                                Internal              ArEventLogAsyncInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+                              AsyFuMaCtx                  ArFBAsyFuMaInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                                   State                                     UINT    0 "                                                               *"    6    6    1   10    0    0         
+                                  Result                                     DINT    0 "                                                               *"    6    4    1   10    0    0         
+                     _ArEventLogGetIdent                       ArEventLogGetIdent    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                    Name                              STRING[256]    0 "                                                               *"    4    9  257    1    0    0         
+                                    Done                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                Internal                   ArEventLogInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+              _ArEventLogReadErrorNumber                ArEventLogReadErrorNumber    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                RecordID                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                    Done                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                             ErrorNumber                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
+                                Severity                                    USINT    0 "                                                               *"    4    5    1   10    0    0         
+                                Internal                   ArEventLogInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+              _ArEventLogReadDescription                ArEventLogReadDescription    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                RecordID                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                            LanguageCode                               STRING[18]    0 "                                                               *"    4    9   19    1    0    0        v
+                               Qualifier                              STRING[250]    0 "                                                               *"    4    9  251    1    0    0         
+                              TextBuffer                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
+                          TextBufferSize                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
+                                    Done                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                    Busy                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                                TextSize                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
+                                Internal              ArEventLogAsyncInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+                              AsyFuMaCtx                  ArFBAsyFuMaInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                                   State                                     UINT    0 "                                                               *"    6    6    1   10    0    0         
+                                  Result                                     DINT    0 "                                                               *"    6    4    1   10    0    0         
+          _ArEventLogGetPreviousRecordID            ArEventLogGetPreviousRecordID    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                RecordID                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                    Done                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                            PrevRecordID                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                Internal                   ArEventLogInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+            _ArEventLogGetLatestRecordID              ArEventLogGetLatestRecordID    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                    Done                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                                RecordID                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                Internal                   ArEventLogInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+                         _ArEventLogRead                           ArEventLogRead    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                RecordID                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                    Done                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                                 EventID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                          OriginRecordID                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                           AddDataFormat                                    USINT    0 "                                                               *"    4    5    1   10    0    0         
+                             AddDataSize                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
+                               TimeStamp                  ArEventLogTimeStampType    0 "                                                               *"    4   24    1    0    0    0         
+                                     sec                                    UDINT    0 "                                                               *"    5    7    1   10    0    0         
+                                    nsec                                    UDINT    0 "                                                               *"    5    7    1   10    0    0         
+                                Internal                   ArEventLogInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+                 _ArEventLogReadObjectID                   ArEventLogReadObjectID    0 "                                                               *"    3   24    1    0    0    0         
+                                 Execute                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Ident                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                RecordID                                    UDINT    0 "                                                               *"    4    7    1   10    0    0        v
+                                    Done                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                   Error                                     BOOL    0 "                                                               *"    4    1    1    2    0    0         
+                                StatusID                                     DINT    0 "                                                               *"    4    4    1   10    0    0         
+                                ObjectID                               STRING[36]    0 "                                                               *"    4    9   37    1    0    0         
+                                Internal                   ArEventLogInternalType    0 "                                                               *"    4   24    1    0    0    0         
+                              FBStateCtx                    ArFBStateInternalType    0 "                                                               *"    5   24    1    0    0    0         
+                              ExecuteRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 BusyRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                 DoneRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                ErrorRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               ActiveRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                               StatusRef                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                FBCyclic                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                            AsyfumaState                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                              FBResetOut                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                Argument                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                                   State                                    UDINT    0 "                                                               *"    6    7    1   10    0    0         
+                             ExecutePrev                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+                           FuncAndParams         LoggerHandlingInterFuncAParsType    0 "                                                               *"    2   24    1    0    0    0         
+                    _ArEventLogIdentType                                    UDINT    0 "                                                               *"    3    7    1   10    0    0        v
+                 _ArEventLogRecordIDType                                    UDINT    0 "                                                               *"    3    7    1   10    0    0        v
+                                 EventID                               STRING[20]    0 "                                                               *"    3    9   21    1    0    0         
+                                ConvTime                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                                 TimeLog                  ArEventLogTimeStampType    0 "                                                               *"    3   24    1    0    0    0         
+                                     sec                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
+                                    nsec                                    UDINT    0 "                                                               *"    4    7    1   10    0    0         
+                              TextBuffor                               STRING[80]    0 "                                                               *"    3    9   81    1    0    0         
+                             ErrorBuffor                               STRING[30]    0 "                                                               *"    3    9   31    1    0    0         
+                                ObjectID                               STRING[36]    0 "                                                               *"    3    9   37    1    0    0         
+                                       i                                     UINT    0 "                                                               *"    3    6    1   10    0    0         
+                                  Output                    LoggerHandlingOutType    0 "                                                               *"    1   24    1    0    0    1         
+                                MainStep                                     DINT    0 "                                                               0"    2    4    1   10    0    0 e,0,WAIT
+
+                                ReadList                                     DINT    0 "                                                               0"    2    4    1   10    0    0 e,0,STAR
+
+                                  States              LoggerHandlingOutStatesType    0 "                                                               *"    2   24    1    0    0    1         
+                                 LogList                              STRING[450]    0 " '10561,10561,10561,10561,10561,3157279,1076899103,30028,31280,'"    3    9  451    1    0    0         
+                                 LogDesc                             STRING[1800]    0 "'NC manager info (see $'ASCII Data$'),NC manager info (see $'ASCII Data$'),NC manager"    3    9 1801    1    0    0         
+                                 LogTime                             STRING[1150]    0 "'DT#2018-12-04-22:07:45,DT#2018-12-04-22:07:45,DT#2018-12-04-22:07:45,DT#2018-12-04-2"    3    9 1151    1    0    0         
+                             LogSeverity                              STRING[150]    0 "                                                 'W,W,W,W,I,W,I'"    3    9  151    1    0    0         
+                             EndStateCmd                               STRING[80]    0 "                                                      'NOT READ'"    3    9   81    1    0    0         
+                             FaultNumber                                     DINT    0 "                                                               0"    3    4    1   10    0    0         
+                           NumberOfFault                                    USINT    0 "                                                               0"    3    5    1   10    0    0         

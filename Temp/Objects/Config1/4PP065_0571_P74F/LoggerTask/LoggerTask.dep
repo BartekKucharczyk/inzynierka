@@ -1,0 +1,6 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/ArEventLog/ArEventLog.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/ArEventLog/ArEventLog.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/runtime/runtime.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/ArEventLog/ArEventLog.var
+$(AS_PROJECT_PATH)/Logical/Source/Code/Logger/LoggerTask/Variables.var
+$(AS_PROJECT_PATH)/Logical/Source/Code/Logger/LoggerTask/Types.typ

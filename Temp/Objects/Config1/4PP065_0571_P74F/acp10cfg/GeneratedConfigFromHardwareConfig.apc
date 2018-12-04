@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AcoposParameterConfiguration>
+  <Root Name="IF4.ST1">
+    <Group Name="SS2">
+      <Parameter Name="_SinglePhaseOperation" ID="80" Value="1" />
+      <Parameter Name="SupplyVoltage" ID="390" Value="24" />
+      <Parameter Name="ENCOD_TYPE" ID="97" Value="4" />
+    </Group>
+    <Group Name="SS1">
+      <Parameter Name="Motor: Test mode" ID="866" Value="7" />
+    </Group>
+  </Root>
+</AcoposParameterConfiguration>

@@ -7,24 +7,22 @@
       <ACE Role="Zarzad" Write="True" />
     </ACL>
     <Module>
-      <GlobalVariables Name="Global PV">
-        <Variable Name="_AxisCtrl" Enable="True">
-          <Variable Name="Input" Enable="True" AutomaticEnable="True" />
-          <Variable Name="Internal" Enable="True" AutomaticEnable="True" />
-          <Variable Name="Output" Enable="True" AutomaticEnable="True">
+      <Task Name="AxisCtrl" Enable="True">
+        <Variable Name="_AxisCtrl" Enable="True" AutomaticEnable="True">
+          <Variable Name="Output">
             <Variable Name="States">
               <Variable Name="SingleAxis">
                 <Variable Name="Axis_0">
                   <Variable Name="Params">
-                    <Variable Name="PositionAct" HistoryBufferSize="1000" HistorySamplingInterval="Timer6" />
+                    <Variable Name="PositionAct" Historizing="True" HistoryBufferSize="150" HistorySamplingInterval="Timer6" />
+                    <Variable Name="VelocityAct" Historizing="True" HistoryBufferSize="150" HistorySamplingInterval="Timer6" />
                   </Variable>
                 </Variable>
               </Variable>
             </Variable>
           </Variable>
         </Variable>
-      </GlobalVariables>
-      <Task Name="AxisCtrl" Enable="True" />
+      </Task>
       <Task Name="Controller" Enable="True">
         <Variable Name="_Controller" Enable="True" AutomaticEnable="True" />
       </Task>

@@ -1,0 +1,6 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/ArProject/ArProject.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/astime/astime.fun
+$(AS_PROJECT_PATH)/Logical/Libraries/sys_lib/sys_lib.fun
+$(AS_PROJECT_PATH)/Logical/Source/Code/Controller/ControllerTask/Variables.var
+$(AS_PROJECT_PATH)/Logical/Source/Code/Controller/ControllerTask/Types.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/runtime/runtime.var

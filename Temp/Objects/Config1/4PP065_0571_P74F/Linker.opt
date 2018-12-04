@@ -1,0 +1,5 @@
+AxisCtrl	"$(AS_CPU_PATH)/AxisCtrl/Main.st.o" "$(AS_CPU_PATH)/AxisCtrl/_bur_pvdef.st.o"  -o "$(AS_CPU_PATH)/AxisCtrl/a.out"  -G V4.1.2  -T SG4  -M IA32  -specs=I386specs_brelf -nostdlib
+Controller	"$(AS_CPU_PATH)/Controller/Main.st.o" "$(AS_CPU_PATH)/Controller/_bur_pvdef.st.o"  -o "$(AS_CPU_PATH)/Controller/a.out"  -G V4.1.2  -T SG4  -M IA32  -specs=I386specs_brelf -nostdlib
+ChartTask	"$(AS_CPU_PATH)/ChartTask/Main.st.o" "$(AS_CPU_PATH)/ChartTask/_bur_pvdef.st.o"  -o "$(AS_CPU_PATH)/ChartTask/a.out"  -G V4.1.2  -T SG4  -M IA32  -specs=I386specs_brelf -nostdlib
+MemTask	"$(AS_CPU_PATH)/MemTask/Main.st.o" "$(AS_CPU_PATH)/MemTask/_bur_pvdef.st.o"  -o "$(AS_CPU_PATH)/MemTask/a.out"  -G V4.1.2  -T SG4  -M IA32  -specs=I386specs_brelf -nostdlib
+LoggerTask	"$(AS_CPU_PATH)/LoggerTask/Main.st.o" "$(AS_CPU_PATH)/LoggerTask/_bur_pvdef.st.o"  -o "$(AS_CPU_PATH)/LoggerTask/a.out"  -G V4.1.2  -T SG4  -M IA32  -specs=I386specs_brelf -nostdlib

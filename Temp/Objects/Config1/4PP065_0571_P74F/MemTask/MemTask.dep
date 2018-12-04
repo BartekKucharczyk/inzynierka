@@ -1,0 +1,4 @@
+$(AS_PROJECT_PATH)/Logical/Libraries/brsystem/brsystem.fun
+$(AS_PROJECT_PATH)/Logical/Source/Code/Memory/MemTask/Variables.var
+$(AS_PROJECT_PATH)/Logical/Source/Code/Memory/MemTask/Types.typ
+$(AS_PROJECT_PATH)/Logical/Libraries/runtime/runtime.var
