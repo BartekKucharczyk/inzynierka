@@ -478,13 +478,13 @@
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Axis1.st"
     LogicalPath="Source.Code.AxisControl.AxisCtrl.Actions.Axis1.st"
     Type="File"
-    LastWriteTime="131883221191666400"
+    LastWriteTime="131888303993106410"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\OutputCmds.st"
     LogicalPath="Source.Code.AxisControl.AxisCtrl.Actions.OutputCmds.st"
     Type="File"
-    LastWriteTime="131881650815827336"
+    LastWriteTime="131890924517062630"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Exit.st"
@@ -502,7 +502,7 @@
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Types.typ"
     LogicalPath="Source.Code.AxisControl.AxisCtrl.Types.typ"
     Type="File"
-    LastWriteTime="131883207686177037"
+    LastWriteTime="131890923589027550"
     Private="true" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Variables.var"
@@ -669,7 +669,7 @@
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Physical\Config1\Hardware.hw"
     LogicalPath="Config1.Hardware.hw"
     Type="File"
-    LastWriteTime="131884310287084590"
+    LastWriteTime="131888333733169848"
     Private="false" />
   <Object
     Path="C:\projects\Inzynierka_Kucharczyk_2018\Physical\Config1\Hardware.hwl"

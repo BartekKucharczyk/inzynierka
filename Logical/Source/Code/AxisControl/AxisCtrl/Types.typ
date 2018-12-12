@@ -34,6 +34,7 @@ TYPE
 		Position : REAL;
 		TorqueWindow : REAL;
 		JogParams : AxisCtrlInpParmsJogPType;
+		CyclicSetParameter : AxisCtrlInpParamsCyclicType;
 	END_STRUCT;
 END_TYPE
 
@@ -47,20 +48,21 @@ TYPE
 		PowerOn : BOOL;
 		PowerOff : BOOL;
 		Home : BOOL;
+		ErrorReset : BOOL;
 		MoveVelocity : BOOL;
+		MoveVelocityOff : BOOL;
 		MoveAdditive : BOOL;
-		MoveOff : BOOL;
+		MoveAdditiveOff : BOOL;
 		MoveAbsolute : BOOL;
-		MoveTorque : BOOL;
+		MoveAbsoluteOff : BOOL;
 		StopOn : BOOL;
 		StopOff : BOOL;
 		JogPositive : BOOL;
 		JogNegative : BOOL;
-		ErrorReset : BOOL;
+		Update : BOOL;
 		Autotune : BOOL;
 		ReleaseBreak : BOOL;
 		TorqControl : AxCtrlInpCmdSinAxATorType;
-		Update : BOOL;
 	END_STRUCT;
 	AxCtrlInpCmdSinAxATorType : 	STRUCT 
 		ErrorReset : BOOL;
@@ -91,6 +93,11 @@ TYPE
 		Deceleration : REAL;
 		UpperLimit : LREAL;
 		LowerLimit : LREAL;
+	END_STRUCT;
+	AxisCtrlInpParamsCyclicType : 	STRUCT 
+		Torque : LREAL;
+		Velocity : LREAL;
+		Position : LREAL;
 	END_STRUCT;
 END_TYPE
 
@@ -152,43 +159,48 @@ TYPE
 	END_STRUCT;
 	AxisCtrlOutStatesSingType : 	STRUCT 
 		Axis_0 : AxisCtrlOutStatesSingAxType;
-		Axis_1 : AxisCtrlOutStatesSingAxType;
 	END_STRUCT;
 	AxisCtrlOutStatesSingAxType : 	STRUCT 
-		InPosition : BOOL;
-		InVelocity : BOOL;
-		StatusID : DINT;
-		UpdateDone : BOOL;
 		Active : BOOL;
-		Error : BOOL;
-		Stopped : BOOL;
-		MoveActive : BOOL;
-		IsHomed : BOOL;
+		UpdateDone : BOOL;
 		PowerOn : BOOL;
-		CyclicSet : AxisCtrlOutStatesSingAxCycSeTyp;
+		IsHomed : BOOL;
+		InVelocity : BOOL;
+		InPosition : BOOL;
+		MoveActive : BOOL;
+		Stopped : BOOL;
+		StatusID : DINT;
+		Error : BOOL;
 		Params : AxisCtrlOutStatesSingAxParType;
+		CyclicSet : AxisCtrlOutStatesSingAxCycSeTyp;
 	END_STRUCT;
 	AxisCtrlOutStatesSingAxParType : 	STRUCT 
 		PositionAct : LREAL;
-		Deceleration : LREAL;
-		Acceleration : LREAL;
-		Position : LREAL;
-		TorqueLimit : LREAL;
-		Distance : LREAL;
-		Velocity : LREAL;
 		VelocityAct : LREAL;
+		Position : LREAL;
+		Velocity : LREAL;
+		Acceleration : LREAL;
+		Deceleration : LREAL;
+		Distance : LREAL;
+		CycParams : AxisCtrlOutStateSinAxParCycType;
+		TorqueLimit : LREAL;
 	END_STRUCT;
 	AxisCtrlOutStatesSingAxCycSeTyp : 	STRUCT 
-		Error : BOOL;
 		Active : BOOL;
+		Error : BOOL;
+		StatusID : UDINT;
+		UpdateDone : BOOL;
 		CyclicSetActive : BOOL;
 		CommandAborted : BOOL;
 		CommandBusy : BOOL;
-		UpdateDone : BOOL;
-		StatusID : UDINT;
 	END_STRUCT;
 	AxisCtrlOutStatesDiagType : 	STRUCT 
 		A0 : AxisCtrlOutStatesDiagAxType;
+	END_STRUCT;
+	AxisCtrlOutStateSinAxParCycType : 	STRUCT 
+		Torque : LREAL;
+		Velocity : LREAL;
+		Position : LREAL;
 	END_STRUCT;
 	AxisCtrlOutStatesDiagAxType : 	STRUCT 
 		DriveRestarted : BOOL;
@@ -210,9 +222,11 @@ TYPE
 		JOG_NEGATIVE,
 		JOG_POSITIVE,
 		MOVE_ADDITIVE,
+		MOVE_ADDITIVE_OFF,
 		MOVE_VELOCITY,
+		MOVE_VELOCITY_OFF,
 		MOVE_ABSOLUTE,
-		MOVE_TORQUE,
+		MOVE_ABSOLUTE_OFF,
 		STOP_OFF,
 		STOP_ON,
 		HOME,
@@ -221,14 +235,14 @@ TYPE
 		WAIT_FOR_ACTIVE,
 		ERROR,
 		ERROR_RESET,
-		UPDATE,
-		MOVE_OFF,
+		UPDATE_MP_AXIS_BASIC,
 		CYCLIC_POSITION_ON,
 		CYCLIC_TORQUE_ON,
 		CYCLIC_VELOCITY_ON,
 		CYCLIC_TORQUE_OFF,
 		CYCLIC_VELOCITY_OFF,
-		CYCLIC_POSITION_OFF
+		CYCLIC_POSITION_OFF,
+		UPDATE_CYCLIC_SET
 		);
 	HomingEnum : 
 		(

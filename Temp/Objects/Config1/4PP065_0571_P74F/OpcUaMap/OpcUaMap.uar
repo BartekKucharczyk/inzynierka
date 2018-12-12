@@ -4,7 +4,7 @@
     <Uri>http://br-automation.com/OpcUa/PLC/PV/</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://br-automation.com/OpcUa/PLC/PV/" Version="1.00" PublicationDate="2018-12-04T18:37:44Z" />
+    <Model ModelUri="http://br-automation.com/OpcUa/PLC/PV/" Version="1.00" PublicationDate="2018-12-12T12:49:12Z" />
   </Models>
   <Extensions>
     <Extension>
@@ -27,16 +27,18 @@
                   <Variable Name="PowerOn" DataType="i=1" />
                   <Variable Name="PowerOff" DataType="i=1" />
                   <Variable Name="Home" DataType="i=1" />
+                  <Variable Name="ErrorReset" DataType="i=1" />
                   <Variable Name="MoveVelocity" DataType="i=1" />
+                  <Variable Name="MoveVelocityOff" DataType="i=1" />
                   <Variable Name="MoveAdditive" DataType="i=1" />
-                  <Variable Name="MoveOff" DataType="i=1" />
+                  <Variable Name="MoveAdditiveOff" DataType="i=1" />
                   <Variable Name="MoveAbsolute" DataType="i=1" />
-                  <Variable Name="MoveTorque" DataType="i=1" />
+                  <Variable Name="MoveAbsoluteOff" DataType="i=1" />
                   <Variable Name="StopOn" DataType="i=1" />
                   <Variable Name="StopOff" DataType="i=1" />
                   <Variable Name="JogPositive" DataType="i=1" />
                   <Variable Name="JogNegative" DataType="i=1" />
-                  <Variable Name="ErrorReset" DataType="i=1" />
+                  <Variable Name="Update" DataType="i=1" />
                   <Variable Name="Autotune" DataType="i=1" />
                   <Variable Name="ReleaseBreak" DataType="i=1" />
                   <Variable Name="TorqControl" DataType="i=22">
@@ -49,7 +51,6 @@
                     <Variable Name="CyclicPositionOn" DataType="i=1" />
                     <Variable Name="Update" DataType="i=1" />
                   </Variable>
-                  <Variable Name="Update" DataType="i=1" />
                 </Variable>
               </Variable>
               <Variable Name="AllAxis" DataType="i=22">
@@ -80,6 +81,11 @@
                 <Variable Name="Deceleration" DataType="i=10" />
                 <Variable Name="UpperLimit" DataType="i=11" />
                 <Variable Name="LowerLimit" DataType="i=11" />
+              </Variable>
+              <Variable Name="CyclicSetParameter" DataType="i=22">
+                <Variable Name="Torque" DataType="i=11" />
+                <Variable Name="Velocity" DataType="i=11" />
+                <Variable Name="Position" DataType="i=11" />
               </Variable>
             </Variable>
           </Variable>
@@ -423,65 +429,39 @@
             <Variable Name="States" DataType="i=22">
               <Variable Name="SingleAxis" DataType="i=22">
                 <Variable Name="Axis_0" DataType="i=22">
-                  <Variable Name="InPosition" DataType="i=1" />
-                  <Variable Name="InVelocity" DataType="i=1" />
-                  <Variable Name="StatusID" DataType="i=6" />
-                  <Variable Name="UpdateDone" DataType="i=1" />
                   <Variable Name="Active" DataType="i=1" />
-                  <Variable Name="Error" DataType="i=1" />
-                  <Variable Name="Stopped" DataType="i=1" />
-                  <Variable Name="MoveActive" DataType="i=1" />
-                  <Variable Name="IsHomed" DataType="i=1" />
+                  <Variable Name="UpdateDone" DataType="i=1" />
                   <Variable Name="PowerOn" DataType="i=1" />
-                  <Variable Name="CyclicSet" DataType="i=22">
-                    <Variable Name="Error" DataType="i=1" />
-                    <Variable Name="Active" DataType="i=1" />
-                    <Variable Name="CyclicSetActive" DataType="i=1" />
-                    <Variable Name="CommandAborted" DataType="i=1" />
-                    <Variable Name="CommandBusy" DataType="i=1" />
-                    <Variable Name="UpdateDone" DataType="i=1" />
-                    <Variable Name="StatusID" DataType="i=7" />
-                  </Variable>
+                  <Variable Name="IsHomed" DataType="i=1" />
+                  <Variable Name="InVelocity" DataType="i=1" />
+                  <Variable Name="InPosition" DataType="i=1" />
+                  <Variable Name="MoveActive" DataType="i=1" />
+                  <Variable Name="Stopped" DataType="i=1" />
+                  <Variable Name="StatusID" DataType="i=6" />
+                  <Variable Name="Error" DataType="i=1" />
                   <Variable Name="Params" DataType="i=22">
                     <Variable Name="PositionAct" DataType="i=11" Historizing="True" HistoryBufferSize="150" HistorySamplingInterval="500" AccessLevel="0x07" />
-                    <Variable Name="Deceleration" DataType="i=11" />
-                    <Variable Name="Acceleration" DataType="i=11" />
-                    <Variable Name="Position" DataType="i=11" />
-                    <Variable Name="TorqueLimit" DataType="i=11" />
-                    <Variable Name="Distance" DataType="i=11" />
-                    <Variable Name="Velocity" DataType="i=11" />
                     <Variable Name="VelocityAct" DataType="i=11" Historizing="True" HistoryBufferSize="150" HistorySamplingInterval="500" AccessLevel="0x07" />
+                    <Variable Name="Position" DataType="i=11" />
+                    <Variable Name="Velocity" DataType="i=11" />
+                    <Variable Name="Acceleration" DataType="i=11" />
+                    <Variable Name="Deceleration" DataType="i=11" />
+                    <Variable Name="Distance" DataType="i=11" />
+                    <Variable Name="CycParams" DataType="i=22">
+                      <Variable Name="Torque" DataType="i=11" />
+                      <Variable Name="Velocity" DataType="i=11" />
+                      <Variable Name="Position" DataType="i=11" />
+                    </Variable>
+                    <Variable Name="TorqueLimit" DataType="i=11" />
                   </Variable>
-                </Variable>
-                <Variable Name="Axis_1" DataType="i=22">
-                  <Variable Name="InPosition" DataType="i=1" />
-                  <Variable Name="InVelocity" DataType="i=1" />
-                  <Variable Name="StatusID" DataType="i=6" />
-                  <Variable Name="UpdateDone" DataType="i=1" />
-                  <Variable Name="Active" DataType="i=1" />
-                  <Variable Name="Error" DataType="i=1" />
-                  <Variable Name="Stopped" DataType="i=1" />
-                  <Variable Name="MoveActive" DataType="i=1" />
-                  <Variable Name="IsHomed" DataType="i=1" />
-                  <Variable Name="PowerOn" DataType="i=1" />
                   <Variable Name="CyclicSet" DataType="i=22">
-                    <Variable Name="Error" DataType="i=1" />
                     <Variable Name="Active" DataType="i=1" />
+                    <Variable Name="Error" DataType="i=1" />
+                    <Variable Name="StatusID" DataType="i=7" />
+                    <Variable Name="UpdateDone" DataType="i=1" />
                     <Variable Name="CyclicSetActive" DataType="i=1" />
                     <Variable Name="CommandAborted" DataType="i=1" />
                     <Variable Name="CommandBusy" DataType="i=1" />
-                    <Variable Name="UpdateDone" DataType="i=1" />
-                    <Variable Name="StatusID" DataType="i=7" />
-                  </Variable>
-                  <Variable Name="Params" DataType="i=22">
-                    <Variable Name="PositionAct" DataType="i=11" />
-                    <Variable Name="Deceleration" DataType="i=11" />
-                    <Variable Name="Acceleration" DataType="i=11" />
-                    <Variable Name="Position" DataType="i=11" />
-                    <Variable Name="TorqueLimit" DataType="i=11" />
-                    <Variable Name="Distance" DataType="i=11" />
-                    <Variable Name="Velocity" DataType="i=11" />
-                    <Variable Name="VelocityAct" DataType="i=11" />
                   </Variable>
                 </Variable>
               </Variable>

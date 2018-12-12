@@ -68,8 +68,9 @@ ACTION Output_commands:
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.StatusID		:= _AxisCtrl.Internal.FunctionsBlock.TorqueControl.StatusID;
 	_AxisCtrl.Output.States.SingleAxis.Axis_0.CyclicSet.UpdateDone 		:= _AxisCtrl.Internal.FunctionsBlock.TorqueControl.UpdateDone;
 
-		
-
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.CycParams.Position := _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Position;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.CycParams.Torque := _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Torque;
+	_AxisCtrl.Output.States.SingleAxis.Axis_0.Params.CycParams.Velocity := _AxisCtrl.Internal.FunctionsBlock.TorqueControl.Velocity;
 	
 	(* CALL FUBS *)
 	_AxisCtrl.Internal.FunctionsBlock.TorqueControl();

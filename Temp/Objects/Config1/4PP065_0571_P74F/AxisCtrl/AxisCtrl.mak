@@ -17,33 +17,15 @@ $(AS_CPU_PATH)/AxisCtrl/a.out: \
 
 $(AS_CPU_PATH)/AxisCtrl/Main.st.o: \
 	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Main.st \
-	$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.fun \
-	$(AS_PROJECT_PATH)/Logical/Libraries/MpBase/MpBase.typ \
-	$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.typ \
-	$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxisError.typ \
-	$(AS_PROJECT_PATH)/Physical/$(AS_CONFIGURATION)/$(AS_PLC)/mapp/Config.mpaxisbasic \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Variables.var \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Types.typ \
-	$(AS_PROJECT_PATH)/Logical/Global.var \
-	$(AS_PROJECT_PATH)/Logical/Libraries/Acp10man/Acp10man.typ \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Actions/Axis1.st \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Actions/ErrorHandling.st \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Actions/Exit.st \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Actions/Initalization.st \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Actions/InputCmds.st \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Actions/OutputCmds.st
+	FORCE 
 	@'$(AS_BIN_PATH)/BR.AS.IecCompiler.exe' '$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Main.st' -o '$(AS_CPU_PATH)/AxisCtrl/Main.st.o'  -O '$(AS_CPU_PATH)//AxisCtrl/Main.st.o.opt' -secret '$(AS_PROJECT_PATH)_br.as.ieccompiler.exe'
 
 $(AS_CPU_PATH)/AxisCtrl/_bur_pvdef.st.o: \
-	$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.fun \
-	$(AS_PROJECT_PATH)/Logical/Libraries/MpBase/MpBase.typ \
-	$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxis.typ \
-	$(AS_PROJECT_PATH)/Logical/Libraries/MpAxis/MpAxisError.typ \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Variables.var \
-	$(AS_PROJECT_PATH)/Logical/Source/Code/AxisControl/AxisCtrl/Types.typ \
-	$(AS_PROJECT_PATH)/Logical/Global.var \
-	$(AS_PROJECT_PATH)/Logical/Libraries/Acp10man/Acp10man.typ
+	FORCE 
 	@'$(AS_BIN_PATH)/BR.AS.IecCompiler.exe' '$(AS_PATH)/AS/GnuInst/V4.1.2/i386-elf/include/bur/_bur_pvdef.st' -o '$(AS_CPU_PATH)/AxisCtrl/_bur_pvdef.st.o'  -O '$(AS_CPU_PATH)//AxisCtrl/_bur_pvdef.st.opt' -secret '$(AS_PROJECT_PATH)_br.as.ieccompiler.exe'
 
 -include $(AS_CPU_PATH)/Force.mak 
 
+
+
+FORCE:
