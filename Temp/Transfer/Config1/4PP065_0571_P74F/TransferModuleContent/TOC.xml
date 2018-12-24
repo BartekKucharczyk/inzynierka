@@ -57,7 +57,7 @@
 			<Module Name="::ArSvcReg" Type="18" Size="78216" Modified="2016-12-09 07:57:34" Version="4.34" ProjectDependent="1" />
 			<Module Name="::AsBrStr" Type="18" Size="9652" Modified="2018-05-25 19:35:02" Version="4.34" ProjectDependent="1" />
 			<Module Name="::AsIecCon" Type="18" Size="17500" Modified="2018-05-25 19:40:28" Version="4.34" ProjectDependent="1" />
-			<Module Name="::AxisCtrl" Type="17" Size="33888" Modified="2018-12-12 13:49:04" Version="1.00" ProjectDependent="1" />
+			<Module Name="::AxisCtrl" Type="17" Size="33972" Modified="2018-12-13 18:01:40" Version="1.00" ProjectDependent="1" />
 			<Module Name="::ChartTask" Type="17" Size="17384" Modified="2018-12-03 16:20:17" Version="1.00" ProjectDependent="1" />
 			<Module Name="::Config" Type="136" Size="17180" Modified="2018-12-01 19:57:37" Version="1.621" ProjectDependent="1" />
 			<Module Name="::Controller" Type="17" Size="3608" Modified="2018-12-03 17:40:02" Version="1.00" ProjectDependent="1" />
@@ -68,7 +68,7 @@
 			<Module Name="::MpAxis" Type="18" Size="607064" Modified="2017-09-11 19:27:13" Version="1.621" ProjectDependent="1" />
 			<Module Name="::MpBase" Type="18" Size="399932" Modified="2017-08-01 16:14:14" Version="5.00" ProjectDependent="1" />
 			<Module Name="::MpCom" Type="18" Size="174160" Modified="2017-09-11 17:38:59" Version="1.621" ProjectDependent="1" />
-			<Module Name="::OpcUaMap" Type="134" Size="4668" Modified="2018-12-12 13:49:13" Version="1.00" ProjectDependent="1" />
+			<Module Name="::OpcUaMap" Type="134" Size="4672" Modified="2018-12-13 18:01:45" Version="1.00" ProjectDependent="1" />
 			<Module Name="::Role" Type="136" Size="1020" Modified="2018-12-01 19:57:37" Version="1.00" ProjectDependent="1" />
 			<Module Name="::User" Type="136" Size="1152" Modified="2018-12-01 19:57:37" Version="1.00" ProjectDependent="1" />
 			<Module Name="::acp10_mc" Type="18" Size="735536" Modified="2017-07-31 08:14:03" Version="3.182" ProjectDependent="1" Reboot="1" />

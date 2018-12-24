@@ -1,24 +1,35 @@
 
 
-Wed Dec 12 13:50:02 2018
+Sun Dec 23 21:15:26 2018
 No ARsim registration found!
   Bernecker & Rainer 
 
 
 
-Wed Dec 12 13:50:02 2018
+Sun Dec 23 21:15:26 2018
 COMMAND_COLDSTART
-InstanceName : 01d4921932d7fb00
+InstanceName : 01d49afc3e3edbd0
 
 WorkingPath :
 C:\projects\Inzynierka_Kucharczyk_2018\Temp\Simulation\Config1\4PP065_0571_P74F\
 
 
 
-Wed Dec 12 13:50:02 2018
+Sun Dec 23 21:15:26 2018
 COMMAND_COLDSTART
 Version : G4.34
 
 
 
-Wed Dec 12 13:50:25 2018
+Sun Dec 23 21:15:31 2018
+COMMAND_TERMINATE
+
+
+Sun Dec 23 21:15:32 2018
+
+
+Sun Dec 23 21:15:32 2018
+COMMAND_TERMINATE
+
+
+Sun Dec 23 21:15:32 2018

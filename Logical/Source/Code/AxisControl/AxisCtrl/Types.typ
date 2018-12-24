@@ -59,6 +59,7 @@ TYPE
 		StopOff : BOOL;
 		JogPositive : BOOL;
 		JogNegative : BOOL;
+		UpdateJogParams : BOOL;
 		Update : BOOL;
 		Autotune : BOOL;
 		ReleaseBreak : BOOL;
@@ -242,7 +243,8 @@ TYPE
 		CYCLIC_TORQUE_OFF,
 		CYCLIC_VELOCITY_OFF,
 		CYCLIC_POSITION_OFF,
-		UPDATE_CYCLIC_SET
+		UPDATE_CYCLIC_SET,
+		UPDATE_JOG_PARAMS
 		);
 	HomingEnum : 
 		(

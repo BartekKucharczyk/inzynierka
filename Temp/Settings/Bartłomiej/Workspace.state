@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.3.7.46 SP?>
 <State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
-  <TextEdit ID="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Initalization.st" CaretLine="1" CaretColumn="1" FirstVisibleLine="1">
+  <TextEdit ID="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\OutputCmds.st" CaretLine="70" CaretColumn="1" FirstVisibleLine="38">
     <Bookmarks />
   </TextEdit>
-  <TextEdit ID="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\OutputCmds.st" CaretLine="70" CaretColumn="1" FirstVisibleLine="55">
+  <TextEdit ID="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\AxisControl\AxisCtrl\Actions\Axis1.st" CaretLine="249" CaretColumn="10" FirstVisibleLine="229">
+    <Bookmarks />
+  </TextEdit>
+  <TextEdit ID="C:\projects\Inzynierka_Kucharczyk_2018\Logical\Source\Code\Controller\ControllerTask\Main.st" CaretLine="1" CaretColumn="1" FirstVisibleLine="13">
     <Bookmarks />
   </TextEdit>
 </State>
